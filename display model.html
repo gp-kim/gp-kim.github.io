@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css%20live.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 <body>
@@ -125,62 +125,5 @@
 
 
     </div>
-
-
-<script>
-// POP UP HEART
-function myFunction() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}
-
-// MULTIPLE MODAL BOX 
-var btn = document.querySelectorAll("button.modal-button");
-
-var modals = document.querySelectorAll('.modal');
-
-var spans = document.getElementsByClassName("close");
-
-for (var i = 0; i < btn.length; i++) {
- btn[i].onclick = function(e) {
-    e.preventDefault();
-    modal = document.querySelector(e.target.getAttribute("href"));
-    modal.style.display = "block";
- }
-}
-
-for (var i = 0; i < spans.length; i++) {
- spans[i].onclick = function() {
-    for (var index in modals) {
-      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
-    }
- }
-}
-
-window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-     for (var index in modals) {
-      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
-     }
-    }
-}
-
-// TABS 
-        function openVersion(evt, versionName) {
-            var i, labtabcontent, labtablinks;
-            labtabcontent = document.getElementsByClassName("labtabcontent");
-            for (i = 0; i < labtabcontent.length; i++) {
-                labtabcontent[i].style.display = "none";
-            }
-            labtablinks = document.getElementsByClassName("labtablinks");
-            for (i = 0; i < labtablinks.length; i++) {
-                labtablinks[i].className = labtablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(versionName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-
-        document.getElementById("defaultOpen").click();
-    </script>
 
 </body>
