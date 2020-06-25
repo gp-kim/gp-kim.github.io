@@ -1,0 +1,516 @@
+a {
+    text-decoration: none;
+    color: var(--lab-link);
+    transition: all .5s
+}
+
+a:hover {
+    color: var(--lab-link-hover)
+}
+
+i {
+    color: var(--lab-italic);
+}
+
+c {
+    background-color: rgba(0,0,0,0.1); 
+    padding: 1px 2px; 
+    font-size: 11px; 
+    font-family: 'Courier New'; 
+    color: #000; 
+    border-radius: 2px
+}
+
+.the_lab * {
+    box-sizing: border-box
+}
+
+.the_lab {
+    width: 500px;
+    margin: 0;
+    font-size: 12px;
+    font-family: Arial;
+    line-height: 16px
+}
+
+.the_head {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid var(--lab-border);
+    background-image: var(--lab-bg-head);
+    background-position: right top;
+    background-repeat: no-repeat;
+    padding: 0 30px 8px 0;
+    margin-bottom: 25px;
+    font-family: roboto;
+    font-size: 14px;
+    text-align: right;
+    color: var(--lab-border);
+    line-height: 15px
+}
+
+.the_head bold {
+    font-weight: 700;
+    color: var(--lab-darker)
+}
+
+.the_head:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: 8px;
+    left: 2px;
+    border-radius: 10px;
+    border: 1px solid var(--lab-darker);
+    background: var(--lab-lighter)
+}
+
+.the_head:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: 8px;
+    left: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--lab-border)
+}
+
+.model {
+    width: 400px;
+    margin: 0 auto
+}
+
+.model bg {
+    display: block;
+    height: 200px;
+    border: 1px solid var(--lab-border);
+    position: relative
+}
+
+.model bg:after {
+    content: '';
+    border: 1px solid var(--lab-border);
+    border-radius: 25px;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    background: var(--lab-lighter)
+}
+
+.model border {
+    position: absolute;
+    z-index: 2;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 40px;
+    background-image: url(https://nsm09.casimages.com/img/2020/06/20//20062009051525394216864996.png), url(https://nsm09.casimages.com/img/2020/06/20//20062009051525394216864996.png), url(https://nsm09.casimages.com/img/2020/06/20//20062009051525394216864996.png), url(https://nsm09.casimages.com/img/2020/06/20//20062009051525394216864996.png);
+    background-position: top left, top right, bottom right, bottom left;
+    background-repeat: no-repeat
+}
+
+.lab_tab {
+    width: 85px;
+    background-color: var(--lab-bg);
+    z-index: 2;
+    position: absolute;
+    bottom: -35px;
+    left: 40px
+}
+
+.lab_tab::after {
+    content: '';
+    border: 1px solid var(--lab-border);
+    background: var(--lab-bg);
+    position: absolute;
+    z-index: 1;
+    top: 4px;
+    left: 4px;
+    bottom: -4px;
+    right: -4px;
+    display: block
+}
+
+.lab_tab button {
+    border: 1px solid var(--lab-border);
+    background-color: inherit;
+    width: 100%;
+    display: block;
+    outline: 0;
+    cursor: pointer;
+    padding: 5px 5px;
+    transition: .3s;
+    font-size: 12px;
+    text-align: left;
+    font-family: Roboto;
+    color: var(--lab-darker);
+    position: relative;
+    z-index: 2
+}
+
+.lab_tab button:hover {
+    background-color: var(--lab-border);
+    color: var(--lab-bg);
+    font-weight: 700
+}
+
+.lab_tab button.active {
+    background-color: var(--lab-border);
+    color: var(--lab-bg);
+    font-weight: 700
+}
+
+.labtabcontent {
+    display: none
+}
+
+desc {
+    position: relative;
+    display: block;
+    margin: 15px 0;
+    text-align: right;
+    font-family: Roboto;
+    color: var(--lab-border);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px
+}
+
+desc d {
+    background-color: var(--lab-border);
+    border-radius: 8px;
+    font-size: 10px;
+    color: var(--lab-bg);
+    padding: 1px 6px;
+    font-weight: 400
+}
+
+.lab_details {
+    position: relative;
+    display: table;
+    margin: 15px 0;
+    border: 1px solid var(--lab-border);
+    border-radius: 10px;
+    padding: 12px 8px
+}
+
+.resize {
+    background-image: var(--lab-img-detail);
+    background-position: 12px 14px;
+    background-repeat: no-repeat;
+    height: 90px
+}
+
+.resize:before {
+    content: 'Les images du lab sont automatiquement redimensionnées et recadrées sans être déformée!';
+    width: 280px;
+    display: block;
+    padding-left: 40px
+}
+
+.gradient {
+    background-image: var(--lab-gradient-detail);
+    background-position: 12px 14px;
+    background-repeat: no-repeat;
+    height: 90px
+}
+
+.gradient:before {
+    content: 'Ce modèle du lab utilise un dégradé généré en css aisément modifiable avec des générateurs web. ';
+    width: 330px;
+    display: block;
+    padding-left: 40px
+}
+
+.lab_buttons {
+    border-width: 1px 2px 2px 1px;
+    border-style: solid;
+    border-color: var(--lab-border);
+    background: var(--lab-bg);
+    border-radius: 5px;
+    cursor: pointer;
+    font: 700 11px Roboto;
+    color: var(--lab-darker);
+    position: absolute;
+    bottom: 13px;
+    left: 47px
+}
+
+.lab_buttons:hover {
+    border-width: 1px;
+    position: absolute;
+    bottom: 13px;
+    right: 8px;
+    background-color: var(--lab-lighter)
+}
+
+.lab_buttons:active {
+    outline: 0
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    padding-top: 100px;
+    padding-right: 150px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    background-color: rgba(255, 255, 255, .4)
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--lab-bg);
+    margin: auto;
+    padding: 0;
+    border: 1px solid var(--lab-border);
+    border-radius: 10px;
+    width: 370px;
+    padding: 45px 20px 20px
+}
+
+.modal-content:after {
+    content: '';
+    border: 1px solid var(--lab-border);
+    background: var(--lab-bg);
+    border-radius: 10px;
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+    left: 5px;
+    bottom: -5px;
+    right: -5px
+}
+
+.head_modal {
+    background: var(--lab-lighter);
+    border-bottom: 1px solid var(--lab-border);
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 700;
+    color: var(--lab-darker);
+    font-family: 14px;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0
+}
+
+.close {
+    color: var(--lab-border);
+    float: left;
+    top: 5px;
+    left: 5px;
+    line-height: 13px;
+    border: 1px solid var(--lab-border);
+    border-radius: 20px;
+    width: 15px;
+    height: 15px
+}
+
+.close:focus,
+.close:hover {
+    background: var(--lab-bg);
+    color: var(--lab-darker);
+    text-decoration: none;
+    cursor: pointer
+}
+
+.modal-content .gif {
+    display: block;
+    border-radius: 5px;
+    border: 3px solid var(--lab-border);
+    max-height: 140px;
+    margin: 0 auto
+}
+
+.credits {
+    position: relative;
+    margin: 30px auto;
+    padding: 25px 0;
+    text-align: right;
+    opacity: .8;
+    font-size: 11px
+}
+
+.credits:before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    height: 1px;
+    width: 450px;
+    background: var(--lab-border)
+}
+
+.credits:after {
+    content: 'Détails';
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--lab-border);
+    font-weight: 700;
+    font-family: Roboto;
+    font-size: 14px
+}
+
+.credits .heart {
+    width: 34px;
+    height: 31px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    font-size: 40px;
+    opacity: 1;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: var(--lab-heart1)
+}
+
+.credits .heart:before {
+    width: 34px;
+    height: 31px;
+    position: absolute;
+    top: 2px;
+    left: 1px;
+    content: '';
+    background-image: var(--lab-heart2);
+    z-index: -1
+}
+
+.heart .popuptext {
+    visibility: hidden;
+    width: 350px;
+    background-color: var(--lab-lighter);
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 40px;
+    left: 0;
+    text-align: left;
+    font-size: 12px;
+    color: var(--lab-darker);
+    font-weight: 700
+}
+
+.heart .popuptext:before {
+    content: 'C’est un faux coeur codé sans âme mais vous pouvez en laisser un vrai en-dessous!'
+}
+
+.heart .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+        left: -50px
+    }
+
+    to {
+        opacity: 1;
+        left: 0
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        left: -50px
+    }
+
+    to {
+        opacity: 1;
+        left: 0
+    }
+}
+
+.lab_preview {
+    position: relative;
+    width: 500px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.lab_preview .plus {
+    display: block;
+    position: relative;
+    width: 25px !important;
+    height: 79px;
+    padding: 0;
+    border-radius: 5px;
+    border-width: 1px 2px 2px 1px;
+    border-style: solid;
+    border-color: var(--lab-border);
+    background: var(--lab-lighter);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--lab-darker)
+}
+
+.lab_preview .plus:hover {
+    background: var(--lab-lighter);
+    color: var(--lab-darker);
+    border-width: 1px;
+    top: 1px;
+    left: 1px
+}
+
+.lab_preview a {
+    width: 90px;
+    height: 79px;
+    display: block;
+    position: relative;
+    background: 0 0;
+    background-image: var(--lab-file);
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    padding: 5px 7px;
+    padding-top: 40px;
+    border-radius: 5px;
+    border: 1px solid var(--lab-border);
+    font-size: 11px
+}
+
+.lab_preview a:hover {
+    background: var(--lab-lighter);
+    background-image: var(--lab-file);
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    color: var(--lab-darker)
+}
+
+.lab_preview a > i {
+    color: var(--lab-text);
+    font-size: 9px
+}
