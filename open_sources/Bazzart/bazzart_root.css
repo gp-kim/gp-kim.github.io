@@ -1,0 +1,15 @@
+:root {
+    --lab-text: #6F666A;
+    --lab-link: #b83251;
+    --lab-link-hover: #cf88b4;
+    --lab-border: #EBC4AD;
+    --lab-darker: #E3B499;
+    --lab-lighter: #F2E4DC;
+    --lab-bg: #EFE8E4;
+    --lab-bg-head: url(https://nsm09.casimages.com/img/2020/06/20//20062009051525394216864997.png);
+    --lab-img-detail: url(https://nsm09.casimages.com/img/2020/06/21//20062104435925394216865297.png);
+    --lab-gradient-detail: url(https://nsm09.casimages.com/img/2020/06/21//20062104435825394216865294.png);
+    --lab-file: url(https://nsm09.casimages.com/img/2020/06/23//20062312154225394216869359.png);
+    --lab-heart1: url(https://nsm09.casimages.com/img/2020/06/23//20062307054725394216870962.png);
+    --lab-heart2: url(https://nsm09.casimages.com/img/2020/06/23//20062307054725394216870963.png)
+}
