@@ -1,0 +1,71 @@
+.lab_code {
+    border: 1px solid var(--lab-border);
+    position: relative
+}
+
+.lab_code:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '< />';
+    color: var(--lab-darker);
+    font-family: Roboto;
+    font-size: 14px;
+    background: var(--lab-lighter);
+    border-right: 1px solid var(--lab-border);
+    width: 50px;
+    text-align: center;
+    padding: 10px 0
+}
+
+.lab_code title {
+    display: block;
+    color: var(--lab-border);
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 10px 10px 65px;
+    border-bottom: 1px solid var(--lab-border)
+}
+
+.lab_code title a {
+    position: relative;
+    font-size: 10px;
+    font-weight: 400;
+    float: right;
+    font-family: Arial
+}
+
+.codebox {
+    width: 500px;
+}
+
+.code {
+    border: none !important;
+    padding: 10px;
+    background: transparent;
+}
+
+.hidecode dt span.genmed {
+    color: transparent
+}
+
+.selectCode {
+    float: right;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    border-bottom: 1px solid #ebc4ad;
+    width: 100%;
+    text-align: right;
+    padding: 0 10px 5px 0;
+    position: relative;
+    bottom: 15px;
+    box-sizing: border-box;
+    color: var(--lab-darker)
+}
+
+iframe {
+    margin: 0 auto;
+    border: none;
+}
