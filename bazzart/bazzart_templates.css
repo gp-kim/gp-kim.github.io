@@ -18,7 +18,7 @@ c {
     font-size: 11px; 
     font-family: 'Courier New'; 
     color: #000; 
-    border-radius: 4px
+    border-radius: 4px;
 }
 
 .the_lab * {
@@ -263,13 +263,9 @@ desc d {
     display: none;
     position: absolute;
     z-index: 2;
-    left: 62px;
+    left: 50px;
     top: 100px;
-    width: 375px;
-    height: auto;
-    overflow: auto;
-    background-color: #000;
-    background-color: rgba(255, 255, 255, .4)
+    width: 410px;
 }
 
 .modal-content {
@@ -279,7 +275,7 @@ desc d {
     padding: 0;
     border: 1px solid var(--lab-border);
     border-radius: 10px;
-    width: 370px;
+    width: 410px;
     padding: 45px 20px 20px
 }
 
