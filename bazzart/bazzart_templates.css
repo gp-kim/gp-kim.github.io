@@ -497,7 +497,8 @@ desc d {
     padding-top: 40px;
     border-radius: 5px;
     border: 1px solid var(--lab-border);
-    font-size: 11px
+    font-size: 11px;
+    transition: none;
 }
 
 .lab_preview a:hover {
