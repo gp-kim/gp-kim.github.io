@@ -146,7 +146,7 @@
 
                 <img class="gif" src="https://media1.tenor.com/images/cf71a6aa8e384067fabf7d960c3519fd/tenor.gif?itemid=7281251" /><br/>
               
-                Les modèles en libre-service du lab sont pensés pour être utilisé facilement. Textes, images, couleurs… Tout peut être remplacé sans avoir à faire de retouche photo ou autre. C’est pourquoi dans la majorité des modèles les images sont redimensionnées et recadrées automatiquement. Ce qui veut dire que n’importe quelle image prendra toujours la même forme et la même place imposée en CSS.
+                Les modèles en libre-service du lab sont pensés pour être utilisés facilement. Textes, images, couleurs… Tout peut être remplacé sans avoir à faire de retouche photo ou autre. C’est pourquoi dans la majorité des modèles les images sont redimensionnées et recadrées automatiquement. Ce qui veut dire que n’importe quelle image prendra toujours la même forme et la même place imposée en CSS.
                 <br/>    <br/>
                 Les propriétés utilisées en CSS sont les suivantes :     <br/>    <br/>
 
@@ -163,9 +163,40 @@
 
     </div>
   
-  <script>
-// Get the element with id="defaultOpen" and click on it
+<script>
 document.getElementById("defaultOpen").click();
+</script>
+  
+<script>
+  var btn = document.querySelectorAll("button.modal-button");
+
+var modals = document.querySelectorAll('.modal');
+
+var spans = document.getElementsByClassName("close");
+
+for (var i = 0; i < btn.length; i++) {
+ btn[i].onclick = function(e) {
+    e.preventDefault();
+    modal = document.querySelector(e.target.getAttribute("href"));
+    modal.style.display = "block";
+ }
+}
+
+for (var i = 0; i < spans.length; i++) {
+ spans[i].onclick = function() {
+    for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+    }
+ }
+}
+
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+     for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+     }
+    }
+}
 </script>
   
 
