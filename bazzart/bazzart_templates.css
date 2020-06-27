@@ -22,7 +22,7 @@ c {
 }
 
 .the_lab * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 .the_lab {
@@ -30,7 +30,8 @@ c {
     margin: 0;
     font-size: 12px;
     font-family: Arial;
-    line-height: 16px
+    line-height: 16px;
+    color: var(--lab-text);
 }
 
 .the_head {
@@ -264,7 +265,7 @@ desc d {
     position: absolute;
     z-index: 2;
     left: 50px;
-    top: 100px;
+    top: 50px;
     width: 410px;
 }
 
