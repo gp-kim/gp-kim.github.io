@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  
+  <link rel="stylesheet" href="/bazzart/bazzart_root.css">
+  <link rel="stylesheet" href="/bazzart/bazzart_templates.css">
+  
+  <script type="text/javascript" src="/bazzart/tabs_bazz_templates.js"></script>
+  <script type="text/javascript" src="/bazzart/modalbox_bazz_templates.js"></script>
+  <script type="text/javascript" src="/bazzart/popup_bazz_templates.js"></script>
+  
+  <title>Pale Yellow</title>
+</head>
+<body>
+
+    <div class="the_lab">
+
+        <div class="the_head">(GP:)/the lab/open_source/<bold>signature</bold>
+        </div>
+
+        Sentez-vous libre d'adaptez les couleurs à votre goût, selon la version de votre choix! 
+        Vous trouvez dans le code des petites annotations sous cette forme <c>/*couleur du texte*/</c> pour guider vos modifications.
+
+        <br /><br /><br />
+
+        <div class="model">
+            <bg>
+                <border>
+
+                    <div id="V1" class="labtabcontent">
+                        <img src="https://nsm09.casimages.com/img/2020/06/27//20062702433625394216889728.png" />
+                    </div>
+
+
+                    <div class="lab_tab">
+                        <button class="labtablinks" onclick="openVersion(event, 'V1')" id="defaultOpen">Version 1</button>
+                    </div>
+
+                </border>
+            </bg>
+
+            <desc>golden boy
+                <br />
+                <d>200*100</d>
+            </desc>
+
+
+
+            <!-------------- DETAILS BOX -------------->
+            <!-------------- DETAILS BOX -------------->
+
+            <div class="lab_details resize">
+
+                <button class="lab_buttons modal-button" href="#myModal1">Explain like I was five</button>
+
+            </div>
+            
+            <div class="lab_details gradient">
+
+                <button class="lab_buttons modal-button" href="#myModal2">I understand nothing</button>
+
+            </div>
+
+
+        </div>
+        
+        <!-------------- CREDITS -------------->
+        <!-------------- CREDITS -------------->
+
+        <div class="credits">
+            <strong>Image/FC</strong> Dominic Cooper<br />
+
+            <div class="heart" onclick="myFunction()"><span class="popuptext" id="myPopup"></span></div>
+        </div>
+
+
+        <!-------------- PREVIEW -------------->
+        <!-------------- PREVIEW -------------->
+        
+        <div class="lab_preview">
+
+            <a href="">pale yellow
+                <br /> <i>Signature</i></a>
+
+            <a href="https://www.bazzart.org/t137245-gp-1-witchcraft">witchcraft
+                <br /> <i>Signature</i></a>
+
+            <a href="https://www.bazzart.org/t137797-chronologie-gp-metro-line">metro line
+                <br /><i>Chronologie</i> </a>
+
+            <a href="https://www.bazzart.org/t137374-gp-2-kiss-me">kiss me
+                <br /><i>Signature</i> </a>
+
+            <a href="https://www.bazzart.org/t137473-gp-3-golden-boy">golden boy
+                <br /><i>Signature</i></a>
+
+            <a class="plus" href="">+</a>
+
+        </div>
+
+
+
+
+
+        <!-------------- MODAL BOX -------------->
+        <!-------------- MODAL BOX -------------->
+
+
+        <div id="myModal1" class="modal">
+
+            <div class="modal-content">
+                <div class="head_modal">
+                    <span class="close">×</span>Recadrer une image</div>
+              
+              <img class="gif" src="https://media1.tenor.com/images/cf71a6aa8e384067fabf7d960c3519fd/tenor.gif?itemid=7281251" /><br/>
+              
+                Les modèles en libre-service du lab sont pensés pour être utilisés facilement. Textes, images, couleurs… Tout peut être remplacé sans avoir à faire de retouche photo ou autre. C’est pourquoi dans la majorité des modèles les images sont redimensionnées et recadrées automatiquement. Ce qui veut dire que n’importe quelle image prendra toujours la même forme et la même place imposée en CSS.
+                <br/>    <br/>
+                Les propriétés utilisées en CSS sont les suivantes :     <br/>    <br/>
+
+                <c>object-fit</c> et <c>object-position</c>    <br/>    <br/>
+
+                <strong>Object-fit</strong> redimensionne l’image en fonction du conteneur et <strong>object-position</strong> sert à déplacer l’image selon le besoin.     <br/><br/>
+                La bonne comparaison serait d’imaginer une photo placée dans un cadre que l’on ajuste selon la taille et forme du cadre.<br/><br/>
+              
+                A vous de choisir la bonne image!
+              
+            </div>
+
+        </div>
+        
+        <div id="myModal2" class="modal">
+
+            <div class="modal-content">
+                <div class="head_modal"><span class="close">×</span>Les dégradés</div>
+              
+              <img class="gif" src="https://media1.tenor.com/images/20ec364df507645d9f1e50984e0ead71/tenor.gif?itemid=4527435" /><br/>
+                
+                Pour des effets de style, ce modèle a recours à un dégradé de couleur généré en CSS. Il existe des générateurs web simplifiés pour produire son parfait dégradé et je vous conseille <a href="https://cssgradient.io/">cssgradient.io/</a>. <br/><br/>
+
+                <strong>Ne copiez que la deuxième ligne fournie par le site.</strong><br/><br/>
+
+                Pour les curieux, voici comment se compose un dégradé allant du blanc vers le noir, de haut en bas <c>linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%)</c> puis, décortiqué : <br/><br/>
+
+                <img src="https://nsm09.casimages.com/img/2020/06/26//20062609220125394216888697.png"/><br/><br/>
+
+                <c style="color: #888">linear</c> définit le type de degradé. Il existe deux types répandus : linéaire et radial. <br/>
+                <c style="color: #940C97">180deg</c> règle l'inclinaison, seulement pour les dégradés linéaires.<br/>
+                <c style="color: #DA2222">255,255,255</c> est le code de couleur dit RGBA (ici blanc puis noir)<br/>
+                <c style="color: #0066FF">1</c> correspond à l'opacité de la couleur qui va de 1 (opaque) à 0 (transparent). 50% d'opacité = 0.5<br/>
+                <c style="color: #258E00">0%</c> est la place que prendra la couleur dans le fond. 0% étant l'extrême côté, 100% l'extrême opposé pour un dégradé tout en douceur. <br/><br/>
+              
+                Vous maîtrisez désormais la magie du dégradé!
+              
+            </div>
+
+        </div>
+
+    </div>
+  
+<script>
+document.getElementById("defaultOpen").click();
+</script>
+  
+<script>
+  var btn = document.querySelectorAll("button.modal-button");
+
+var modals = document.querySelectorAll('.modal');
+
+var spans = document.getElementsByClassName("close");
+
+for (var i = 0; i < btn.length; i++) {
+ btn[i].onclick = function(e) {
+    e.preventDefault();
+    modal = document.querySelector(e.target.getAttribute("href"));
+    modal.style.display = "block";
+ }
+}
+
+for (var i = 0; i < spans.length; i++) {
+ spans[i].onclick = function() {
+    for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+    }
+ }
+}
+
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+     for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+     }
+    }
+}
+</script>
+  
+
+
+</body>
+</html>
