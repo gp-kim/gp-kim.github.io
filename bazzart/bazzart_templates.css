@@ -79,6 +79,7 @@ c {
 }
 
 .model {
+    position: relative;
     width: 400px;
     margin: 0 auto
 }
@@ -126,7 +127,7 @@ c {
     background-color: var(--lab-bg);
     z-index: 2;
     position: absolute;
-    bottom: -35px;
+    bottom: 50px;
     left: 40px
 }
 
