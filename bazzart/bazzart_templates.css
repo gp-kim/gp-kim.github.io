@@ -127,7 +127,7 @@ c {
     background-color: var(--lab-bg);
     z-index: 2;
     position: absolute;
-    bottom: 50px;
+    top: -35px;
     left: 40px
 }
 
