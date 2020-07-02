@@ -79,19 +79,19 @@ c {
 }
 
 .model {
-    position: relative;
-    width: 400px;
-    margin: 0 auto
+    display: table;
+    min-width: 400px;
+    min-height: 200px;
+    margin: 0 auto;
 }
 
-.model bg {
+.model .bg {
     display: block;
-    height: 200px;
     border: 1px solid var(--lab-border);
-    position: relative
+    position: relative;
 }
 
-.model bg:after {
+.model .bg:after {
     content: '';
     border: 1px solid var(--lab-border);
     border-radius: 25px;
@@ -102,24 +102,28 @@ c {
     bottom: -1px;
     left: -1px;
     right: -1px;
-    background: var(--lab-lighter)
+    background: var(--lab-lighter);
 }
 
-.model border {
-    position: absolute;
+.model .border {
+    position: relative;
     z-index: 2;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    display: block;
+    top: 3px;
+    margin-top: -6px;
+    left: 3px;
+    margin-left: -6px;
+    height: 101%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 40px;
+    padding: 40px;
     background-image: url(https://nsm09.casimages.com/img/2020/06/20//20062009051525394216864996.png), url(https://nsm09.casimages.com/img/2020/06/20//20062009051525394216864996.png), url(https://nsm09.casimages.com/img/2020/06/20//20062009051525394216864996.png), url(https://nsm09.casimages.com/img/2020/06/20//20062009051525394216864996.png);
     background-position: top left, top right, bottom right, bottom left;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+}
+
+.labtabcontent img {
+    max-width: 400px;
 }
 
 .lab_tab {
