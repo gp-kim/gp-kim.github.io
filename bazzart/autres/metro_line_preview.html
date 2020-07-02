@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  
+  <link rel="stylesheet" href="/bazzart/bazzart_root.css">
+  <link rel="stylesheet" href="/bazzart/bazzart_templates.css">
+  
+  <script type="text/javascript" src="/bazzart/tabs_bazz_templates.js"></script>
+  <script type="text/javascript" src="/bazzart/modalbox_bazz_templates.js"></script>
+  <script type="text/javascript" src="/bazzart/popup_bazz_templates.js"></script>
+  
+  <title>Golden boy</title>
+</head>
+<body>
+
+    <div class="the_lab">
+
+        <div class="the_head">(GP:)/the lab/open_source/<bold>signature</bold>
+        </div>
+
+        Voici 4 différents codes personnalisables pour faire des chronologies pour vos <strong>personnages ou vos annexes</strong> de façon assez simple.<br/>
+        Le cadre même est à ajuster selon vos envies ou pour correspondre au design de votre forum.<br/><br/>
+
+        En postant ci-dessous vous trouvez les codes des différentes version mais aussi un lien <a href="https://jsbin.com/?js,console">JSbin</a> d'exposition pour découvrir le fonctionne du code et tester différentes couleurs.
+        <br/><br/>
+        Sentez-vous libre d'adaptez les couleurs à votre goût!<br/> 
+        Vous trouverez dans le code des petites annotations sous cette forme <c>/*couleur du texte*/</c> pour guider vos modifications.
+
+        <br /><br /><br />
+
+        <div class="model">
+            <bg>
+                <border>
+
+                    <div id="V1" class="labtabcontent">
+                        <img src="https://nsm09.casimages.com/img/2020/07/02//20070204364325394216900594.png" />
+                    </div>
+                    
+                    <div id="V2" class="labtabcontent">
+                        <img src="https://nsm09.casimages.com/img/2020/07/02//20070204364325394216900595.png" />
+                    </div>
+                    
+                    <div id="V3" class="labtabcontent">
+                        <img src="https://nsm09.casimages.com/img/2020/07/02//20070204364425394216900596.png" />
+                    </div>
+                    
+                    <div id="V4" class="labtabcontent">
+                        <img src="https://nsm09.casimages.com/img/2020/07/02//20070204364425394216900597.png" />
+                    </div>
+
+                </border>
+            </bg>
+          
+             <desc><div class="lab_tab">
+                        <button class="labtablinks" onclick="openVersion(event, 'V1')" id="defaultOpen">Version 1</button>
+                    </div>
+                    <div class="lab_tab">
+                        <button class="labtablinks" onclick="openVersion(event, 'V2')" id="defaultOpen">Version 2</button>
+                    </div>
+                    <div class="lab_tab">
+                        <button class="labtablinks" onclick="openVersion(event, 'V3')" id="defaultOpen">Version 3</button>
+                    </div>
+                    <div class="lab_tab">
+                        <button class="labtablinks" onclick="openVersion(event, 'V4')" id="defaultOpen">Version 4</button>
+                    </div>
+
+                metro line
+                <br />
+                <d>ajustable</d>
+            </desc>
+
+
+
+            <!-------------- DETAILS BOX -------------->
+            <!-------------- DETAILS BOX -------------->
+
+            <div class="lab_details resize">
+
+                <button class="lab_buttons modal-button" href="#myModal1">Explain like I was five</button>
+
+            </div>
+
+
+        </div>
+        
+        <!-------------- CREDITS -------------->
+        <!-------------- CREDITS -------------->
+
+        <div class="credits">
+            <div class="heart" onclick="myFunction()"><span class="popuptext" id="myPopup"></span></div>
+        </div>
+
+
+        <!-------------- PREVIEW -------------->
+        <!-------------- PREVIEW -------------->
+        
+        <div class="lab_preview">
+
+            <a target="_blank href="https://www.bazzart.org/t138224-gp-4-pale-yellow#4405357">pale yellow
+                <br /> <i>Signature</i></a>
+
+            <a target="_blank" href="https://www.bazzart.org/t137245-gp-1-witchcraft">witchcraft
+                <br /> <i>Signature</i></a>
+
+            <a target="_blank" href="https://www.bazzart.org/t137797-chronologie-gp-metro-line">metro line
+                <br /><i>Chronologie</i> </a>
+
+            <a target="_blank" href="https://www.bazzart.org/t137374-gp-2-kiss-me">kiss me
+                <br /><i>Signature</i> </a>
+
+            <a target="_blank" href="https://www.bazzart.org/t137473-gp-3-golden-boy">golden boy
+                <br /><i>Signature</i></a>
+
+            <a target="_blank" class="plus" href="">+</a>
+
+        </div>
+
+
+    </div>
+  
+<script>
+document.getElementById("defaultOpen").click();
+</script>
+  
+<script>
+  var btn = document.querySelectorAll("button.modal-button");
+
+var modals = document.querySelectorAll('.modal');
+
+var spans = document.getElementsByClassName("close");
+
+for (var i = 0; i < btn.length; i++) {
+ btn[i].onclick = function(e) {
+    e.preventDefault();
+    modal = document.querySelector(e.target.getAttribute("href"));
+    modal.style.display = "block";
+ }
+}
+
+for (var i = 0; i < spans.length; i++) {
+ spans[i].onclick = function() {
+    for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+    }
+ }
+}
+
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+     for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+     }
+    }
+}
+</script>
+  
+
+
+</body>
+</html>
