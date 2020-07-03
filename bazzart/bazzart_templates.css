@@ -123,7 +123,7 @@ c {
 }
 
 .labtabcontent img {
-    max-width: 400px;
+    max-width: 420px;
 }
 
 .lab_tab {
@@ -150,6 +150,7 @@ c {
 
 .lab_tab button {
     border: 1px solid var(--lab-border);
+    border-bottom: none;
     background-color: inherit;
     width: 100%;
     display: block;
@@ -175,6 +176,10 @@ c {
     background-color: var(--lab-border);
     color: var(--lab-bg);
     font-weight: 700
+}
+
+.lab_tab button:last-child {
+    border-bottom: 1px solid var(--lab-border)!important;
 }
 
 .labtabcontent {
@@ -412,8 +417,8 @@ desc d {
     padding: 5px;
     position: absolute;
     z-index: 1;
-    top: 40px;
-    left: 0;
+    top: 0;
+    left: 50px;
     text-align: left;
     font-size: 12px;
     color: var(--lab-darker);
