@@ -29,8 +29,8 @@ c {
     width: 500px;
     margin: 0;
     font-size: 12px;
-    font-family: Arial;
-    line-height: 16px;
+    font-family: 'Verdana';
+    line-height: 18px;
     color: var(--lab-text);
 }
 
