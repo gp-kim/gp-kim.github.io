@@ -224,7 +224,7 @@ desc d {
 }
 
 .resize:before {
-    content: 'Les images du lab sont automatiquement redimensionnées et recadrées sans être déformée!';
+    content: 'Les images du lab sont automatiquement redimensionnées et recadrées!';
     width: 280px;
     display: block;
     padding-left: 40px
