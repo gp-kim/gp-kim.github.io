@@ -117,7 +117,7 @@ c {
     justify-content: center;
     align-items: center;
     padding: 40px;
-    background-image: url(https://nsm09.casimages.com/img/2020/06/20//20062009051525394216864996.png), url(https://nsm09.casimages.com/img/2020/06/20//20062009051525394216864996.png), url(https://nsm09.casimages.com/img/2020/06/20//20062009051525394216864996.png), url(https://nsm09.casimages.com/img/2020/06/20//20062009051525394216864996.png);
+    background-image: var(--lab-square), var(--lab-square), var(--lab-square), var(--lab-square);
     background-position: top left, top right, bottom right, bottom left;
     background-repeat: no-repeat;
 }
