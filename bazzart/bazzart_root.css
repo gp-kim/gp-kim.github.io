@@ -1,17 +1,18 @@
 :root {
     --lab-text: #6F666A;
-    --lab-link: #b83251;
-    --lab-link-hover: #cf88b4;
-    --lab-border: #EBC4AD;
-    --lab-darker: #E3B499;
-    --lab-lighter: #F2E4DC;
-    --lab-bg: #EFE8E4;
-    --lab-bg-head: url(https://nsm09.casimages.com/img/2020/06/20//20062009051525394216864997.png);
-    --lab-img-detail: url(https://nsm09.casimages.com/img/2020/06/21//20062104435925394216865297.png);
-    --lab-gradient-detail: url(https://nsm09.casimages.com/img/2020/06/21//20062104435825394216865294.png);
-    --lab-file: url(https://nsm09.casimages.com/img/2020/06/23//20062312154225394216869359.png);
-    --lab-heart1: url(https://nsm09.casimages.com/img/2020/06/23//20062307054725394216870962.png);
-    --lab-heart2: url(https://nsm09.casimages.com/img/2020/06/23//20062307054725394216870963.png)
+    --lab-link: #8368e0;
+    --lab-link-hover: #C5A5F4;
+    --lab-border: #BFE0DB;
+    --lab-darker: #A1C7C2;
+    --lab-lighter: #F0FEF7;
+    --lab-bg: #FBFFF7;
+    --lab-bg-head: url(https://nsm09.casimages.com/img/2020/07/13//20071309234125394216918409.png);
+    --lab-square: url(https://nsm09.casimages.com/img/2020/07/13//20071309234025394216918408.png);
+    --lab-img-detail: url(https://nsm09.casimages.com/img/2020/07/13//20071309234025394216918406.png);
+    --lab-gradient-detail: url(https://nsm09.casimages.com/img/2020/07/13//20071309234025394216918407.png);
+    --lab-file: url(https://nsm09.casimages.com/img/2020/07/13//20071309234025394216918405.png);
+    --lab-heart1: url(https://nsm09.casimages.com/img/2020/07/13//20071309234125394216918410.png);
+    --lab-heart2: url(https://nsm09.casimages.com/img/2020/07/13//20071309234125394216918411.png)
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
