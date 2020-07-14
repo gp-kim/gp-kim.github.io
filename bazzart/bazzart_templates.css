@@ -102,7 +102,7 @@ c {
     bottom: -1px;
     left: -1px;
     right: -1px;
-    background: var(--lab-lighter);
+    background: #FFFFFF;
 }
 
 .model .border {
