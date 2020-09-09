@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
@@ -9,6 +9,7 @@
 
 <style>
 html {
+    height: ;
     font-size: 62.5%;
 }
 
@@ -65,23 +66,23 @@ a:hover {
 
 h1,
 h2,
-h3, h4 {
+h3 {
     font-family: var(--title-font);
     margin: 0;
     font-weight: 400;
 }
 
-h2 {
+h1 {
     font-size: 4.8rem;
     margin-bottom: 6.6rem;
 }
 
-h3 {
+h2 {
     font-size: 3.2rem;
     margin-bottom: 1.6rem;
 }
 
-h4 {
+h3 {
     font-size: 2.2rem;
     margin: 0;
     margin-bottom: ;
@@ -103,7 +104,7 @@ li {
 .highlight_blue,
 .highlight_coral {
     display: inline-block;
-    padding: 2px 10px 4px 5px;
+    padding: 2px 10px 4px 0px;
     background-repeat: no-repeat;
     background-size: 90%;
     background-position: bottom;
@@ -172,7 +173,7 @@ header img {
     text-align: center;
 }
 
-.welcome h4 {
+.welcome h3 {
     margin: 2.2rem 0;
 }
 
@@ -222,7 +223,6 @@ header img {
     position: absolute;
     z-index: -1;
     content: "";
-    background: #;
     background-image: url('forme_bleue.svg');
     background-size: 90%;
     background-position: left top;
@@ -242,16 +242,16 @@ header img {
     grid-template-rows: 2fr;
 }
 
-.projets h3 {
+.projets h2 {
     font-weight: 700;
 }
 
-.derniers_projets h3:first-child {
+.derniers_projets h2:first-child {
     text-align: center;
     margin: 18rem 0;
 }
 
-.projets h2 {
+.projets h1 {
     display: block;
     grid-column: 1 / span 3;
     text-align: right;
@@ -341,26 +341,26 @@ header img {
 
     <div class="welcome">
 
-        <h4>À vous <strong>qui croyez</strong><br /> qu’il est bien possible de faire autrement.</h4>
+        <h3>À vous <strong>qui croyez</strong><br /> qu’il est bien possible de faire autrement.</h3>
 
-        <h4>À vous <span class="highlight_blue">qui avez envie</span><br /> de ne pas dépasser les bornes des limites.</h4>
+        <h3>À vous <span class="highlight_blue">qui avez envie</span><br /> de ne pas dépasser les bornes des limites.</h4>
 
-        <h4>À vous <strong>qui pensez</strong><br /> mission et impacts avant tout.</h4>
+            <h3>À vous <strong>qui pensez</strong><br /> mission et impacts avant tout.</h3>
 
-        <h4>À vous <span class="highlight_coral">qui voulez</span><br /> toujours plus de cohérence.</h4>
+            <h3>À vous <span class="highlight_coral">qui voulez</span><br /> toujours plus de cohérence.</h3>
 
-        <h4>À vous <strong>qui expérimentez,</strong></h4>
+            <h3>À vous <strong>qui expérimentez,</strong></h3>
 
-        <h4>À vous <span class="highlight_yellow">qui faites.</span></h4>
+            <h3>À vous <span class="highlight_yellow">qui faites.</span></h3>
 
-        <br />
+            <br />
 
-        <h2>Bienvenue parmi<br /> <strong>les Raisonné·e·s</strong></h2>
+            <h1>Bienvenue parmi<br /> <strong>les Raisonné·e·s</strong></h1>
 
     </div>
 
     <div class="seagulls">
-        <img src="seagull-min.jpg" alt="Seagulls" />
+        <img src="seagull-min.jpg" alt="" />
     </div>
 
     <div class="summary">
@@ -370,17 +370,17 @@ header img {
 
         <div class="grid">
 
-            <img src="i_1.jpg" alt="Trame1" />
+            <img src="i_1.jpg" alt="" />
             <p>Une communication <strong>qui limite ses impacts négatifs</strong> sur la société, l’environnement et ses occupants. Ok… Et ça veut dire quoi ? </p>
 
-            <img src="i_2.jpg" alt="Trame2" />
+            <img src="i_2.jpg" alt="" />
             <p>C’est le respect de la personne humaine, des différences, des minorités, des individualités.<br /> C’est <strong>veiller à l’accessibilité</strong> des messages et des supports.</p>
 
-            <img src="i_3.jpg" alt="Trame3" />
+            <img src="i_3.jpg" alt="" />
             <p>C’est <strong>réduire</strong> les effets néfastes de la conception et de la production des actions de communication sur l’environnement.</p>
 
-            <img src="i_4.jpg" alt="Trame4" />
-            <p>Et plus encore, la communication responsable vise à <strong>faire évoluer les prises de paroles</strong> et ce qui les motive ! Communiquer pour créer de nouveaux imaginaires et parfois même pour <strong>contribuer à la résolution</strong> de challenges de société…</p>
+            <img src="i_4.jpg" alt="" />
+            <p>Et plus encore, la communication responsable vise à <strong>faire évoluer les prises de parole</strong> et ce qui les motive ! Communiquer pour créer de nouveaux imaginaires et parfois même pour <strong>contribuer à la résolution</strong> de challenges de société…</p>
 
         </div>
 
@@ -388,31 +388,34 @@ header img {
 
     <div class="derniers_projets">
 
-        <h3>Les Raisonné·e·s <strong>veulent donner la parole</strong> aux<br /> personnes qui ne la prennent pas assez</h3>
+        <h2>Les Raisonné·e·s <strong>veulent donner la parole</strong> aux<br /> personnes qui ne la prennent pas assez</h2>
 
 
         <div class="projets">
 
-            <h2>Nos derniers projets<br />
-                <span class="highlight_red2">raisonnés :</span></h2>
+            <h1>Nos derniers projets<br />
+                <span class="highlight_red2">raisonnés :</span></h1>
 
             <section>
-                <img src="projet-kai.jpg" alt="Kaïros" />
-                <h3>Kaïros</h3>
+                <img src="projet-kai.jpg" alt="" />
+                <h2>Kaïros</h2>
 
-                <h4>« C’est l’histoire d’un mec connu dans la course au large (coucou Bilou !), qui un jour décide de faire aussi des matériaux biosourcés. Parce qu’on n’a pas assez de ressources dans les cales, ok ? »</h4>
+                <h3>« C’est l’histoire d’un mec connu dans la course au large (coucou Bilou !), qui un jour décide de faire aussi des matériaux biosourcés. Parce qu’on n’a pas assez de ressources dans les cales, ok ? »</h3>
 
                 <p><strong>Le challenge :</strong><br /></p>
-                <p>Redonner de la cohérence à une entreprise aux multiples facettes.</p>
-                <p>Accompagner la création d’un site internet en sobriété numérique.</p>
+                <ul>
+
+                    <li>Redonner de la cohérence à une entreprise aux multiples facettes.</li>
+                    <li>Accompagner la création d’un site internet en sobriété numérique.</li>
+                </ul>
 
             </section>
 
             <section>
-                <img src="projet-ltl.jpg" alt="Low tech Lab" />
-                <h3>Low Tech Lab</h3>
+                <img src="projet-ltl.jpg" alt="" />
+                <h2>Low Tech Lab</h2>
 
-                <h4>« La perfection est atteinte non pas lorsqu’il n’y a plus rien à ajouter, mais lorsque qu’il n’y a plus rien à retirer » disait Saint-Ex</h4>
+                <h3>« La perfection est atteinte non pas lorsqu’il n’y a plus rien à ajouter, mais lorsque qu’il n’y a plus rien à retirer » disait Saint-Ex</h3>
 
                 <p><strong>Le challenge :</strong><br />
 
@@ -425,10 +428,10 @@ header img {
             </section>
 
             <section>
-                <div class="solidaire"><img class="solidaire" src="projet-bottega.jpg" alt="Bottega Mathi" /></div>
-                <h3>Bottega Mathi</h3>
+                <div class="solidaire"><img class="solidaire" src="projet-bottega.jpg" alt="" /></div>
+                <h2>Bottega Mathi</h2>
 
-                <h4>« Une pure recette italienne : des bons produits, des saveurs, des valeurs simples et surtout, de la solidarité. »</h4>
+                <h3>« Une pure recette italienne : des bons produits, des saveurs, des valeurs simples et surtout, de la solidarité. »</h3>
 
                 <p><strong>Le challenge :</strong><br /></p>
                 <ul>
@@ -442,8 +445,8 @@ header img {
     </div>
 
     <div class="contact">
-        <h2>Et tout est bien qui<br />
-            <span class="highlight_yellow2">finit mieux.</span></h2>
+        <h1>Et tout est bien qui<br />
+            <span class="highlight_yellow2">finit mieux.</span></h1>
 
         <p>Back dans les bacs, contact<br /> 06 89 13 24 17</p>
 
@@ -455,11 +458,11 @@ header img {
     </div>
 
     <div class="footer">
-        <h2 class="center">Voilà.</h2>
+        <h1 class="center">Voilà.</h1>
 
         <img src="export_logo_trame.svg" alt="Les raisonné·e·s" />
 
-        <p>Le poids total des images (svg et jpg) présent sur le site est de xxx</p>
+        <p>Le poids total des images (SVG et JPG) présentes sur le site est de 613ko</p>
     </div>
 
 
