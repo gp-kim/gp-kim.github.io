@@ -233,6 +233,7 @@ header img {
 }
 
 
+
 /*------ CONTACT -------*/
 .contact {
     background-image: url(branche.jpg);
@@ -248,7 +249,7 @@ header img {
 
 
 .mail {
-    margin: 1.6rem 0;
+    display: inline-block;
     text-decoration: none;
     border-radius: 20px;
     border: 3px solid #FF7155;
@@ -256,11 +257,13 @@ header img {
 }
 
 
-.contact h2:last-child { 
-    margin: 100px 0;
-    text-align: center;
+/*------ FOOTER -------*/
 
+.footer { 
+    margin: 100px auto;
+    text-align: center;
 }
+
 
 
 
@@ -269,9 +272,6 @@ header img {
 <body>
 
     <header></header>
-
-
-    <main>
 
         <div class="welcome">
 
@@ -381,17 +381,15 @@ header img {
 
             <p>Retrouvez-nous partout dans le monde de Rennes à Concarneau en passant par Dinard.<br />
                 Ou sur <a href="">Facebook</a>, <a href="">Twitter</a>, <a href="">Instagram</a> ou <a href="">Linkedin</a></p>
-
-            <h2>Voilà.</h2>
+                
+        </div>
+        
+        <div class="footer">
+            <h2 class="center">Voilà.</h2>
 
             <p>Le poids total des images (svg et jpg) présent sur le site est de xxx</p>
         </div>
-
-
-
-    </main>
-
-
+        
 </body>
 
 </html>
