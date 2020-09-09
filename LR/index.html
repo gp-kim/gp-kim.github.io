@@ -9,7 +9,6 @@
 
 <style>
 html {
-    height: ;
     font-size: 62.5%;
 }
 
@@ -45,6 +44,7 @@ body:after {
     --main-blue: #0D1E47;
     --font: 'Helvetica', sans-serif;
     --title-font: 'Kumbh Sans', sans-serif;
+    --red: #FF7155;
     --grey: #A8A8A8;
 }
 
@@ -65,7 +65,7 @@ a:hover {
 
 h1,
 h2,
-h3 {
+h3, h4 {
     font-family: var(--title-font);
     margin: 0;
     font-weight: 400;
@@ -73,7 +73,7 @@ h3 {
 
 h2 {
     font-size: 4.8rem;
-    margin-bottom: 3.6rem;
+    margin-bottom: 6.6rem;
 }
 
 h3 {
@@ -89,7 +89,15 @@ h4 {
 
 p {
     margin: 1.6rem 0;
+    line-height: 20px;
 }
+
+ul { padding-left: 2rem }
+
+li {
+    line-height: 20px;
+    margin-bottom: 1.6rem;
+    }
 
 .highlight_yellow,
 .highlight_blue,
@@ -99,6 +107,7 @@ p {
     background-repeat: no-repeat;
     background-size: 90%;
     background-position: bottom;
+    font-weight: 700;
 }
 
 .highlight_blue {
@@ -137,7 +146,7 @@ p {
 body div {
     margin: 0 auto;
     max-width: 100rem;
-    margin-bottom: 150px;
+    margin-bottom: 18rem;
 }
 
 /*------ HEADER -------*/
@@ -160,22 +169,15 @@ header img {
 
 /*------ WELCOME -------*/
 .welcome {
-    margin: 0 auto;
     text-align: center;
-
 }
 
-.welcome span {
-    font-weight: 700;
+.welcome h4 {
+    margin: 2.2rem 0;
 }
 
-.welcome img {
-    margin: 0 auto;
-    width: 8rem;
-}
 
 .seagulls {
-    padding: 100px 0;
     display: grid;
     place-items: center;
 }
@@ -183,7 +185,6 @@ header img {
 .seagulls img {
     margin: 0 auto;
     background: var(--grey);
-    width: 50%;
 }
 
 
@@ -202,7 +203,7 @@ header img {
 
 .summary .grid {
     display: grid;
-    grid-gap: 2.4rem;
+    grid-gap: 3rem;
     grid-template-columns: 20.3rem 43.2rem;
     grid-template-rows: repeat(4, 7rem)
 }
@@ -211,6 +212,7 @@ header img {
 
 /*------ DERNIERS PROJETS -------*/
 .derniers_projets {
+    margin: 0 auto;
     position: relative;
     max-width: 100vw;
 }
@@ -240,24 +242,48 @@ header img {
     grid-template-rows: 2fr;
 }
 
+.projets h3 {
+    font-weight: 700;
+}
 
 .derniers_projets h3:first-child {
     text-align: center;
-    margin-bottom: 100px;
+    margin: 18rem 0;
 }
 
 .projets h2 {
     display: block;
     grid-column: 1 / span 3;
     text-align: right;
-    
+    margin-bottom: 1.6rem;
 }
 
 .projets img {
     width: 31.8rem;
-    height: ;
     background: var(--grey);
     margin-bottom: 16px;
+}
+
+
+
+.solidaire {
+    position: relative;
+    margin: 0;
+    width: auto;
+}
+
+.solidaire:after {
+    position: absolute;
+    z-index: 10;
+    bottom: 26px;
+    left: 12px;
+    content: "Projet solidaire";
+    font-size: 1.2rem;
+    color: var(--main-blue);
+    font-weight: 700;
+    border-radius: 20px;
+    background: var(--background);
+    padding: 2px 8px;
 }
 
 
@@ -276,11 +302,21 @@ header img {
 
 
 .mail {
+    position: relative;
     display: inline-block;
-    text-decoration: none;
     border-radius: 20px;
-    border: 3px solid #FF7155;
-    padding: 10px 20px;
+    border: 3px solid var(--red);
+    padding: 10px 20px 10px 40px;
+    margin-bottom: 0;
+}
+
+.mail:before {
+    position: absolute;
+    left: 1.2rem;
+    top: 0.3rem;
+    content: "➜";
+    color: var(--red);
+    font-size: 2.2rem;
 }
 
 
@@ -291,128 +327,140 @@ header img {
     text-align: center;
 }
 
+.footer img {
+    margin: -4rem 0 6rem 0;
+    width: 8rem;
+}
+
+
 </style>
 </head>
 <body>
 
     <header></header>
 
-        <div class="welcome">
+    <div class="welcome">
 
-            <p>À vous <span>qui croyez</span><br /> qu’il est bien possible de faire autrement.</p>
+        <h4>À vous <strong>qui croyez</strong><br /> qu’il est bien possible de faire autrement.</h4>
 
-            <p>À vous <span class="highlight_blue">qui avez envie</span><br /> de ne pas dépasser les bornes des limites.</p>
+        <h4>À vous <span class="highlight_blue">qui avez envie</span><br /> de ne pas dépasser les bornes des limites.</h4>
 
-            <p>À vous <span>qui pensez</span><br /> mission et impacts avant tout.</p>
+        <h4>À vous <strong>qui pensez</strong><br /> mission et impacts avant tout.</h4>
 
-            <p>À vous <span class="highlight_coral">qui voulez</span><br /> toujours plus de cohérence.</p>
+        <h4>À vous <span class="highlight_coral">qui voulez</span><br /> toujours plus de cohérence.</h4>
 
-            <p>À vous <span>qui expérimentez,</span></p>
+        <h4>À vous <strong>qui expérimentez,</strong></h4>
 
-            <p>À vous <span class="highlight_yellow">qui faites.</span></p>
+        <h4>À vous <span class="highlight_yellow">qui faites.</span></h4>
 
-            <br />
+        <br />
 
-            <h2>Bienvenue parmi<br /> <strong>les Raisonné·e·s</strong></h2>
+        <h2>Bienvenue parmi<br /> <strong>les Raisonné·e·s</strong></h2>
 
-            <img src="export_logo_trame.svg" alt="Les raisonné·e·s" />
+    </div>
 
+    <div class="seagulls">
+        <img src="seagull-min.jpg" alt="Seagulls" />
+    </div>
 
-        </div>
-
-        <div class="seagulls">
-            <img src="seagull-min.jpg" alt="Seagulls" />
-        </div>
-
-        <div class="summary">
-            <h2><strong>Une communication</strong><br />
-                <strike>responsable</strike> <span class="highlight_yellow2">raisonnée</span><br /> c'est quoi ?</h2>
+    <div class="summary">
+        <h2><strong>Une communication</strong><br />
+            <span class="highlight_yellow2">raisonnée</span> c'est quoi ?</h2>
 
 
-            <div class="grid">
+        <div class="grid">
 
-                <img src="i_1.jpg" alt="Trame1" />
-                <p>Une communication qui limite <strong>ses impacts négatifs sur la société</strong>, l’environnement et ses occupants. Ok… Et ça veut dire quoi ? </p>
+            <img src="i_1.jpg" alt="Trame1" />
+            <p>Une communication <strong>qui limite ses impacts négatifs</strong> sur la société, l’environnement et ses occupants. Ok… Et ça veut dire quoi ? </p>
 
-                <img src="i_2.jpg" alt="Trame2" />
-                <p>C’est <strong>le respect</strong> de la personne humaine, des différences, des minorités, des individualités.<br /> C’est veiller à l’accessibilité des messages et des supports.</p>
+            <img src="i_2.jpg" alt="Trame2" />
+            <p>C’est le respect de la personne humaine, des différences, des minorités, des individualités.<br /> C’est <strong>veiller à l’accessibilité</strong> des messages et des supports.</p>
 
-                <img src="i_3.jpg" alt="Trame3" />
-                <p>C’est <strong>réduire</strong> les effets néfastes de la conception et de la production des actions de communication sur l’environnement.</p>
+            <img src="i_3.jpg" alt="Trame3" />
+            <p>C’est <strong>réduire</strong> les effets néfastes de la conception et de la production des actions de communication sur l’environnement.</p>
 
-                <img src="i_4.jpg" alt="Trame4" />
-                <p>Et plus encore, la communication responsable vise à <strong>faire évoluer les prises de paroles</strong> et ce qui les motive ! Communiquer pour créer de nouveaux imaginaires et parfois même pour contribuer à la résolution de challenges de société…</p>
-
-            </div>
+            <img src="i_4.jpg" alt="Trame4" />
+            <p>Et plus encore, la communication responsable vise à <strong>faire évoluer les prises de paroles</strong> et ce qui les motive ! Communiquer pour créer de nouveaux imaginaires et parfois même pour <strong>contribuer à la résolution</strong> de challenges de société…</p>
 
         </div>
 
-        <div class="derniers_projets">
+    </div>
 
-            <h3>Les Raisonné·e·s <strong>veulent donner la parole</strong> aux<br /> personnes qui ne la prennent pas assez</h3>
+    <div class="derniers_projets">
+
+        <h3>Les Raisonné·e·s <strong>veulent donner la parole</strong> aux<br /> personnes qui ne la prennent pas assez</h3>
 
 
-            <div class="projets">
+        <div class="projets">
 
-                <h2>Nos derniers projets<br />
-                    <span class="highlight_red2">raisonnées :</span></h2>
+            <h2>Nos derniers projets<br />
+                <span class="highlight_red2">raisonnés :</span></h2>
 
-                <section>
-                    <img src="projet-kai.jpg" alt="Kaïros" />
-                    <h3>Kaïros</h3>
+            <section>
+                <img src="projet-kai.jpg" alt="Kaïros" />
+                <h3>Kaïros</h3>
 
-                    <h4>« C’est l’histoire d’un mec connu dans la course au large (coucou Bilou !), qui un jour décide de faire aussi des matériaux biosourcés. Parce qu’on n’a pas assez de ressources dans les cales, ok ? »</h4>
+                <h4>« C’est l’histoire d’un mec connu dans la course au large (coucou Bilou !), qui un jour décide de faire aussi des matériaux biosourcés. Parce qu’on n’a pas assez de ressources dans les cales, ok ? »</h4>
 
-                    <p><strong>Le challenge</strong><br /></p>
-                    <p>Redonner de la cohérence à une entreprise aux multiples facettes Accompagner la création d’un site internet en sobriété numérique</p>
+                <p><strong>Le challenge :</strong><br /></p>
+                <p>Redonner de la cohérence à une entreprise aux multiples facettes.</p>
+                <p>Accompagner la création d’un site internet en sobriété numérique.</p>
 
-                </section>
+            </section>
 
-                <section>
-                    <img src="projet-ltl.jpg" alt="Low tech Lab" />
-                    <h3>Low tech Lab</h3>
+            <section>
+                <img src="projet-ltl.jpg" alt="Low tech Lab" />
+                <h3>Low Tech Lab</h3>
 
-                    <h4>« La perfection est atteinte non pas lorsqu’il n’y a plus rien à ajouter, mais lorsque qu’il n’y a plus rien à retirer » disait Saint-Ex</h4>
+                <h4>« La perfection est atteinte non pas lorsqu’il n’y a plus rien à ajouter, mais lorsque qu’il n’y a plus rien à retirer » disait Saint-Ex</h4>
 
-                    <p><strong>Le challenge</strong><br />
-                        <p>
-                            <p>Créer une identité graphique modulable, utilisable par des débutants comme des initiés<br /> Prendre part à la création d’un site internet au cahier des charges low-tech drastique (Sacré Gauthier Roussilhe !)</p>
+                <p><strong>Le challenge :</strong><br />
 
-                </section>
+                    <ul>
 
-                <section>
-                    <img src="projet-bottega.jpg" alt="Bottega Mathi" />
-                    <h3>Bottega Mathi</h3>
+                        <li>Créer une identité graphique modulable, utilisable par des débutants comme des initiés.</li>
+                        <li>Prendre part à la création d’un site internet au cahier des charges low-tech drastique (Sacré Gauthier Roussilhe !)</li>
+                    </ul>
 
-                    <h4>« Une pure recette italienne : des bons produits, des saveurs, des valeurs simples et surtout, de la solidarité. »</h4>
+            </section>
 
-                    <p><strong>Le challenge</strong><br /></p>
-                    <p>« Une pure recette italienne : des bons produits, des saveurs, des valeurs simples et surtout, de la solidarité. »</p>
+            <section>
+                <div class="solidaire"><img class="solidaire" src="projet-bottega.jpg" alt="Bottega Mathi" /></div>
+                <h3>Bottega Mathi</h3>
 
-                </section>
+                <h4>« Une pure recette italienne : des bons produits, des saveurs, des valeurs simples et surtout, de la solidarité. »</h4>
 
-            </div>
+                <p><strong>Le challenge :</strong><br /></p>
+                <ul>
+                    <li>Assurer la visibilité et une reprise rapide de l’activité après le confinement.</li>
+                </ul>
+
+            </section>
 
         </div>
 
-        <div class="contact">
-            <h2>Et tout est bien qui<br />
-                <span class="highlight_yellow2">finit mieux.</span></h2>
+    </div>
 
-            <p>Back dans les bacs, contact<br /> 06 89 13 24 17</p>
+    <div class="contact">
+        <h2>Et tout est bien qui<br />
+            <span class="highlight_yellow2">finit mieux.</span></h2>
 
-            <a href="" class="mail">bonjour@lesraisonnees.co</a>
+        <p>Back dans les bacs, contact<br /> 06 89 13 24 17</p>
 
-            <p>Retrouvez-nous partout dans le monde de Rennes à Concarneau en passant par Dinard.<br />
-                Ou sur <a href="">Facebook</a>, <a href="">Twitter</a>, <a href="">Instagram</a> ou <a href="">Linkedin</a></p>
-                
-        </div>
-        
-        <div class="footer">
-            <h2 class="center">Voilà.</h2>
+        <div class="mail"> <a href="">bonjour@lesraisonnees.co</a></div>
 
-            <p>Le poids total des images (svg et jpg) présent sur le site est de xxx</p>
-        </div>
+        <p>Retrouvez-nous partout dans le monde de Rennes à Concarneau en passant par Dinard.<br />
+            Ou sur <a href="">Facebook</a>, <a href="">Twitter</a>, <a href="">Instagram</a> ou <a href="">Linkedin</a></p>
+
+    </div>
+
+    <div class="footer">
+        <h2 class="center">Voilà.</h2>
+
+        <img src="export_logo_trame.svg" alt="Les raisonné·e·s" />
+
+        <p>Le poids total des images (svg et jpg) présent sur le site est de xxx</p>
+    </div>
 
 
 
