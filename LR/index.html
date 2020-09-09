@@ -66,7 +66,9 @@ body:after {
 
 @font-face {
   font-family: 'Kumbh Sans', sans-serif;
-  src: url(kumbhsans-regular.tff);
+  src: url('kumbhsans-regular-webfont.woff2') format('woff2'),
+         url('kumbhsans-regular-webfont.woff') format('woff'),
+         url('kumbhsans-regular.ttf') format('truetype'),
 }
     
 @font-face {
@@ -392,7 +394,7 @@ header {
 .mail:before {
     position: absolute;
     left: 1.2rem;
-    top: 0.3rem;
+    top: 0.4rem;
     content: "➜";
     color: var(--red);
     font-size: 2.2rem;
