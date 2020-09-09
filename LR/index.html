@@ -21,8 +21,8 @@ body {
     color: var(--main-blue);
     font-size: 1.6rem;
     background-image: url('forme_jaune.svg');
-    background-size: 102%;
-    background-position: 90% 10%;
+    background-size: 130vw;
+    background-position: top center;
     background-repeat: no-repeat;
     background
 }
@@ -38,6 +38,15 @@ body {
 
 * {
     box-sizing: border-box;
+}
+
+a {
+    font-weight: 700;
+    color: var(--main-blue)
+}
+
+a:hover {
+    opacity: 0.9;
 }
 
 
@@ -112,6 +121,12 @@ p {
     background-image: url(soulignement_jaune.svg);
 }
 
+body div {
+    margin: 0 auto;
+    max-width: 100rem;
+    margin-bottom: 100px;
+}
+
 /*------ HEADER -------*/
 header {
     height: 100vh;
@@ -129,10 +144,6 @@ header img {
 }
 
 
-main {
-    margin: 0 auto;
-    max-width: 100rem;
-}
 
 /*------ WELCOME -------*/
 .welcome {
@@ -159,14 +170,20 @@ main {
 .seagulls img {
     margin: 0 auto;
     background: var(--grey);
-    width: 54.6rem;
-    height: 26.7rem;
+    width: 50%;
 }
 
 
 /*------ SUMMARY -------*/
 .summary {
     
+}
+
+.summary img {
+    object-fit: cover;
+    object-position: center;
+    height: 7rem;
+    width: 20rem;
 }
 
 
@@ -180,17 +197,33 @@ main {
 .summary .grid p { margin: 0}
 
 /*------ DERNIERS PROJETS -------*/
+.derniers_projets {
+    max-width: 100vw;
+    background-image: url('forme_bleue.svg');
+    background-repeat: no-repeat;
+    background-position: 130%;
+    background-size: :
+}
+
 .projets {
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: repeat(3, 31.8rem);
+    grid-template-rows: 2fr;
 }
 
-.derniers_projets h2 {
+
+.derniers_projets h3:first-child {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.projets h2 {
+    display: block;
+    grid-column: 1 / span 3;
     text-align: right;
+    
 }
-
-
 
 .projets img {
     width: 31.8rem;
@@ -202,11 +235,19 @@ main {
 
 /*------ CONTACT -------*/
 .contact {
+    background-image: url(branche.jpg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 60%;
     
 }
 
+.contact p {
+    width: 38%;
+}
+
+
 .mail {
-    display: inline-block;
     margin: 1.6rem 0;
     text-decoration: none;
     border-radius: 20px;
@@ -215,17 +256,12 @@ main {
 }
 
 
-.contact img { 
-    float: right;
-    width: ;
+.contact h2:last-child { 
+    margin: 100px 0;
+    text-align: center;
 
 }
 
-
-a {
-    font-weight: 700;
-    color: var(--main-blue)
-}
 
 
 </style>
@@ -250,8 +286,8 @@ a {
             <p>À vous <span>qui expérimentez,</span></p>
 
             <p>À vous <span class="highlight_yellow">qui faites.</span></p>
-            
-            <br/>
+
+            <br />
 
             <h2>Bienvenue parmi<br /> <strong>les Raisonné·e·s</strong></h2>
 
@@ -261,7 +297,7 @@ a {
         </div>
 
         <div class="seagulls">
-            <img src="" alt="Seagulls" />
+            <img src="seagull-min.jpg" alt="Seagulls" />
         </div>
 
         <div class="summary">
@@ -271,34 +307,31 @@ a {
 
             <div class="grid">
 
-                <img src="" alt="Trame1" />
+                <img src="i_1.jpg" alt="Trame1" />
                 <p>Une communication qui limite <strong>ses impacts négatifs sur la société</strong>, l’environnement et ses occupants. Ok… Et ça veut dire quoi ? </p>
 
-                <img src="" alt="Trame2" />
+                <img src="i_2.jpg" alt="Trame2" />
                 <p>C’est <strong>le respect</strong> de la personne humaine, des différences, des minorités, des individualités.<br /> C’est veiller à l’accessibilité des messages et des supports.</p>
 
-                <img src="" alt="Trame3" />
+                <img src="i_3.jpg" alt="Trame3" />
                 <p>C’est <strong>réduire</strong> les effets néfastes de la conception et de la production des actions de communication sur l’environnement.</p>
 
-                <img src="" alt="Trame4" />
+                <img src="i_4.jpg" alt="Trame4" />
                 <p>Et plus encore, la communication responsable vise à <strong>faire évoluer les prises de paroles</strong> et ce qui les motive ! Communiquer pour créer de nouveaux imaginaires et parfois même pour contribuer à la résolution de challenges de société…</p>
 
             </div>
-
-
-            <center>
-                <p><h3>Les Raisonné·e·s <strong>veulent donner la parole</strong> aux<br /> personnes qui ne la prennent pas assez</h3></p>
-            </center>
-
 
         </div>
 
         <div class="derniers_projets">
 
-            <h2>Nos derniers projets<br />
-                <span class="highlight_red2">raisonnées :</span></h2>
+            <h3>Les Raisonné·e·s <strong>veulent donner la parole</strong> aux<br /> personnes qui ne la prennent pas assez</h3>
+
 
             <div class="projets">
+
+                <h2>Nos derniers projets<br />
+                    <span class="highlight_red2">raisonnées :</span></h2>
 
                 <section>
                     <img src="" alt="Kaïros" />
@@ -307,7 +340,7 @@ a {
                     <h4>« C’est l’histoire d’un mec connu dans la course au large (coucou Bilou !), qui un jour décide de faire aussi des matériaux biosourcés. Parce qu’on n’a pas assez de ressources dans les cales, ok ? »</h4>
 
                     <p><strong>Le challenge</strong><br /></p>
-                        <p>Redonner de la cohérence à une entreprise aux multiples facettes Accompagner la création d’un site internet en sobriété numérique</p>
+                    <p>Redonner de la cohérence à une entreprise aux multiples facettes Accompagner la création d’un site internet en sobriété numérique</p>
 
                 </section>
 
@@ -317,8 +350,9 @@ a {
 
                     <h4>« La perfection est atteinte non pas lorsqu’il n’y a plus rien à ajouter, mais lorsque qu’il n’y a plus rien à retirer » disait Saint-Ex</h4>
 
-                    <p><strong>Le challenge</strong><br /><p>
-                        <p>Créer une identité graphique modulable, utilisable par des débutants comme des initiés<br /> Prendre part à la création d’un site internet au cahier des charges low-tech drastique (Sacré Gauthier Roussilhe !)</p>
+                    <p><strong>Le challenge</strong><br />
+                        <p>
+                            <p>Créer une identité graphique modulable, utilisable par des débutants comme des initiés<br /> Prendre part à la création d’un site internet au cahier des charges low-tech drastique (Sacré Gauthier Roussilhe !)</p>
 
                 </section>
 
@@ -329,29 +363,28 @@ a {
                     <h4>« Une pure recette italienne : des bons produits, des saveurs, des valeurs simples et surtout, de la solidarité. »</h4>
 
                     <p><strong>Le challenge</strong><br /></p>
-                        <p>« Une pure recette italienne : des bons produits, des saveurs, des valeurs simples et surtout, de la solidarité. »</p>
+                    <p>« Une pure recette italienne : des bons produits, des saveurs, des valeurs simples et surtout, de la solidarité. »</p>
 
                 </section>
 
             </div>
 
         </div>
-        
+
         <div class="contact">
-            <h2>Et tout est bien qui<br/>
-            <span class="highlight_yellow2">finit mieux.</span></h2>
-            
-            <p>Back dans les bacs, contact<br/> 06 89 13 24 17</p>
-            
+            <h2>Et tout est bien qui<br />
+                <span class="highlight_yellow2">finit mieux.</span></h2>
+
+            <p>Back dans les bacs, contact<br /> 06 89 13 24 17</p>
+
             <a href="" class="mail">bonjour@lesraisonnees.co</a>
-            
-            <p>Retrouvez-nous partout dans le monde de Rennes à Concarneau en passant par Dinard.<br/>
-            Ou sur <a href="">Facebook</a>, <a href="">Twitter</a>, <a href="">Instagram</a> ou <a href="">Linkedin</a></p>
-            
-            <img src="" alt="Un peu de vert ?"/>
-            
-            
-            <center><h2>Voilà.</h2></center>
+
+            <p>Retrouvez-nous partout dans le monde de Rennes à Concarneau en passant par Dinard.<br />
+                Ou sur <a href="">Facebook</a>, <a href="">Twitter</a>, <a href="">Instagram</a> ou <a href="">Linkedin</a></p>
+
+            <h2>Voilà.</h2>
+
+            <p>Le poids total des images (svg et jpg) présent sur le site est de xxx</p>
         </div>
 
 
