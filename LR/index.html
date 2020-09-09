@@ -44,12 +44,15 @@ body:after {
 }
 
 @media screen and (max-width: 640px) {
+    body {
+        font-size: 1.8rem;
+    }
     body:after {
-    background-size: 400%;
-    height: 1000px;
-    width: 100%;
-    left: 0px;
-    top: 90px;
+        background-size: 400%;
+        height: 1000px;
+        width: 100%;
+        left: 0px;
+        top: 90px;
 }
 }
 
@@ -62,6 +65,11 @@ body:after {
     --grey: #A8A8A8;
 }
 
+@font-face {
+  font-family: 'Kumbh Sans', sans-serif;
+  src: url(kumbhsans-regular.tff);
+    src: url(kumbhsans-bold.tff);
+}
 
 * {
     box-sizing: border-box;
@@ -157,14 +165,14 @@ li {
     background-image: url(soulignement_jaune.svg);
 }
 
-body div {
+body .welcome, .summary, .derniers_projets, .projets, .contact {
     margin: 0 auto;
     max-width: 100rem;
     margin-bottom: 18rem;
 }
 
 @media screen and (max-width: 640px) {
-    body div {
+    body body .welcome, .summary, .derniers_projets, .projets, .contact {
         max-width: 90%;
     }
 }
@@ -236,8 +244,9 @@ header {
 
 @media screen and (max-width: 640px) {
     .summary .grid {
-        margin: auto;
-        grid-template-columns: 40rem;
+        margin: 0;
+        max-width: 100%;
+        grid-template-columns: 100%;
         grid-template-rows: 4fr
     }
     .summary .grid img { display: none }
@@ -283,7 +292,6 @@ header {
     }
     
     .projets img {
-        width: 100%;
         margin-top: 7rem;
     }
     
@@ -308,6 +316,7 @@ header {
 }
 
 .projets img {
+    width: 30rem;
     background: var(--grey);
     margin-bottom: 16px;
 }
@@ -397,6 +406,7 @@ header {
     margin: -4rem 0 6rem 0;
     width: 8rem;
 }
+
 
 
 </style>
