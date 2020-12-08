@@ -151,7 +151,7 @@ pre {
    height: 820px;
     overflow: auto;
     width: 700px;
-    margin: 0;
+    margin: 0!important;
 }
 
 pre button.copy-button {
