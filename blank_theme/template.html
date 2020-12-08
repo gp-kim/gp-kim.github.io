@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="list_template.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://www.aht.li/3568909/prism_blank_theme.css">
+    <script src="https://www.aht.li/3568908/prism_blank_theme.js"></script>
+    <script src="https://www.aht.li/3566377/prism.js"></script>
+
+
+    <script src="https://www.aht.li/3566719/clipboardauto.js"></script>
+
+    <script src="https://kit.fontawesome.com/f96772d3f9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="tab">
+            <h3>Page principale</h3>
+            <button class="tablinks" onclick="openTemp(event, 'T1')" id="defaultOpen">
+                Haut de page <span>overall_header</span></button>
+            <button class="tablinks" onclick="openTemp(event, 'T2')">
+                Page d'accueil <span>index_body</span></button>
+            <button class="tablinks" onclick="openTemp(event, 'T3')">
+                Catégories <span>index_box</span></button>
+
+            <h3>Forums</h3>
+            <button class="tablinks" onclick="openTemp(event, 'T4')">
+                Affichage d'un forum <span>viewforum_body</span></button>
+            <button class="tablinks" onclick="openTemp(event, 'T5')">
+                Liste des sujets <span>topics_list_box</span></button>
+
+            <h3>Sujet</h3>
+            <button class="tablinks" onclick="openTemp(event, 'T6')">
+                Affichage d'un sujet <span>viewtopic_body </span></button>
+            <button class="tablinks" onclick="openTemp(event, 'T7')">
+                Affichage d'un sondage <span>viewtopic_poll_ballot </span></button>
+            <button class="tablinks" onclick="openTemp(event, 'T8')">
+                Résultat d'un sondage <span>viewtopic_poll_result</span></button>
+
+            <h3>Envoyer un message</h3>
+            <button class="tablinks" onclick="openTemp(event, 'T9')">
+                Page d'envoi d'un message <span>posting_body</span></button>
+            <button class="tablinks" onclick="openTemp(event, 'T10')">
+                Historique des messages (msg) <span>posting_topic_review</span></button>
+            <button class="tablinks" onclick="openTemp(event, 'T11')">
+                Historique des messages (mp) <span>privmsg_topic_review</span></button>
+
+            <h3>Messages privés</h3>
+            <button class="tablinks" onclick="openTemp(event, 'T12')">
+                Liste des messages privés <span>privmsgs_body</span></button>
+            <button class="tablinks" onclick="openTemp(event, 'T13')">
+                Affichage d'un message privé <span>privmsgs_read_body </span></button>
+
+            <h3>Membres</h3>
+            <button class="tablinks" onclick="openTemp(event, 'T14')">
+                Liste des membres <span>memberlist_body</span></button>
+            <button class="tablinks" onclick="openTemp(event, 'T15')">
+                Profil utilisateur <span>profile_view_body</span></button>
+            <button class="tablinks" onclick="openTemp(event, 'T16')">
+                Profil simplifié des tags <span>mentions_tooltip</span></button>
+
+            <h3>Blogs</h3>
+            <button class="tablinks" onclick="openTemp(event, 'T17')">
+                Affichage des blogs <span>topics_blog_box</span></button>
+            <button class="tablinks" onclick="openTemp(event, 'T18')">
+                Affichage des commentaires <span>viewcomments_body </span></button>
+
+            <h3>Footer</h3>
+            <button class="tablinks" onclick="openTemp(event, 'T19')">
+                Début du bas de page <span>overall_footer_begin</span></button>
+            <button class="tablinks" onclick="openTemp(event, 'T20')">
+                Fin du bas de page <span>overall_footer_end</span> </button>
+
+
+        </div>
+
+
+
+        <!---------------------->
+        <!-- Page principale -->
+        <div id="T1" class="tabcontent">
+            <h1>Haut de page</h1>
+            <h3>overall_header</h3>
+
+            <pre class="language-markup">
+            <code class="language-markup">
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" dir="{S_CONTENT_DIRECTION}" id="min-width" lang="{L_LANG_HTML}" xml:lang="{L_LANG_HTML}" {NAMESPACE_FB_LIKE} {NAMESPACE_FB} {NAMESPACE_BBCODE}&gt;
+&lt;head&gt;
+
+&lt;!--   INSTALLATION D'UNE NOUVELLE POLICE D'ECRITURE --&gt;
+    &lt;link rel="preconnect" href="https://fonts.gstatic.com"&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet"&gt;
+
+
+    &lt;title&gt;{SITENAME_TITLE}{PAGE_TITLE}&lt;/title&gt;
+    &lt;meta http-equiv="content-type" content="text/html; charset={S_CONTENT_ENCODING}" /&gt;
+    &lt;meta http-equiv="content-script-type" content="text/javascript" /&gt;
+    &lt;meta http-equiv="content-style-type" content="text/css" /&gt;
+    &lt;!-- BEGIN switch_compat_meta --&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE={switch_compat_meta.VERSION}" /&gt;
+    &lt;!-- END switch_compat_meta --&gt;
+    &lt;!-- BEGIN switch_canonical_url --&gt;
+    &lt;link rel="canonical" href="{switch_canonical_url.CANONICAL_URL}" /&gt;
+    &lt;!-- END switch_canonical_url --&gt;
+    {META_FAVICO}
+    {META}
+    {META_FB_LIKE}
+    &lt;meta name="title" content="{SITENAME_TITLE}{PAGE_TITLE}" /&gt;
+    {T_HEAD_STYLESHEET}
+    {CSS}
+    &lt;link rel="search" type="application/opensearchdescription+xml" href="/improvedsearch.xml" title="{SITENAME}" /&gt;
+    &lt;link rel="search" type="application/opensearchdescription+xml" href="{URL_BOARD_DIRECTORY}/search/improvedsearch.xml" title="{SEARCH_FORUMS}" /&gt;
+    &lt;script src="{JQUERY_PATH}" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;!-- BEGIN switch_recent_jquery --&gt;
+    &lt;script src="{JS_DIR}jquery1.9/jquery-migrate-1.4.1.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;script src="{JQUERY_DIR}browser/v1.0/jquery.browser.min.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;script src="{JQUERY_DIR}support/jquery.support.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;!-- END switch_recent_jquery --&gt;
+    &lt;script src="{JS_DIR}{L_LANG}.js" type="text/javascript"&gt;&lt;/script&gt;
+    {RICH_SNIPPET_GOOGLE}
+
+    &lt;!-- BEGIN switch_ticker --&gt;
+    &lt;link type="text/css" rel="stylesheet" href="{JQUERY_DIR}ticker/ticker.css" /&gt;
+    &lt;script src="{JQUERY_DIR}ticker/ticker.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;!-- END switch_ticker --&gt;
+
+    &lt;!-- BEGIN switch_ticker_new --&gt;
+    &lt;script src="{JQUERY_DIR}jcarousel/jquery.jcarousel.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript"&gt;
+        //&lt;![CDATA[
+        /* Definir le sens de direction en fonction du panneau admin */
+        var tickerDirParam = "{switch_ticker.DIRECTION}";
+        var slid_vert = false;
+        var auto_dir = 'next';
+        var h_perso = parseInt({
+            switch_ticker.HEIGHT
+        });
+
+        switch (tickerDirParam) {
+            case 'top':
+                slid_vert = true;
+                break;
+
+            case 'left':
+                break;
+
+            case 'bottom':
+                slid_vert = true;
+                auto_dir = 'prev';
+                break;
+
+            case 'right':
+                auto_dir = 'prev';
+                break;
+
+            default:
+                slid_vert = true;
+        }
+
+        $(document).ready(function() {
+
+            $('#fa_ticker_content').css('display', 'block');
+
+            var width_max = $('ul#fa_ticker_content').width();
+            var width_item = Math.floor(width_max / {
+                switch_ticker.SIZE
+            });
+
+            if (width_max &gt; 0) {
+                $('ul#fa_ticker_content li').css('float', 'left').css('list-style', 'none').width(width_item).find('img').each(function() {
+                    if ($(this).width() &gt; width_item) {
+                        var ratio = $(this).width() / width_item;
+                        var new_height = Math.round($(this).height() / ratio);
+                        $(this).height(new_height).width(width_item);
+                    }
+                });
+
+                if (slid_vert) {
+                    var height_max = h_perso;
+
+                    $('ul#fa_ticker_content li').each(function() {
+                        if ($(this).height() &gt; height_max) {
+                            height_max = $(this).height();
+                        }
+                    });
+
+                    $('ul#fa_ticker_content').width(width_item).height(height_max).css('marginLeft', 'auto').css('marginRight', 'auto');
+                    $('ul#fa_ticker_content li').height(height_max);
+                }
+
+
+                $('#fa_ticker_content').jcarousel({
+                    vertical: slid_vert,
+                    wrap: 'circular',
+                    auto: {
+                        switch_ticker.STOP_TIME
+                    },
+                    auto_direction: auto_dir,
+                    scroll: 1,
+                    size: {
+                        switch_ticker.SIZE
+                    },
+                    height_max: height_max,
+                    animation: {
+                        switch_ticker.SPEED
+                    }
+                });
+            } else {
+                $('ul#fa_ticker_content li:not(:first)').css('display', 'none');
+                $('ul#fa_ticker_content li:first').css('list-style', 'none').css('text-align', 'center');
+            }
+        });
+        //]]&gt;
+
+    &lt;/script&gt;
+    &lt;!-- END switch_ticker_new --&gt;
+
+    &lt;script type="text/javascript"&gt;
+        //&lt;![CDATA[
+        $(document).ready(function() {
+            &lt;
+            !--BEGIN switch_enable_pm_popup-- &gt;
+            pm = window.open('{U_PRIVATEMSGS_POPUP}', '_faprivmsg', 'HEIGHT=225,resizable=yes,WIDTH=400');
+            if (pm != null) {
+                pm.focus();
+            } &lt;
+            !--END switch_enable_pm_popup-- &gt;
+            &lt;
+            !--BEGIN switch_report_popup-- &gt;
+            report = window.open('{switch_report_popup.U_REPORT_POPUP}', '_phpbbreport', 'HEIGHT={switch_report_popup.S_HEIGHT},resizable=yes,scrollbars=no,WIDTH={switch_report_popup.S_WIDTH}');
+            if (report != null) {
+                report.focus();
+            } &lt;
+            !--END switch_report_popup-- &gt;
+            &lt;
+            !--BEGIN switch_ticker-- &gt;
+            $(document).ready(function() {
+                Ticker.start({
+                    height: {
+                        switch_ticker.HEIGHT
+                    },
+                    spacing: {
+                        switch_ticker.SPACING
+                    },
+                    speed: {
+                        switch_ticker.SPEED
+                    },
+                    direction: '{switch_ticker.DIRECTION}',
+                    pause: {
+                        switch_ticker.STOP_TIME
+                    }
+                });
+            }); &lt;
+            !--END switch_ticker-- &gt;
+        });
+
+
+        //]]&gt;
+
+    &lt;/script&gt;
+    {GREETING_POPUP}
+    &lt;style type="text/css"&gt;
+        #page-footer,
+        div.navbar,
+        div.navbar ul.linklist {
+            display: block !important;
+        }
+
+        ul.linklist li.rightside,
+        ul.linklist li.rightside a.copyright {
+            display: inline !important;
+        }
+
+        &lt; !-- BEGIN switch_ticker_new --&gt;.jcarousel-skin-tango .jcarousel-item {
+            text-align: center;
+            width: 10px;
+        }
+
+        .jcarousel-skin-tango .jcarousel-item-horizontal {
+            margin-right: {
+                switch_ticker.SPACING
+            }
+
+            px;
+        }
+
+        .jcarousel-skin-tango .jcarousel-item-vertical {
+            margin-bottom: {
+                switch_ticker.SPACING
+            }
+
+            px;
+        }
+
+        &lt; !-- END switch_ticker_new --&gt;
+
+    &lt;/style&gt;
+    {HOSTING_JS}
+    &lt;!-- BEGIN google_analytics_code --&gt;
+    &lt;script async src="https://www.googletagmanager.com/gtag/js?id={G_ANALYTICS_ID}"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '{G_ANALYTICS_ID}', {
+            'anonymize_ip': true,
+            'store_gac': false,
+            'cookie_expires': 13 * 30 * 24 * 60 * 60
+        }); &lt;
+        !--BEGIN google_analytics_code_bis-- &gt;
+        gtag('config', '{G_ANALYTICS_ID_BIS}', {
+            'anonymize_ip': true,
+            'store_gac': false,
+            'cookie_expires': 13 * 30 * 24 * 60 * 60
+        }); &lt;
+        !--END google_analytics_code_bis-- &gt;
+
+    &lt;/script&gt;
+    &lt;!-- END google_analytics_code --&gt;
+
+
+&lt;/head&gt;
+
+&lt;body id="phpbb"&gt;
+
+    &lt;!-- Structure du forum --&gt;
+    &lt;div class="main_forum"&gt;
+
+        &lt;!-- Ascenseur : renvoi vers le haut de la page --&gt;
+        &lt;a id="top" name="top" accesskey="t"&gt;&lt;/a&gt;
+        {JAVASCRIPT}
+      
+      
+       &lt;!-----------------------------------------------&gt;
+       &lt;!-- ENTETE DU FORUM (au-dessus de la pub) --------------&gt;
+
+        &lt;div id="page-header"&gt;
+
+           &lt;!-- Bannière --&gt;
+            &lt;a href="{U_INDEX}" id="header"&gt;&lt;img loading="lazy" src="{LOGO}" alt="{L_INDEX}" /&gt;&lt;/a&gt;
+
+           &lt;!-- Barre de navigation --&gt;
+            &lt;ul class="navbar"&gt;
+                &lt;li&gt;{GENERATED_NAV_BAR}&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;!-- Fin de la barre de nav --&gt;
+
+            &lt;!-- Annonces défilantes --&gt;
+            &lt;!-- BEGIN switch_ticker_new --&gt;
+            &lt;div id="fa_ticker_blockD"&gt;
+                &lt;div class="module"&gt;
+                    &lt;div id="fa_ticker_container"&gt;
+                        &lt;ul id="fa_ticker_content" class="jcarousel-skin-tango" style="display:none"&gt;
+                            &lt;!-- BEGIN ticker_row --&gt;
+                            &lt;li&gt;{switch_ticker.ticker_row.ELEMENT}&lt;/li&gt;
+                            &lt;!-- END ticker_row --&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- END switch_ticker_new --&gt;
+            
+            &lt;!-- BEGIN switch_ticker --&gt;
+            &lt;div id="fa_ticker_block" style="margin-top:4px;"&gt;
+                &lt;div class="module"&gt;
+                    &lt;div id="fa_ticker_container"&gt;
+                        &lt;div id="fa_ticker" style="height:{switch_ticker.HEIGHT}px;"&gt;
+                            &lt;div class="fa_ticker_content"&gt;
+                                &lt;!-- BEGIN ticker_row --&gt;
+                                &lt;div&gt;{switch_ticker.ticker_row.ELEMENT}&lt;/div&gt;
+                                &lt;!-- END ticker_row --&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- END switch_ticker --&gt;
+            &lt;!-- Fin des annonces défilantes --&gt;
+        &lt;/div&gt;
+        &lt;!-- Fin de l'entête --&gt;
+      
+      
+       &lt;!-----------------------------------------------&gt;
+       &lt;!-- CONTENU DU FORUM --------------&gt;
+       
+        &lt;div id="page-body"&gt;
+
+            &lt;div id="{ID_CONTENT_CONTAINER}" {CLASS_CONTENT_CONTAINER}&gt;
+                &lt;div id="outer-wrapper"&gt;
+                    &lt;div id="wrapper"&gt;
+                        &lt;div id="container"&gt;
+                            &lt;div id="content"&gt;
+
+                                &lt;div id="main"&gt;
+                                    &lt;div id="main-content"&gt;
+            
+            </code>
+            </pre>
+
+        </div>
+
+
+
+        <div id="T2" class="tabcontent">
+            <h1>Page d'accueil</h1>
+            <h3>index_body</h3>
+
+            <pre class="language-HTML">
+            <code>
+
+            </code>
+            </pre>
+
+
+
+
+
+        </div>
+
+        <div id="T3" class="tabcontent">
+            <h1>Catégories</h1>
+            <h3>index_box</h3>
+            
+                <pre class="language-markup">
+            <code class="language-markup">
+&lt;!-----------------------------------------------&gt;
+&lt;!-- BARRE DE GESTION --------------&gt;
+
+&lt;div class="links_bar"&gt;
+    &lt;span&gt;
+        &lt;!-- BEGIN switch_user_logged_in --&gt;
+        &lt;!-- Messages depuis la dernière visite --&gt;
+        &lt;a id="lastvisit_posts" href="{U_SEARCH_NEW}"&gt;{L_SEARCH_NEW}&lt;/a&gt;&nbsp;&bull;&nbsp;
+
+        &lt;!-- Voir ses messages --&gt;
+        &lt;a href="{U_SEARCH_SELF}"&gt;{L_SEARCH_SELF}&lt;/a&gt;&nbsp;&bull;&nbsp;
+        &lt;!-- END switch_user_logged_in --&gt;
+
+        &lt;!-- Messages sans réponses --&gt;
+        &lt;a id="posts_unanswered" href="{U_SEARCH_UNANSWERED}"&gt;{L_SEARCH_UNANSWERED}&lt;/a&gt;
+    &lt;/span&gt;
+
+    &lt;!-- Marquer les forums comme lus --&gt;
+    &lt;!-- BEGIN switch_user_logged_in --&gt;
+    &lt;a class="specials_links right" id="mark_read" href="{U_MARK_READ}" accesskey="m"&gt;{L_MARK_FORUMS_READ}&lt;/a&gt;
+    &lt;!-- END switch_user_logged_in --&gt;
+&lt;/div&gt;
+
+&lt;!-- Modifications des textes de lien trop long --&gt;
+&lt;script type="text/javascript"&gt;document.getElementById('lastvisit_posts').innerHTML=document.getElementById ('lastvisit_posts').innerHTML.replace(/Voir les nouveaux messages depuis votre dernière visite/,"Messages depuis la dernière visite");&lt;/script&gt;
+&lt;script type="text/javascript"&gt;document.getElementById('posts_unanswered').innerHTML=document.getElementById ('posts_unanswered').innerHTML.replace(/Voir les messages sans réponses/,"Messages sans réponses");&lt;/script&gt;
+&lt;script type="text/javascript"&gt;document.getElementById('mark_read').innerHTML=document.getElementById ('mark_read').innerHTML.replace(/Marquer tous les forums comme lus/,"Tout marquer comme lu");&lt;/script&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- CATEGORIES --------------&gt;
+
+&lt;!-- Conteneur d'une catégorie --&gt;
+&lt;!-- BEGIN catrow --&gt;
+
+
+&lt;!-- Entête d'une catégorie --&gt;
+&lt;!-- BEGIN tablehead --&gt;
+&lt;div class="forabg"&gt;
+
+    &lt;!-- Titre catégorie --&gt;
+    &lt;div class="cate_title"&gt;{catrow.tablehead.L_FORUM}&lt;/div&gt;
+
+
+    &lt;!-- Conteneur liste des forums --&gt;
+    &lt;div class="forums"&gt;
+
+&lt;!-- END tablehead --&gt;
+&lt;!-- Fin de l'entête --&gt;
+
+        &lt;!-- Affichage d'un forum --&gt;
+        &lt;!-- BEGIN forumrow --&gt;
+        
+        &lt;div class="forum_row"&gt;
+            &lt;div class="top_row"&gt;
+
+                &lt;!-- Titre forum --&gt;
+                &lt;a href="{catrow.forumrow.U_VIEWFORUM}" class="forumtitle"&gt;{catrow.forumrow.FORUM_NAME}&lt;/a&gt;
+                &lt;br /&gt;
+
+                &lt;!-- Image forum : nouveau, rien, verrouillé --&gt;
+                &lt;img class="forum-img" src="{catrow.forumrow.FORUM_FOLDER_IMG}" /&gt;
+
+                &lt;!-- Description --&gt;
+                &lt;div class="forum_desc"&gt;{catrow.forumrow.FORUM_DESC}&lt;/div&gt;
+
+                
+                &lt;div class="forum_lastpost-avatar"&gt;
+                   &lt;!-- Avatar du dernier posteur --&gt;
+                    &lt;!-- BEGIN avatar --&gt;
+                    {catrow.forumrow.avatar.LAST_POST_AVATAR}
+                    &lt;!-- END avatar --&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Conteneur dernier posteur --&gt;
+                &lt;div class="forum_lastpost"&gt;
+                  &lt;span&gt;
+                     &lt;!-- Dernier sujet --&gt;
+                      &lt;!-- BEGIN switch_topic_title --&gt;
+                      &lt;a href="{catrow.forumrow.U_LATEST_TOPIC}" title="{catrow.forumrow.LATEST_TOPIC_TITLE}"&gt;{catrow.forumrow.LATEST_TOPIC_NAME}&lt;/a&gt;&lt;br /&gt;
+                      &lt;!-- END switch_topic_title --&gt;
+                      
+                      &lt;!-- Auteur --&gt;
+                      {catrow.forumrow.USER_LAST_POST}
+                  &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class="bottom_row"&gt;
+
+                &lt;!-- Liens de sous-forum --&gt;
+                &lt;span id="ssforum"&gt;{catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}&lt;/span&gt;
+
+                &lt;!-- Compteur sujets et message --&gt;
+                &lt;span class="forum_stats"&gt;{catrow.forumrow.TOPICS} sujets et {catrow.forumrow.POSTS} messages&lt;/span&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;!-- END forumrow --&gt;
+        &lt;!-- Fin affichage d'un forum --&gt;
+
+        &lt;!-- Footer catégorie --&gt;
+        &lt;!-- BEGIN tablefoot --&gt;
+    &lt;/div&gt;
+    &lt;!-- Fin liste des forums --&gt;
+
+
+&lt;/div&gt;
+&lt;!-- END tablefoot --&gt;
+&lt;!-- END catrow --&gt;
+&lt;!-- Fin du conteneur de catégorie --&gt;
+
+&lt;!-- Suprresion des virgules entre les liens de sous-forum --&gt;
+&lt;script type="text/javascript"&gt;document.getElementById('ssforum').innerHTML=document.getElementById ('ssforum').innerHTML.replace(/, /," ");&lt;/script&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- BARRE DE GESTION --------------&gt;
+
+&lt;!-- BEGIN switch_on_index --&gt;
+&lt;div class="links_bar"&gt;
+    &lt;span&gt;
+        &lt;!-- Sujets actifs du jour --&gt;
+        &lt;a href="{U_TODAY_ACTIVE}"&gt;{L_TODAY_ACTIVE}&lt;/a&gt;&nbsp;&bull;&nbsp;
+
+        &lt;!-- Top 20 des posteurs du jour --&gt;
+        &lt;a href="{U_TODAY_POSTERS}"&gt;{L_TODAY_POSTERS}&lt;/a&gt;&nbsp;&bull;&nbsp;
+
+        &lt;!-- Top 20 des postesurs du forum --&gt;
+        &lt;a href="{U_OVERALL_POSTERS}"&gt;{L_OVERALL_POSTERS}&lt;/a&gt;
+    &lt;/span&gt;
+
+    &lt;!-- Supprimer des cookies du forum --&gt;
+    &lt;!-- BEGIN switch_delete_cookies --&gt;
+    &lt;a class="specials_links right" href="{switch_on_index.switch_delete_cookies.U_DELETE_COOKIES}" rel="nofollow"&gt;{switch_on_index.switch_delete_cookies.L_DELETE_COOKIES}&lt;/a&gt;
+    &lt;!-- END switch_delete_cookies --&gt;
+&lt;/div&gt;
+&lt;!-- END switch_on_index --&gt;
+            
+            </code>
+            </pre>
+
+
+        </div>
+
+
+        <!-- Forums -->
+        <div id="T4" class="tabcontent">
+            Affichage d'un forum
+        </div>
+
+        <div id="T5" class="tabcontent">
+            Liste des sujets
+        </div>
+
+
+        <!---------------------->
+        <!-- Sujets -->
+        <div id="T6" class="tabcontent">
+            Affichage d'un sujet
+        </div>
+
+        <div id="T7" class="tabcontent">
+            Affichage d'un sondage
+        </div>
+
+        <div id="T8" class="tabcontent">
+            Résultat d'un sondage
+        </div>
+
+
+        <!---------------------->
+        <!-- Envoyer un message -->
+        <div id="T9" class="tabcontent">
+            Page d'envoi d'un message
+        </div>
+
+        <div id="T10" class="tabcontent">
+            Historique des messages (sujet)
+        </div>
+
+        <div id="T11" class="tabcontent">
+            Historique des messages (mp)
+        </div>
+
+
+        <!---------------------->
+        <!-- Message privé -->
+        <div id="T12" class="tabcontent">
+            Liste des messages privés
+        </div>
+
+        <div id="T13" class="tabcontent">
+            Message privé
+        </div>
+
+
+        <!---------------------->
+        <!-- Membres -->
+        <div id="T14" class="tabcontent">
+            Liste des membres
+        </div>
+
+        <div id="T15" class="tabcontent">
+            Profil utilisateur
+        </div>
+
+        <div id="T16" class="tabcontent">
+            Profil simplifié au survol des tags
+        </div>
+
+
+        <!---------------------->
+        <!-- Blogs -->
+        <div id="T17" class="tabcontent">
+            Affichages des blogs
+        </div>
+
+        <div id="T18" class="tabcontent">
+            Affichage des commentaires
+        </div>
+
+
+        <!---------------------->
+        <!-- Footer -->
+        <div id="T19" class="tabcontent">
+            Début du bas de page
+        </div>
+
+        <div id="T20" class="tabcontent">
+            Fin du bas de page
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <script>
+        document.getElementById("defaultOpen").click();
+
+        function openTemp(evt, tempName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tempName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+    </script>
+
+
+    <script>
+        (function() {
+
+            // Get the elements.
+            // - the 'pre' element.
+            // - the 'div' with the 'paste-content' id.
+
+            var pre = document.getElementsByTagName('pre');
+            var pasteContent = document.getElementById('paste-content');
+
+            // Add a copy button in the 'pre' element.
+            // which only has the className of 'language-'.
+
+            for (var i = 0; i < pre.length; i++) {
+                var isLanguage = pre[i].children[0].className.indexOf('language-');
+
+                if (isLanguage === 0) {
+                    var button = document.createElement('button');
+                    button.className = 'copy-button';
+                    button.textContent = 'Copier';
+
+                    pre[i].appendChild(button);
+                }
+            };
+
+            // Run Clipboard
+
+            var copyCode = new Clipboard('.copy-button', {
+                target: function(trigger) {
+                    return trigger.previousElementSibling;
+                }
+            });
+
+            // On success:
+            // - Change the "Copy" text to "Copied".
+            // - Swap it to "Copy" in 2s.
+            // - Lead user to the "contenteditable" area with Velocity scroll.
+
+            copyCode.on('success', function(event) {
+                event.clearSelection();
+                event.trigger.textContent = 'Copié!';
+                window.setTimeout(function() {
+                    event.trigger.textContent = 'Copier';
+                }, 2000);
+
+                $.Velocity(pasteContent, 'scroll', {
+                    duration: 1000
+                });
+            });
+
+            // On error (Safari):
+            // - Change the  "Press Ctrl+C to copy"
+            // - Swap it to "Copy" in 2s.
+
+            copyCode.on('error', function(event) {
+                event.trigger.textContent = 'Press "Ctrl + C" to copy';
+                window.setTimeout(function() {
+                    event.trigger.textContent = 'Copié!';
+                }, 5000);
+            });
+
+        })();
+
+    </script>
+
+
+</body>
+
+</html>
