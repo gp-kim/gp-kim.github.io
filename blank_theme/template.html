@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="list_template.css">
+    <link rel="stylesheet" href="/blank_theme/templates.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 
@@ -14,149 +14,22 @@
 
 
     <script src="https://www.aht.li/3566719/clipboardauto.js"></script>
-
     <script src="https://kit.fontawesome.com/f96772d3f9.js" crossorigin="anonymous"></script>
-    
-    
-    <style>
-        :root {
-    --text: #333;
-    --link: #000;
-    --light: #FFF;
-    --lighter: #fafafa;
-    --grey: #F4F4F4;
-    --greyer: #E5E5E5;
-    --border: 1px solid #E5E5E5;
-    --font: 'Open Sans';
-}
-
-* {box-sizing: border-box}
-
-body {
-    background: var(--grey);
-    font-family: var(--font);
-    font-size: 12px;
-}
-
-.wrapper {
-    background: var(--light);
-    border-radius: 5px;
-    display: flex;
-    width: 1000px;
-    margin: 50px auto;
-    padding: 10px;
-}
-
-h3 { margin: 15px 0 8px;}
-
-/* Style the tab */
-.tab {
-    border: var(--border);
-    width: 250px;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.tab h3:first-child { margin-top: 0}
-
-/* Style the buttons inside the tab */
-.tab button {
-    background: var(--light);
-    width: 98%;
-    height: 21px;
-    border-radius: 5px;
-    text-align: left;
-    overflow: hidden;
-    display: block;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 3px 6px;
-    margin: 5px 0 5px 5px;
-    transition: 0.3s;
-    font-weight: 600;
-    font-family: var(--font);
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: space-between;
-    line-height: 12px;
-    font-size: 13px;
-}
-
-
-.tab button:hover {
-    background-color: var(--grey);
-    height: 44px;
-}
-
-.tab button span {
-    font-style: italic;
-    line-height: 25px;
-    font-weight: 400;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-    background-color: var(--grey);
-}
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    flex-grow: 100;
-}
-
-
-
-
-pre {
-    position: relative;
-    border-radius: 5px;
-    border: var(--border);
-    min-height: 400px;
-    max-height: 700px;
-    overflow: auto;
-    width: 700px;
-}
-
-pre code { 
-   
-}
-
-pre button.copy-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border: var(--border);
-    padding: 0;
-    background: var(--light);
-    border-radius: 5px;
-    padding: 3px 6px;
-    color: var(--text);
-}
-
-pre button.copy-button:active, pre button.copy-button:focus {
-    outline:none;
-    background: var(--greyer);
-}
-
-pre button.copy-button:before {
-    content: '\f0c5';
-    font-family: 'Font Awesome 5 Free';
-    margin-right: 5px;
-    opacity: 80%;
-    font-size: 12px;
-}
-
-pre button.copy-button:active:before, pre button.copy-button:focus:before {font-weight: 900;}
-    </style>
 </head>
 
 <body>
 
     <div class="wrapper">
+        
+        <a href="" class="back previous">
+            <i class="fas fa-align-left"></i>
+             <span>Explications</span>
+        </a>
+        
+        <a href="" class="back code_ls">
+            <div> { }</div>
+             <span>CSS</span>
+        </a>
 
         <div class="tab">
             <h3>Page principale</h3>
@@ -179,7 +52,7 @@ pre button.copy-button:active:before, pre button.copy-button:focus:before {font-
             <button class="tablinks" onclick="openTemp(event, 'T7')">
                 Affichage d'un sondage <span>viewtopic_poll_ballot </span></button>
             <button class="tablinks" onclick="openTemp(event, 'T8')">
-                Résultat d'un sondage <span>viewtopic_poll_result</span></button>
+                Résultats d'un sondage <span>viewtopic_poll_result</span></button>
 
             <h3>Envoyer un message</h3>
             <button class="tablinks" onclick="openTemp(event, 'T9')">
@@ -219,12 +92,12 @@ pre button.copy-button:active:before, pre button.copy-button:focus:before {font-
         </div>
 
 
-
         <!---------------------->
         <!-- Page principale -->
         <div id="T1" class="tabcontent">
-            <h1>Haut de page</h1>
-            <h3>overall_header</h3>
+            
+            <div class="tempname"><h1>Haut de page</h1>
+            <h1 class="temp">overall_header</h1></div>
 
             <pre class="language-markup">
             <code class="language-markup">
@@ -232,7 +105,7 @@ pre button.copy-button:active:before, pre button.copy-button:focus:before {font-
 &lt;html xmlns="http://www.w3.org/1999/xhtml" dir="{S_CONTENT_DIRECTION}" id="min-width" lang="{L_LANG_HTML}" xml:lang="{L_LANG_HTML}" {NAMESPACE_FB_LIKE} {NAMESPACE_FB} {NAMESPACE_BBCODE}&gt;
 &lt;head&gt;
 
-&lt;!--   INSTALLATION D'UNE NOUVELLE POLICE D'ECRITURE --&gt;
+&lt;!-- INSTALLATION DE NOUVELLE POLICE D'ECRITURE --&gt;
     &lt;link rel="preconnect" href="https://fonts.gstatic.com"&gt;
     &lt;link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet"&gt;
 
@@ -541,35 +414,227 @@ pre button.copy-button:active:before, pre button.copy-button:focus:before {font-
 
                                 &lt;div id="main"&gt;
                                     &lt;div id="main-content"&gt;
-            
+
             </code>
             </pre>
 
         </div>
 
-
-
         <div id="T2" class="tabcontent">
-            <h1>Page d'accueil</h1>
-            <h3>index_body</h3>
+            <div class="tempname"><h1>Page d'accueil</h1>
+            <h1 class="temp">index_body</h1></div>
 
-            <pre class="language-HTML">
-            <code>
+            <pre class="language-markup">
+            <code class="language-markup">
+{JAVASCRIPT}
 
+&lt;!-----------------------------------------------&gt;
+&lt;!-- CONNEXION RAPIDE (haut) --------------&gt;
+
+
+&lt;!-- BEGIN switch_user_login_form_header --&gt;
+&lt;div class="panel"&gt;
+    &lt;form action="{S_LOGIN_ACTION}" method="post" name="form_login"&gt;
+        &lt;div class="user_login_form center"&gt;
+            &lt;!-- Nom utilisateur --&gt;
+            &lt;label&gt;{L_USERNAME} : &lt;input class="post" type="text" size="10" name="username" /&gt;&lt;/label&gt;&nbsp;
+
+            &lt;!-- Mot de passe --&gt;
+            &lt;label&gt;{L_PASSWORD} : &lt;input class="post" type="password" size="10" name="password" /&gt;&lt;/label&gt;&nbsp;
+
+            &lt;!-- Check : connexion automatique --&gt;
+            &lt;label&gt;{L_AUTO_LOGIN} : &lt;input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} /&gt;&lt;/label&gt;&nbsp;
+
+            &lt;!-- Bouton connexion --&gt;
+            {S_HIDDEN_FIELDS}&lt;input class="mainoption button1" type="submit" name="login" value="{L_LOGIN}" /&gt;
+
+
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;!-- END switch_user_login_form_header --&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- PAGE D'ACCUEIL --------------&gt;
+
+
+&lt;!-- BEGIN message_admin_index --&gt;
+&lt;div class="panel introduction"&gt;
+
+    &lt;!-- Titre de la PA --&gt;
+    &lt;!-- BEGIN message_admin_titre --&gt;
+    &lt;div class="h3"&gt;{message_admin_index.message_admin_titre.MES_TITRE}&lt;/div&gt;
+    &lt;!-- END message_admin_titre --&gt;
+
+    &lt;!-- Contenu de la PA --&gt;
+    &lt;!-- BEGIN message_admin_txt --&gt;
+    &lt;div class="mes-txt"&gt;{message_admin_index.message_admin_txt.MES_TXT}&lt;/div&gt;
+    &lt;!-- END message_admin_txt --&gt;
+&lt;/div&gt;
+&lt;!-- END message_admin_index --&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- CB (si affichée en haut) --------------&gt;
+
+{CHATBOX_TOP}
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- CATEGORIES --------------&gt;
+&lt;!-- (template : index_box) --&gt;
+
+{BOARD_INDEX}
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- QUI EST EN LIGNE --------------&gt;
+
+&lt;!-- BEGIN disable_viewonline --&gt;
+&lt;div class="qeel"&gt;
+
+    &lt;div class="qeel-right"&gt;
+
+        &lt;!-- Dernier inscrit --&gt;
+        &lt;div id="last_user"&gt;
+	&lt;span id="lastuser_avatar"&gt;&lt;/span&gt;
+          
+            &lt;span id="newest_user"&gt;
+                {NEWEST_USER}&lt;br /&gt; est le dernier inscrit
+            &lt;/span&gt;
+        &lt;/div&gt;&lt;br /&gt;
+
+
+        &lt;!-- Total posts : X messages / Total users : X membres --&gt;
+        Il y a &lt;span id="qeel_posts"&gt;{TOTAL_POSTS}&lt;/span&gt; et
+        &lt;span id="qeel_members"&gt;{TOTAL_USERS}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+
+
+        &lt;a class="groups"&gt;Alpha&lt;/a&gt;
+        &lt;a class="groups"&gt;Bêta&lt;/a&gt;
+        &lt;a class="groups"&gt;Charlie&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class="qeel-middle"&gt;
+
+        &lt;!-- X connectés :: 1 membre, 0 invisible, 0 invité --&gt;
+        &lt;div id="total_users"&gt;{TOTAL_USERS_ONLINE}&lt;/div&gt;
+
+        &lt;div class="separator"&gt;&lt;/div&gt;
+
+        &lt;!-- Connectés en ce moment --&gt;
+        &lt;div id="online_users"&gt;{LOGGED_IN_USER_LIST}&lt;/div&gt;
+
+
+        &lt;div class="credits"&gt;Ici crédits de ce qui qui l’a fait et qui qui l’admistre avec l’optimisation qui va bien. Et encore un peu plus de blabla.&lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;!-- Derniers connectés au cours de ces Xh --&gt;
+    &lt;div class="qeel-left" id="24hconnected"&gt;
+        {L_CONNECTED_MEMBERS}&lt;br /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+&lt;!-- Changement de texte des informations du QEEL --&gt;
+&lt;script type="text/javascript"&gt;
+document.getElementById('last_user').innerHTML = document.getElementById('last_user').innerHTML.replace(/L'utilisateur enregistré le plus récent est/, " ");&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+document.getElementById('qeel_posts').innerHTML = document.getElementById('qeel_posts').innerHTML.replace(/Nos membres ont posté un total de /, " ");&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+document.getElementById('qeel_members').innerHTML = document.getElementById('qeel_members').innerHTML.replace(/Nous avons/, " ");&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+document.getElementById('total_users').innerHTML = document.getElementById('total_users').innerHTML.replace(/Il y a en tout/, " ");&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+document.getElementById('total_users').innerHTML = document.getElementById('total_users').innerHTML.replace(/utilisateur en ligne/, "connecté");&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+document.getElementById('online_users').innerHTML = document.getElementById('online_users').innerHTML.replace(/Utilisateurs enregistrés/, "En ligne");&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+document.getElementById('24hconnected').innerHTML = document.getElementById('24hconnected').innerHTML.replace(/Membres connectés au cours des 24 dernières heures/, "Connectés récemment");&lt;/script&gt;
+
+
+
+&lt;!-- Conteneur des infos CB --&gt;
+&lt;!-- BEGIN switch_chatbox_activate --&gt;
+  
+  &lt;div class="panel"&gt;
+      &lt;!-- Nom de la CB --&gt;
+      &lt;div class="h3"&gt;&lt;a href="{S_JOIN_CHAT}" target="ChatBox"&gt;{CHATBOX_NAME}&lt;/a&gt;&lt;/div&gt;
+  
+      &lt;!-- Nombre et liste des connectés sur la CB --&gt;
+      {TOTAL_CHATTERS_ONLINE}&nbsp;:&nbsp;{CHATTERS_LIST}&lt;br /&gt;
+  
+      &lt;!-- BEGIN switch_chatbox_popup --&gt;
+      &lt;!-- Lien pour rejoindre la CB --&gt;
+      &lt;div id="chatbox_popup"&gt;&lt;/div&gt;
+      &lt;script type="text/javascript"&gt;
+          insertChatBoxPopup('{disable_viewonline.switch_chatbox_activate.switch_chatbox_popup.U_FRAME_CHATBOX}', '{L_CLICK_TO_JOIN_CHAT}');
+  
+      &lt;/script&gt;
+      &lt;!-- END switch_chatbox_popup --&gt;
+    
+  &lt;/div&gt;
+&lt;!-- END switch_chatbox_activate --&gt;
+&lt;!-- Fin des infos CB --&gt;
+
+
+&lt;!-- END disable_viewonline --&gt;
+&lt;!-- Fin du QEEL --&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- CB (si affichée en bas) --------------&gt;
+
+{CHATBOX_BOTTOM}
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- CONNEXION RAPIDE (bas) --------------&gt;
+
+&lt;!-- BEGIN switch_user_login_form_footer --&gt;
+&lt;div class="panel"&gt;
+    &lt;form action="{S_LOGIN_ACTION}" method="post" name="form_login"&gt;
+        &lt;div class="user_login_form center"&gt;
+            &lt;!-- Nom utilisateur --&gt;
+            &lt;label&gt;{L_USERNAME} : &lt;input class="post" type="text" size="10" name="username" /&gt;&lt;/label&gt;&nbsp;
+
+            &lt;!-- Mot de passe --&gt;
+            &lt;label&gt;{L_PASSWORD} : &lt;input class="post" type="password" size="10" name="password" /&gt;&lt;/label&gt;&nbsp;
+
+            &lt;!-- Check : connexion automatique --&gt;
+            &lt;label&gt;{L_AUTO_LOGIN} : &lt;input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} /&gt;&lt;/label&gt;&nbsp;
+
+            &lt;!-- Bouton connexion --&gt;
+            {S_HIDDEN_FIELDS}&lt;input class="mainoption button1" type="submit" name="login" value="{L_LOGIN}" /&gt;
+
+
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;!-- END switch_user_login_form_footer --&gt;
+
+
+
+
+{AUTO_DST}
             </code>
             </pre>
-
-
-
-
-
         </div>
 
         <div id="T3" class="tabcontent">
-            <h1>Catégories</h1>
-            <h3>index_box</h3>
-            
-                <pre class="language-markup">
+            <div class="tempname"><h1>Catégories</h1>
+            <h1 class="temp">index_box</h1></div>
+
+            <pre class="language-markup">
             <code class="language-markup">
 &lt;!-----------------------------------------------&gt;
 &lt;!-- BARRE DE GESTION --------------&gt;
@@ -699,7 +764,7 @@ pre button.copy-button:active:before, pre button.copy-button:focus:before {font-
         &lt;!-- Top 20 des posteurs du jour --&gt;
         &lt;a href="{U_TODAY_POSTERS}"&gt;{L_TODAY_POSTERS}&lt;/a&gt;&nbsp;&bull;&nbsp;
 
-        &lt;!-- Top 20 des postesurs du forum --&gt;
+        &lt;!-- Top 20 des posteurs du forum --&gt;
         &lt;a href="{U_OVERALL_POSTERS}"&gt;{L_OVERALL_POSTERS}&lt;/a&gt;
     &lt;/span&gt;
 
@@ -708,8 +773,7 @@ pre button.copy-button:active:before, pre button.copy-button:focus:before {font-
     &lt;a class="specials_links right" href="{switch_on_index.switch_delete_cookies.U_DELETE_COOKIES}" rel="nofollow"&gt;{switch_on_index.switch_delete_cookies.L_DELETE_COOKIES}&lt;/a&gt;
     &lt;!-- END switch_delete_cookies --&gt;
 &lt;/div&gt;
-&lt;!-- END switch_on_index --&gt;
-            
+&lt;!-- END switch_on_index --&gt;   
             </code>
             </pre>
 
@@ -717,91 +781,2531 @@ pre button.copy-button:active:before, pre button.copy-button:focus:before {font-
         </div>
 
 
+      
+       
         <!-- Forums -->
         <div id="T4" class="tabcontent">
-            Affichage d'un forum
+            <div class="tempname"><h1>Affichage d'un forum</h1>
+            <h1 class="temp">viewforum_body</h1></div>
+
+            <pre class="language-markup">
+            <code class="language-markup">
+&lt;!-- Affichage des sous forums (template : index_box) --&gt;
+{BOARD_INDEX}
+&lt;br /&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- LIEN DE NAVIGATION --------------&gt;
+
+&lt;div class="navigation_links"&gt;
+
+    &lt;!-- Chaîne de lien : Catégorie &gt; Forum &gt; Sous-fo --&gt;
+    &lt;span class="navigation_chain"&gt;
+        {NAV_CAT_DESC}
+    &lt;/span&gt;
+
+    &lt;!-- Pagination --&gt;
+    &lt;span class="right pagination page-topic"&gt;
+        {PAGINATION}
+    &lt;/span&gt;
+
+&lt;/div&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- BARRE DE GESTION --------------&gt;
+
+&lt;div class="links_bar"&gt;
+
+    &lt;!-- Boutons : nouveau, répondre, verrouillé --&gt;
+    &lt;!-- BEGIN switch_user_authpost --&gt;
+        &lt;a class="buttons" href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow"&gt;&lt;img src="{POST_IMG}" class="{POST_IMG_ID}" alt="{L_POST_NEW_TOPIC}" /&gt;&lt;/a&gt;
+    &lt;!-- END switch_user_authpost --&gt;
+
+    &lt;!-- Liens : Surveiller ce forum -- Sujets surveillés --&gt;
+    &lt;span class="right"&gt;
+        {S_WATCH_FORUM} • &lt;a href="{U_WATCHSEARCH_JS_PLUS_MENU}"&gt;Sujets surveillés&lt;/a&gt;
+    &lt;/span&gt;
+
+&lt;/div&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- LISTE DES SUJETS --------------&gt;
+&lt;!--(template: topics_list_box) --&gt;
+
+&lt;div class="container"&gt;
+
+    &lt;!-- Titre liste des sujets --&gt;
+    &lt;h1 class="page-title"&gt;{FORUM_NAME}&lt;/h1&gt;
+
+   &lt;!-- Liste des sujets --&gt;
+    {TOPICS_LIST_BOX}
+&lt;/div&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- BARRE DE GESTION --------------&gt;
+
+&lt;div class="links_bar"&gt;
+
+    &lt;!-- Bouton : nouveau --&gt;
+    &lt;!-- BEGIN switch_user_authpost --&gt;
+    &lt;div class="buttons"&gt;
+        &lt;a href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow"&gt;&lt;img src="{POST_IMG}" class="{POST_IMG_ID}" alt="{L_POST_NEW_TOPIC}" /&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;!-- END switch_user_authpost --&gt;
+
+    &lt;!-- Lien "marquer comme lu" --&gt;
+    &lt;span class="right"&gt;
+        &lt;a href="{U_MARK_READ}"&gt;{L_MARK_TOPICS_READ}&lt;/a&gt;
+    &lt;/span&gt;
+
+&lt;/div&gt;
+
+
+
+&lt;!-- Conteneur : utilisateurs et pagination --&gt;
+&lt;div class="navigation_links"&gt;
+
+    &lt;!-- Utilisateurs parcourant ce forum --&gt;
+    &lt;span id="users_here"&gt;
+        {LOGGED_IN_USER_LIST}
+    &lt;/span&gt;
+    &lt;!-- Modification de la phrase "utilisateur parcourant ce forum" --&gt;
+    &lt;script type="text/javascript"&gt;
+        document.getElementById('users_here').innerHTML = document.getElementById('users_here').innerHTML.replace(/Utilisateurs parcourant actuellement ce forum/, "Actuellement sur ce forum");&lt;/script&gt;
+
+
+    &lt;!-- Pagination --&gt;
+    &lt;span class="right pagination page-topic"&gt;
+        {PAGINATION}
+    &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-----------------------------------------------&gt;
+&lt;!----------------&gt;
+
+&lt;br /&gt;
+&lt;div class="separator"&gt;&lt;/div&gt;
+&lt;br /&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- SAUTER VERS UN FORUM --------------&gt;
+
+&lt;div class="right"&gt;
+    &lt;form action="{S_JUMPBOX_ACTION}" method="get" name="jumpbox" onsubmit="if(document.jumpbox.f.value == -1){return false;}"&gt;
+        &lt;fieldset class="vf_jumpbox"&gt;
+            &lt;label&gt;{L_JUMP_TO}:&lt;/label&gt;&lt;br /&gt;
+            {S_JUMPBOX_SELECT}&nbsp;
+            &lt;input class="button2" type="submit" value="{L_GO}" /&gt;
+        &lt;/fieldset&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- LIENS UTILES --------------&gt;
+
+&lt;a href="{U_EGOSEARCH_JS_PLUS_MENU}"&gt;Voir ses messages&lt;/a&gt;&lt;br /&gt;
+&lt;a href="{U_NEWPOSTS_JS_PLUS_MENU}"&gt;Nouveaux messages depuis la dernière visite&lt;/a&gt;&lt;br /&gt;
+&lt;a href="{U_UNANSWERED_JS_PLUS_MENU}"&gt;Messages sans réponses&lt;/a&gt;&lt;br /&gt;
+
+
+
+&lt;br /&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;
+
+            </code>
+            </pre>
         </div>
 
         <div id="T5" class="tabcontent">
-            Liste des sujets
+            <div class="tempname"><h1>Liste des sujets</h1>
+            <h1 class="temp">topics_list_body</h1></div>
+            
+            <pre class="language-markup">
+            <code class="language-markup">
+&lt;!-----------------------------------------------&gt;
+&lt;!-- LISTE DES SUJETS --------------&gt;
+&lt;!-- BEGIN topics_list_box --&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- AFFICHAGE D'UN SUJET --------------&gt;
+&lt;!-- BEGIN row --&gt;
+&lt;!-- BEGIN topic --&gt;
+
+
+&lt;!-- Conteneur d'un sujet --&gt;
+&lt;div class="topicslist_row"&gt;
+
+    &lt;!-- Image d'un sujet --&gt;
+    &lt;div class="topicslist-img"&gt;
+        &lt;img src="{topics_list_box.row.TOPIC_FOLDER_IMG}" /&gt;
+    &lt;/div&gt;
+
+
+    &lt;div class="topicslist_infos" {topics_list_box.row.ICON}&gt;
+
+        &lt;!-- Sélection d'un sujet 
+                (utile uniquement durant la modération des sujets, permet de les sélectionner)--&gt;
+        &lt;!-- BEGIN single_selection --&gt;
+        &lt;input type="radio" name="{topics_list_box.FIELDNAME}" value="{topics_list_box.row.FID}" {topics_list_box.row.L_SELECT} /&gt;
+        &lt;!-- END single_selection --&gt;
+      
+      	&lt;!-- Icon de message --&gt;
+     	&lt;span class="topic_msgicon"&gt;&lt;/span&gt;
+
+        &lt;!-- Icon sujet récent --&gt;
+        {topics_list_box.row.NEWEST_POST_IMG}
+
+        &lt;!-- Icon vous avez posté dans ce sujet --&gt;
+        {topics_list_box.row.PARTICIPATE_POST_IMG}
+
+        &lt;!-- Label type de sujet : annonce, note, ... --&gt;
+        &lt;span class="topic-type"&gt;{topics_list_box.row.TOPIC_TYPE}&lt;/span&gt;
+
+        &lt;!-- Titre du sujet --&gt;
+        &lt;h2&gt;&lt;a class="topictitle" href="{topics_list_box.row.U_VIEW_TOPIC}"&gt;{topics_list_box.row.TOPIC_TITLE}&lt;/a&gt;&lt;/h2&gt;
+        &lt;br /&gt;
+
+        &lt;!-- Pagination du sujet --&gt;
+        &lt;span class="topicslist-pagination"&gt;
+            {topics_list_box.row.GOTO_PAGE_NEW}
+            &lt;!-- BEGIN nav_tree --&gt;
+            {topics_list_box.row.TOPIC_NAV_TREE_NEW}
+            &lt;!-- END nav_tree --&gt;
+        &lt;/span&gt;
+
+        &lt;span class="topic-author"&gt;
+            {topics_list_box.row.L_BY}&nbsp;
+            &lt;!-- Indication "par" --&gt;
+            {topics_list_box.row.TOPIC_AUTHOR}
+            &lt;!-- Auteur --&gt;
+        &lt;/span&gt;
+
+    &lt;/div&gt;
+
+
+    &lt;!-- Statistiques --&gt;
+    &lt;div class="topicslist-stats"&gt;
+        {topics_list_box.row.REPLIES} {L_REPLIES}
+        &lt;!-- Nombres // Indication "messages" --&gt;
+        &lt;br /&gt;
+        {topics_list_box.row.VIEWS} {L_VIEWS}
+        &lt;!-- Nombres // Indication "vues" --&gt;
+    &lt;/div&gt;
+
+
+    &lt;!-- Avatar du dernier posteur--&gt;
+    &lt;div class="topicslist-avatar-lastpost"&gt;
+        &lt;!-- BEGIN avatar --&gt;
+        {topics_list_box.row.topic.avatar.LAST_POST_AVATAR}
+        &lt;!-- END avatar --&gt;
+    &lt;/div&gt;
+
+
+    &lt;!-- Dernier message --&gt;
+    &lt;div class="topicslist-lastpost"&gt;
+        &lt;!-- Date du dernier message --&gt;
+        {topics_list_box.row.LAST_POST_TIME}&nbsp;
+        &lt;br /&gt;
+        &lt;!-- Auteur du dernier message --&gt;
+        {topics_list_box.row.LAST_POST_AUTHOR} &nbsp;
+        &lt;!-- Image-lien pour aller au dernier message --&gt;
+        {topics_list_box.row.LAST_POST_IMG}
+    &lt;/div&gt;
+
+
+    &lt;!-- Description du sujet --&gt;
+    &lt;!-- BEGIN switch_description --&gt;
+    &lt;div class="topicslist-description"&gt;
+        {topics_list_box.row.topic.switch_description.TOPIC_DESCRIPTION}
+    &lt;/div&gt;
+    &lt;!-- END switch_description --&gt;
+
+
+&lt;/div&gt;
+&lt;!-- END topic --&gt;
+&lt;!-- END row --&gt;
+
+&lt;!-- Fin du conteneur d'un sujet --&gt;
+
+&lt;!-- Indication "pas de sujet" --&gt;
+&lt;!-- BEGIN no_topics --&gt;
+&lt;center&gt;&lt;strong&gt;{topics_list_box.row.L_NO_TOPICS}&lt;/strong&gt;&lt;/center&gt;
+&lt;!-- END no_topics --&gt;
+
+
+&lt;!-- END topics_list_box --&gt;
+&lt;!-- Fin de la liste des sujets --&gt;
+
+
+
+
+
+&lt;!-- BEGIN multi_selection --&gt;
+&lt;script type="text/javascript"&gt;
+    function check_uncheck_main_ {
+        topics_list_box.row.header_table.BOX_ID
+    }() {
+        alert('MAIN');
+
+        var all_checked = true;
+
+        for (i = 0;
+            (i &lt; document. {
+                topics_list_box.FORMNAME
+            }.elements.length) && all_checked; i++) {
+            if (document. {
+                    topics_list_box.FORMNAME
+                }.elements[i].name == '{topics_list_box.FIELDNAME}[]{topics_list_box.row.header_table.BOX_ID}') {
+                all_checked = document. {
+                    topics_list_box.FORMNAME
+                }.elements[i].checked;
+            }
+        }
+
+        document. {
+            topics_list_box.FORMNAME
+        }.all_mark_ {
+            topics_list_box.row.header_table.BOX_ID
+        }.checked = all_checked;
+    }
+
+    function check_uncheck_all_ {
+        topics_list_box.row.header_table.BOX_ID
+    }() {
+        alert('ALL');
+
+        for (i = 0; i &lt; document. {
+                topics_list_box.FORMNAME
+            }.length; i++) {
+            if (document. {
+                    topics_list_box.FORMNAME
+                }.elements[i].name == '{topics_list_box.FIELDNAME}[]{topics_list_box.row.header_table.BOX_ID}') {
+                document. {
+                    topics_list_box.FORMNAME
+                }.elements[i].checked = document. {
+                    topics_list_box.FORMNAME
+                }.all_mark_ {
+                    topics_list_box.row.header_table.BOX_ID
+                }.checked;
+            }
+        }
+    }
+
+&lt;/script&gt;
+&lt;!-- END multi_selection --&gt;
+            </code>
+            </pre>
         </div>
 
 
+       
         <!---------------------->
         <!-- Sujets -->
         <div id="T6" class="tabcontent">
-            Affichage d'un sujet
+            <div class="tempname"><h1>Affichage d'un sujet</h1>
+            <h1 class="temp">viewtopic_body</h1></div>
+
+            <pre class="language-markup">
+            <code class="language-markup">
+&lt;br /&gt;
+&lt;!-----------------------------------------------&gt;
+&lt;!-- LIENS DE NAVIGATION --------------&gt;
+
+&lt;div class="navigation_links"&gt;
+
+    &lt;!-- Chaîne de lien : Catégorie &gt; Forum &gt; Sous-fo --&gt;
+    &lt;span class="navigation_chain"&gt;
+        {NAV_CAT_DESC}
+    &lt;/span&gt;
+
+    &lt;!-- Pagination --&gt;
+    &lt;span class="right pagination page-topic"&gt;
+        {PAGINATION}
+    &lt;/span&gt;
+
+&lt;/div&gt;
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- RBARRE DE GESTION --------------&gt;
+
+&lt;div class="links_bar"&gt;
+    &lt;span&gt;
+        &lt;!-- Boutons : nouveau --&gt;
+        &lt;!-- BEGIN switch_user_authpost --&gt;
+        &lt;a class="buttons" href="{U_POST_NEW_TOPIC}" rel="nofollow"&gt;&lt;img src="{POST_IMG}" class="{POST_IMG_CLASS}" alt="{L_POST_NEW_TOPIC}" /&gt;&lt;/a&gt;&nbsp;&nbsp;&nbsp;
+        &lt;!-- END switch_user_authpost --&gt;
+
+        &lt;!-- Bouton : répondre --&gt;
+        &lt;!-- BEGIN switch_user_authreply --&gt;
+        &lt;a class="buttons" href="{U_POST_REPLY_TOPIC}"&gt;&lt;img src="{REPLY_IMG}" class="i_reply" alt="{L_POST_REPLY_TOPIC}" /&gt;&lt;/a&gt;
+        &lt;!-- END switch_user_authreply --&gt;
+    &lt;/span&gt;
+
+
+    &lt;span class="right"&gt;
+        &lt;a href="{JS_AUTH_FAVOURITES}"&gt;Ajouter le sujet à ses favoris&lt;/a&gt;
+    &lt;/span&gt;
+
+&lt;/div&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- MESSAGE --------------&gt;
+
+
+&lt;!-- Contenenur des messages --&gt;
+&lt;div class="container"&gt;
+
+    &lt;!-- Titre du poste --&gt;
+    &lt;h1 class="page-title"&gt;{TOPIC_TITLE}&lt;/h1&gt;
+
+
+    &lt;!-- Sondage (template : viewtopic_poll_ballot /// viewtopic_poll_result) --&gt;
+    {POLL_DISPLAY}
+
+
+    &lt;!-- Affichage d'un message --&gt;
+    &lt;!-- BEGIN postrow --&gt;
+    &lt;!-- BEGIN displayed --&gt;
+    &lt;div class="post_row" id="p{postrow.displayed.U_POST_ID}"&gt;
+
+        &lt;!-- Conteneur informations du message--&gt;
+        &lt;div class="post_details"&gt;
+
+            &lt;span class="post_date"&gt;
+                &lt;!-- Lien d'ancre vers le message --&gt;
+                &lt;a href="{postrow.displayed.POST_URL}"&gt;{postrow.displayed.POST_SUBJECT}&lt;/a&gt;&nbsp;
+
+                &lt;!-- Date du message --&gt;
+                {postrow.displayed.POST_DATE_NEW}
+            &lt;/span&gt;
+              
+                &lt;!-- Boutons d'édition de message --&gt;
+                &lt;ul class="profile-icons "&gt;
+                    &lt;li&gt;{postrow.displayed.THANK_IMG}&lt;/li&gt;
+                    &lt;li&gt;{postrow.displayed.MULTIQUOTE_IMG}&lt;/li&gt;
+                    &lt;li&gt;{postrow.displayed.QUOTE_IMG}&lt;/li&gt;
+                    &lt;li&gt;{postrow.displayed.EDIT_IMG}&lt;/li&gt;
+                    &lt;li&gt;{postrow.displayed.DELETE_IMG}&lt;/li&gt;
+                    &lt;li&gt;{postrow.displayed.IP_IMG}&lt;/li&gt;
+                &lt;/ul&gt;
+          
+                &lt;!-- Conteneur du bouton like --&gt;
+                &lt;!-- BEGIN switch_likes_active --&gt;
+                &lt;div class="like_button"&gt;
+
+                    &lt;!-- Bouton "j'aime" --&gt;
+                    &lt;button class="rep-button {postrow.displayed.switch_likes_active.C_VOTE_LIKE}" data-href="{postrow.displayed.switch_likes_active.U_VOTE_LIKE}" data-href-rm="{postrow.displayed.switch_likes_active.U_VOTE_RM_LIKE}"&gt;
+
+                        &lt;!-- Texte "j'aime" --&gt;
+                        &lt;span class="like_text"&gt;{postrow.displayed.switch_likes_active.L_LIKE}&lt;/span&gt;
+                        &lt;!-- Compte des "j'aime" --&gt;
+                        {postrow.displayed.switch_likes_active.COUNT_VOTE_LIKE}
+
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;!-- END switch_likes_active --&gt;
+                &lt;!-- Fin du bouton like --&gt;
+
+
+        &lt;/div&gt;
+        &lt;!-- Fin détails --&gt;
+
+
+        &lt;!-- Colonne de profil --&gt;
+        &lt;div class="post_profil"&gt;
+
+            &lt;center&gt;
+                &lt;!-- Pseudo --&gt;
+                &lt;span class="post_pseudo"&gt;{postrow.displayed.POSTER_NAME}&lt;/span&gt;&lt;br /&gt;
+
+                &lt;!-- Rang --&gt;
+                &lt;span class="post_rank"&gt;
+                    {postrow.displayed.POSTER_RANK_NEW} &lt;!-- Textuel --&gt;
+                    {postrow.displayed.RANK_IMAGE} &lt;!-- Image --&gt;
+                &lt;/span&gt;&lt;br /&gt;
+            &lt;/center&gt;
+
+            &lt;!-- Avatar --&gt;
+            &lt;div class="post_avatar"&gt;
+                {postrow.displayed.POSTER_AVATAR}
+            &lt;/div&gt;
+
+            &lt;br /&gt;
+
+            &lt;!-- En ligne --&gt;
+            &lt;center&gt;
+                &lt;div class="{postrow.displayed.ONLINE_IMG_NEW}"&gt;&lt;/div&gt; &lt;!-- Image (!!voir css .online) --&gt;
+                {postrow.displayed.ONLINE_IMG_NEW}&lt;!-- Textuel --&gt;
+            &lt;/center&gt;
+
+            &lt;br /&gt;
+
+            &lt;div class="post_userinfo"&gt;
+               
+               &lt;!-- Champs de profil --&gt;
+                &lt;!-- BEGIN profile_field --&gt;
+                &lt;!-- Label d'un champs de profil --&gt;
+                &lt;span class="profil_label"&gt;{postrow.displayed.profile_field.LABEL}&lt;/span&gt;
+
+                &lt;!-- Contenu d'un champs de profil --&gt;
+                &lt;span class="profil_content"&gt;{postrow.displayed.profile_field.CONTENT}&lt;/span&gt;
+
+                &lt;!-- Séparateur entre champs de profil --&gt;
+                &lt;span class="profil_separator"&gt;{postrow.displayed.profile_field.SEPARATOR}&lt;/span&gt;
+                &lt;!-- END profile_field --&gt;
+                &lt;!-- Fin de champs de profil --&gt;
+
+                &lt;!-- Champs de profil de la feuille de personnage --&gt;
+                {postrow.displayed.POSTER_RPG}
+
+            &lt;/div&gt;
+
+            &lt;br /&gt;
+
+            &lt;!-- Lien de contact --&gt;
+            &lt;div class="profil_contact"&gt;
+                {postrow.displayed.PROFILE_IMG}&nbsp;&lt;!-- Profil --&gt;
+                {postrow.displayed.PM_IMG}&nbsp;&lt;!-- MP --&gt;
+                {postrow.displayed.EMAIL_IMG}&nbsp;&lt;!--Email --&gt;
+                &lt;!-- Autre contact--&gt;
+                &lt;!-- BEGIN contact_field --&gt;
+                {postrow.displayed.contact_field.CONTENT}&nbsp;
+                &lt;!-- END contact_field --&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;!-- Fin colonne profil --&gt;
+
+
+        &lt;!-- Contenu du message --&gt;
+        &lt;div class="post_message postbody content"&gt;
+            {postrow.displayed.MESSAGE}
+
+            &lt;!-- Signature --&gt;
+            &lt;!-- BEGIN switch_signature --&gt;
+            &lt;div class="signature_div" id="sig{postrow.displayed.U_POST_ID}"&gt;{postrow.displayed.SIGNATURE_NEW}&lt;/div&gt;
+            &lt;!-- END switch_signature --&gt;
+
+        &lt;/div&gt;
+        &lt;!-- Fin du contenu du message --&gt;
+    &lt;/div&gt;
+
+    &lt;!-- END displayed --&gt;
+    &lt;!-- END postrow --&gt;
+    &lt;!-- Fin affichage d'un message --&gt;
+
+&lt;/div&gt;
+&lt;!-- Fin des messages --&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- BARRE DE GESTION --------------&gt;
+
+
+&lt;div class="links_bar"&gt;
+    &lt;span&gt;
+        &lt;!-- Lien "surveiller le sujet" --&gt;
+        &lt;!-- BEGIN switch_user_logged_in --&gt;
+        &lt;!-- BEGIN watchtopic --&gt;
+        &lt;span class="specials_links"&gt;{S_WATCH_TOPIC}&lt;/span&gt;
+        &lt;!-- END watchtopic --&gt;
+        &lt;!-- END switch_user_logged_in --&gt;
+
+        &lt;!-- Lien "sujets surveillés" --&gt;
+        &nbsp;&lt;a class="specials_links" href="{U_WATCHSEARCH_JS_PLUS_MENU}"&gt;Sujets surveillés&lt;/a&gt;
+    &lt;/span&gt;
+
+    &lt;!-- Pagination --&gt;
+    &lt;!-- BEGIN topicpagination --&gt;
+    &lt;span class="pagination right"&gt;{PAGINATION}&lt;/span&gt;
+    &lt;!-- END topicpagination --&gt;
+
+&lt;/div&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- REGLES DE LA CATEGORIE (si activé) --------------&gt;
+
+&lt;!-- BEGIN switch_forum_rules --&gt;
+&lt;div class="panel" id="forum_rules"&gt;
+
+    &lt;!-- Titre "règlement" --&gt;
+    &lt;div class="h3"&gt;{L_FORUM_RULES}&lt;/div&gt;
+
+    &lt;!-- Règlement --&gt;
+    &lt;div class="postbody"&gt;
+        &lt;!-- Image du règlement --&gt;
+        &lt;!-- BEGIN switch_forum_rule_image --&gt;
+        &lt;img class="left logo" src="{RULE_IMG_URL}" alt="" /&gt;
+        &lt;!-- END switch_forum_rule_image --&gt;
+
+        &lt;!-- Contenu --&gt;
+        {RULE_MSG}
+    &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;!-- END switch_forum_rules --&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- REPONSE RAPIDE --------------&gt;
+
+&lt;div class="container quickreply"&gt;
+    &lt;!-- BEGIN switch_user_logged_in --&gt;
+    {QUICK_REPLY_FORM}
+    &lt;!-- END switch_user_logged_in --&gt;
+&lt;/div&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- BARRE DE GESTION --------------&gt;
+
+
+&lt;div class="links_bar"&gt;
+    &lt;span&gt;
+        &lt;!-- Bouton : nouveau --&gt;
+        &lt;!-- BEGIN switch_user_authpost --&gt;
+        &lt;a class="buttons" href="{U_POST_NEW_TOPIC}" rel="nofollow"&gt;&lt;img src="{POST_IMG}" class="{POST_IMG_CLASS}" alt="{L_POST_NEW_TOPIC}" /&gt;&lt;/a&gt;&nbsp;&nbsp;&nbsp;
+        &lt;!-- END switch_user_authpost --&gt;
+
+        &lt;!-- Bouton : répondre --&gt;
+        &lt;!-- BEGIN switch_user_authreply --&gt;
+        &lt;a class="buttons" href="{U_POST_REPLY_TOPIC}"&gt;&lt;img src="{REPLY_IMG}" class="i_reply" alt="{L_POST_REPLY_TOPIC}" /&gt;&lt;/a&gt;
+        &lt;!-- END switch_user_authreply --&gt;
+    &lt;/span&gt;
+
+
+    &lt;span class="right"&gt;
+        &lt;a href="{JS_AUTH_FAVOURITES}"&gt;Ajouter le sujet à ses favoris&lt;/a&gt;
+    &lt;/span&gt;
+
+&lt;/div&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- SAUTER VERS UN AUTRE FORUM --------------&gt;
+
+
+&lt;form action="{S_JUMPBOX_ACTION}" method="get" onsubmit="if(document.jumpbox.f.value == -1){return false;}"&gt;
+    &lt;fieldset class="jumpbox"&gt;
+        &lt;label&gt;{L_JUMP_TO}:&nbsp;&lt;/label&gt;
+        {S_JUMPBOX_SELECT}&nbsp;
+        &lt;input class="button2" type="submit" value="{L_GO}" /&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- BOUTONS DE MODERATION --------------&gt;
+
+&lt;!-- BEGIN viewtopic_bottom --&gt;
+&lt;form method="get" action="{S_FORM_MOD_ACTION}"&gt;
+    &lt;fieldset class="quickmod"&gt;
+        &lt;input type="hidden" name="t" value="{TOPIC_ID}" /&gt;
+
+        &lt;!-- &lt;input type="hidden" name="sid" value="{S_SID}" /&gt; --&gt;
+        &lt;input type="hidden" name="{SECURE_ID_NAME}" value="{SECURE_ID_VALUE}" /&gt;
+        &lt;label&gt;{L_MOD_TOOLS}:&nbsp;&lt;/label&gt;
+        {S_SELECT_MOD}&nbsp;
+        &lt;input class="button2" type="submit" value="{L_GO}" /&gt;
+    &lt;/fieldset&gt;
+  &lt;br/&gt;&lt;br/&gt;
+  &lt;span class="right"&gt;{S_TOPIC_ADMIN}&lt;/span&gt;
+&lt;/form&gt;
+&lt;!-- END viewtopic_bottom --&gt;
+
+
+
+&lt;div class="clear"&gt;&lt;/div&gt;
+&lt;br /&gt;
+
+&lt;!-- Script image recadré --&gt;
+&lt;!-- BEGIN switch_image_resize --&gt;
+&lt;script type="text/javascript"&gt;
+    //&lt;![CDATA[
+    $(resize_images({
+        'selector': '.postbody .content',
+        'max_width': {
+            switch_image_resize.IMG_RESIZE_WIDTH
+        },
+        'max_height': {
+            switch_image_resize.IMG_RESIZE_HEIGHT
+        }
+    }));
+    //]]&gt;
+
+&lt;/script&gt;
+&lt;!-- END switch_image_resize --&gt;
+
+
+&lt;!-- BEGIN switch_plus_menu --&gt;
+&lt;script type="text/javascript"&gt;
+    //&lt;![CDATA[
+    var multiquote_img_off = '{JS_MULTIQUOTE_IMG_OFF}',
+        multiquote_img_on = '{JS_MULTIQUOTE_IMG_ON}';
+
+&lt;/script&gt;
+&lt;!-- END switch_plus_menu --&gt;
+&lt;script type="text/javascript"&gt;
+    var hiddenMsgLabel = {
+        visible: '{JS_HIDE_HIDDEN_MESSAGE}',
+        hidden: '{JS_SHOW_HIDDEN_MESSAGE}'
+    };
+    showHiddenMessage = function(id) {
+        try {
+            var regId = parseInt(id, 10);
+            if (isNaN(regId)) {
+                regId = 0;
+            }
+
+            if (regId &gt; 0) {
+                $('.post--' + id).toggle(0, function() {
+                    if ($(this).is(":visible")) {
+                        $('#hidden-title--' + id).html(hiddenMsgLabel.visible);
+                    } else {
+                        $('#hidden-title--' + id).html(hiddenMsgLabel.hidden);
+                    }
+                });
+            }
+        } catch (e) {}
+
+        return false;
+    };
+
+    //]]&gt;
+
+&lt;/script&gt;
+
+            </code>
+            </pre>
         </div>
 
         <div id="T7" class="tabcontent">
-            Affichage d'un sondage
+            <div class="tempname"><h1>Affichage d'un sondage</h1>
+            <h1 class="temp">viewtopic_poll_ballot</h1></div>
+
+            <pre class="language-markup">
+            <code class="language-markup">
+&lt;form method="post" action="{S_POLL_ACTION}"&gt;
+&lt;!-- Conteneur du sondage --&gt;
+&lt;div class="poll"&gt;
+
+        &lt;div class="head_poll"&gt;
+            &lt;!-- Titre du sondage --&gt;
+            &lt;h2&gt;{POLL_QUESTION}&lt;/h2&gt;
+
+            &lt;!-- Fermer le sondage --&gt;
+            &lt;span class="right"&gt;
+                {CLOSE_POLL}
+            &lt;/span&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- Liste des choix de vote --&gt;
+        &lt;div class="poll_list"&gt;
+            &lt;!-- Option --&gt;
+            &lt;!-- BEGIN poll_option --&gt;
+
+            &lt;!-- Nom d'une option --&gt;
+            &lt;div class="poll_option"&gt;{poll_option.POLL_OPTION_CAPTION}&lt;/div&gt;
+
+            &lt;!-- Case à cocher --&gt;
+            &lt;div class="poll_vote"&gt;&lt;input type="{poll_option.POLL_TYPE_BUTTON}" name="vote_id[]" value="{poll_option.POLL_OPTION_ID}" /&gt;&lt;/div&gt;
+            &lt;!-- END poll_option --&gt;
+            &lt;!-- Fin d'une option --&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- Conteneur : options du sondage --&gt;
+        &lt;div class="poll_send"&gt;
+            &lt;!-- Envoyer son vote --&gt;
+            &lt;input type="submit" name="submit" value="{L_SUBMIT_VOTE}" class="button1" /&gt;
+
+            &lt;!-- Voir les résultats --&gt;
+            &nbsp;&nbsp;&lt;a href="{U_VIEW_RESULTS}"&gt;{L_VIEW_RESULTS}&lt;/a&gt;
+
+            &lt;br /&gt;
+            &lt;!-- Sondage terminé --&gt;
+            {L_VOTE_EXPIRE}
+        &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/form&gt;
+
+            </code>
+            </pre>
         </div>
 
         <div id="T8" class="tabcontent">
-            Résultat d'un sondage
+            <div class="tempname"><h1>Résultats d'un sondage</h1>
+            <h1 class="temp">viewtopic_poll_result</h1></div>
+
+            <pre class="language-markup">
+            <code class="language-markup">
+&lt;!-- Conteneur du sondage --&gt;
+&lt;div class="poll"&gt;
+
+        &lt;div class="head_poll"&gt;
+            &lt;!-- Titre du sondage --&gt;
+            &lt;h2&gt;{POLL_QUESTION}&lt;/h2&gt;
+
+            &lt;!-- Fermer le sondage --&gt;
+            &lt;span class="right"&gt;
+                {CLOSE_POLL}
+            &lt;/span&gt;
+        &lt;/div&gt;
+
+
+        &lt;!-- Liste des choix de vote --&gt;
+        &lt;div class="poll_list"&gt;
+
+           &lt;!-- Option --&gt;
+            &lt;!-- BEGIN poll_option --&gt;
+            
+                &lt;!-- Nom de l'option --&gt;
+                &lt;div class="poll_option"&gt;{poll_option.POLL_OPTION_CAPTION}&lt;/div&gt;
+
+                &lt;!-- Case à cocher --&gt;
+                &lt;div class="poll_vote"&gt;
+
+                    &lt;!-- Images de barre de progression --&gt;
+                    &lt;img src="{VOTE_LCAP_IMG}" height="12" alt="" /&gt;
+                    &lt;img src="{poll_option.POLL_OPTION_IMG}" width="{poll_option.POLL_OPTION_IMG_WIDTH}" height="12" alt="{poll_option.POLL_OPTION_PERCENT}" /&gt;
+                    &lt;img src="{VOTE_RCAP_IMG}" height="12" alt="" /&gt;&nbsp;
+
+                   
+                    &lt;!-- Compte des votes d'une option --&gt;
+                    &lt;strong&gt;{poll_option.POLL_OPTION_RESULT}&lt;/strong&gt;&nbsp;
+                    &lt;!-- Total en pourcentage --&gt;
+                    ({poll_option.POLL_OPTION_PERCENT})
+
+                &lt;/div&gt;
+            &lt;!-- END poll_option --&gt;
+            &lt;!-- Fin option --&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- Conteneur : options du sondage --&gt;
+        &lt;div class="poll_send"&gt;
+
+            &lt;!-- Vote terminé --&gt;
+            {L_VOTE_EXPIRE}&lt;br /&gt;
+
+            &lt;!-- Résultat total des votes --&gt;
+            {L_TOTAL_VOTES} : &lt;strong&gt;{TOTAL_VOTES}&lt;/strong&gt;&nbsp;
+
+            &lt;!-- Annuler vote --&gt;
+            &lt;!-- BEGIN cancel_vote --&gt;
+            &lt;a href="{U_CANCEL_VOTE}"&gt;{L_CANCEL_VOTE}&lt;/a&gt;
+            &lt;!-- END cancel_vote --&gt;
+
+            &lt;br /&gt;
+
+            &lt;!-- Cacher les résultats --&gt;
+            &lt;!-- BEGIN switch_hide_result --&gt;
+            &lt;div id="hide_result_msg"&gt;{L_POLL_HIDE_RESULT}&lt;/div&gt;
+            &lt;!-- END switch_hide_result --&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+            </code>
+            </pre>
         </div>
 
 
+       
         <!---------------------->
         <!-- Envoyer un message -->
         <div id="T9" class="tabcontent">
-            Page d'envoi d'un message
+            <div class="tempname"><h1>Page d'envoi d'un message</h1>
+            <h1 class="temp">posting_body</h1></div>
+
+            <pre class="language-markup">
+            <code class="language-markup">
+&lt;br/&gt;{ERROR_BOX}
+&lt;form action="{S_POST_ACTION}" method="post" name="post" enctype="multipart/form-data"&gt;
+
+    &lt;!-----------------------------------------------&gt;
+    &lt;!-- ENTETE DE LA PAGE --------------&gt;
+
+    &lt;div class="container"&gt;
+
+        &lt;!-- Titre de la page --&gt;
+        &lt;h1 class="page-title"&gt;{L_POST_A}&lt;/h1&gt;
+
+        &lt;!-- Affichage de la prévisualisation (template : posting_topic_review ) --&gt;
+        {POST_PREVIEW_BOX}
+
+        &lt;!-----------------------------------------------&gt;
+        &lt;!-- REGLES DE LA CATEGORIE (si activé) --------------&gt;
+
+        &lt;!-- BEGIN switch_forum_rules --&gt;
+        &lt;div class="panel" id="forum_rules"&gt;
+
+            &lt;!-- Titre "règlement" --&gt;
+            &lt;div class="h3"&gt;{L_FORUM_RULES}&lt;/div&gt;
+
+            &lt;!-- Règlement --&gt;
+            &lt;div class="postbody"&gt;
+                &lt;!-- Image du règlement --&gt;
+                &lt;!-- BEGIN switch_forum_rule_image --&gt;
+                &lt;img class="left logo" src="{RULE_IMG_URL}" alt="" /&gt;
+                &lt;!-- END switch_forum_rule_image --&gt;
+
+                &lt;!-- Contenu --&gt;
+                {RULE_MSG}
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;!-- END switch_forum_rules --&gt;
+
+
+        &lt;!-----------------------------------------------&gt;
+        &lt;!-- AVERTISSEMENT (si trop de citation) --------------&gt;
+
+        &lt;!-- BEGIN switch_quote_limit --&gt;
+        &lt;div class="post row2"&gt;
+            &lt;br /&gt;
+            &lt;p class="center" style="color:red"&gt;{switch_quote_limit.L_QUOTE_LIMIT_WARNING}&lt;/p&gt;
+            &lt;br /&gt;
+        &lt;/div&gt;
+        &lt;!-- END switch_quote_limit --&gt;
+        
+        &lt;!-----------------------------------------------&gt;
+        &lt;!-- CONTENU DE LA SECTION POSTER UN MESSAGE --------------&gt;
+
+        &lt;div class="panel" id="postingbox"&gt;
+            &lt;!-- BEGIN switch_post_a --&gt;
+            &lt;div class="h3"&gt;{L_POST_A}&lt;/div&gt;
+            &lt;!-- END switch_post_a --&gt;
+            &lt;fieldset class="fields1" style="min-width: inherit;"&gt;
+                &lt;!-- BEGIN switch_username_select --&gt;
+                &lt;dl&gt;
+                    &lt;dt&gt;&lt;label&gt;{L_USERNAME}&lt;/label&gt;&lt;/dt&gt;
+                    &lt;dd&gt;&lt;input class="inputbox" type="text" name="username" maxlength="25" value="{USERNAME}" /&gt;&lt;/dd&gt;
+                &lt;/dl&gt;
+                &lt;!-- END switch_username_select --&gt;
+
+                &lt;!-- BEGIN switch_reasons --&gt;
+                &lt;dl&gt;
+                    &lt;dt&gt;&lt;label&gt;{L_REASON}&lt;/label&gt;&lt;/dt&gt;
+                    &lt;dd&gt;{REASON_NEW}&lt;/dd&gt;
+                &lt;/dl&gt;
+                &lt;!-- END switch_reasons --&gt;
+                &lt;!-- BEGIN switch_privmsg --&gt;
+                &lt;dl&gt;
+                    &lt;dt&gt;&lt;label&gt;{L_USERNAME}&lt;/label&gt;&lt;/dt&gt;
+                    &lt;dd&gt;
+                        &lt;!-- BEGIN switch_username --&gt;
+                        &lt;input class="inputbox" style="width:15%;margin:1px 0" type="text" name="username[]" value="{switch_privmsg.switch_username.USERNAME}" /&gt;&lt;br /&gt;
+                        &lt;!-- END switch_username --&gt;
+                        &lt;input class="inputbox" style="width:15%;margin:1px 0" type="text" id="username" name="username[]" value="{USERNAME}" tabindex="1" /&gt;&nbsp;
+                        &lt;img id="add_username" src="{ADD_USERNAME_IMG}" class="selectHover" style="vertical-align:middle" alt="" /&gt;&nbsp;
+                        &lt;input class="button2" type="button" id="find_user" value="{L_FIND_USERNAME}" /&gt;
+                    &lt;/dd&gt;
+                &lt;/dl&gt;
+
+                &lt;!-- BEGIN switch_privmsg_group --&gt;
+                &lt;dl&gt;
+                    &lt;dt&gt;&lt;label&gt;{switch_privmsg.switch_privmsg_group.L_OR_GROUP}&lt;/label&gt;&lt;/dt&gt;
+                    &lt;dd&gt;{switch_privmsg.switch_privmsg_group.MASS_PM} &lt;input type="button" value="  ?  " title="{switch_privmsg.switch_privmsg_group.MASS_PM_EXPLAIN}" class="button2" /&gt;&lt;/dd&gt;
+                &lt;/dl&gt;
+                &lt;!-- END switch_privmsg_group --&gt;
+                &lt;!-- END switch_privmsg --&gt;
+
+                &lt;!-- BEGIN switch_icon_checkbox --&gt;
+                &lt;dl&gt;
+                    &lt;dt&gt;&lt;label&gt;{L_ICON_TITLE}&lt;/label&gt;&lt;/dt&gt;
+                    &lt;dd&gt;
+                        &lt;!-- BEGIN row --&gt;
+                        &lt;!-- BEGIN cell --&gt;
+                        &lt;label&gt;&lt;input type="radio" name="post_icon" value="{switch_icon_checkbox.row.cell.ICON_ID}" {switch_icon_checkbox.row.cell.ICON_CHECKED} id="post_icon_{switch_icon_checkbox.row.cell.ICON_ID}" /&gt;&nbsp;&lt;span onclick="document.forms['post'].post_icon_{switch_icon_checkbox.row.cell.ICON_ID}.checked=true"&gt;{switch_icon_checkbox.row.cell.ICON_IMG}&lt;/span&gt;&lt;/label&gt; &nbsp;
+                        &lt;!-- END cell --&gt;
+                        &lt;!-- END row --&gt;
+                    &lt;/dd&gt;
+                &lt;/dl&gt;
+                &lt;!-- END switch_icon_checkbox --&gt;
+
+                &lt;!-- BEGIN switch_subject --&gt;
+                &lt;dl&gt;
+                    &lt;dt&gt;&lt;label&gt;{L_SUBJECT}&lt;/label&gt;&lt;/dt&gt;
+                    &lt;dd&gt;
+                        &lt;input class="inputbox medium" type="text" name="subject" value="{SUBJECT}" maxlength="{TOPIC_TITLE_MAXLENGTH}" title="{TOPIC_TITLE_LENGTH_EXPLAIN}" onkeypress="if (event.keyCode==13){return false}" /&gt;
+
+                        &lt;!-- BEGIN switch_subject_color --&gt;
+
+                        &lt;script type="text/javascript"&gt;
+                            //&lt;![CDATA[
+                            input = document.getElementsByName('subject');
+                            //]]&gt;
+
+                        &lt;/script&gt;
+                        &lt;select name="topic_color" onchange="input[0].style.color = topic_color.value" style="margin-left:10px"&gt;
+                            {switch_subject.switch_subject_color.TOPIC_TITLE_COLOR_OPTIONS}
+                        &lt;/select&gt;
+                        &lt;script type="text/javascript"&gt;
+                            //&lt;![CDATA[
+                            input[0].style.color = '{switch_subject.switch_subject_color.TOPIC_TITLE_COLOR_DEFAULT}';
+                            //]]&gt;
+
+                        &lt;/script&gt;
+
+                        &lt;!-- END switch_subject_color --&gt;
+                    &lt;/dd&gt;
+                &lt;/dl&gt;
+                &lt;!-- END switch_subject --&gt;
+
+                &lt;!-- BEGIN switch_description --&gt;
+                &lt;dl&gt;
+                    &lt;dt&gt;&lt;label&gt;{L_DESCRIPTION}&lt;/label&gt;&lt;/dt&gt;
+                    &lt;dd&gt;
+                        &lt;input class="inputbox medium" type="text" name="description" value="{DESCRIPTION}" maxlength="{TOPIC_DESCRIPTION_MAXLENGTH}" onkeypress="if (event.keyCode==13){return false}" /&gt;
+                    &lt;/dd&gt;
+                &lt;/dl&gt;
+                &lt;!-- END switch_description --&gt;
+
+                &lt;div id="smiley-box"&gt;
+                    &lt;div id="smileyContainer"&gt;
+                        {L_SMILIES_PREVIEW_NEW}
+                    &lt;/div&gt;&lt;br /&gt;
+                    {HTML_STATUS}&lt;br /&gt;
+                    &lt;a href="/faq?mode=bbcode" target="_blank"&gt;{BBCODE_STATUS}&lt;/a&gt;&lt;br /&gt;
+                    {SMILIES_STATUS}
+                &lt;/div&gt;
+
+                &lt;div id="message-box"&gt;
+                    &lt;div class="left-box"&gt;&lt;span id="helpbox" class="helpline"&gt;&lt;/span&gt;&lt;/div&gt;
+                    &lt;br /&gt;
+                    &lt;div id="textarea_content" style="width:80%;"&gt;
+                        &lt;textarea id="text_editor_textarea" name="message"&gt;{MESSAGE}&lt;/textarea&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- BEGIN edit_reason --&gt;
+                &lt;br /&gt;
+                &lt;dl&gt;
+                    &lt;dt&gt;&lt;label&gt;&lt;span style="font-size:11px"&gt;{edit_reason.L_EDIT_REASON}&lt;/span&gt;&lt;/label&gt;&lt;/dt&gt;
+                    &lt;dd&gt;&lt;input class="inputbox medium" style="width:63%" type="text" name="edit_reason" value="{edit_reason.EDIT_REASON}" maxlength="255" /&gt;&lt;/dd&gt;
+                &lt;/dl&gt;
+                &lt;!-- END edit_reason --&gt;
+
+                &lt;div class="clear"&gt;&lt;/div&gt;
+            &lt;/fieldset&gt;
+        &lt;/div&gt;
+
+        &lt;!-----------------------------------------------&gt;
+        &lt;!-- BOUTONS (envoyer, prévisu,...) --------------&gt;
+
+        &lt;div class="panel row2"&gt;
+            &lt;fieldset class="submit-buttons"&gt;
+                {S_HIDDEN_FORM_FIELDS}
+                &lt;input type="hidden" name="lt" value="{LAST_TOPIC_ID}" /&gt;
+                &lt;!-- BEGIN switch_preview --&gt;
+                &lt;input class="button2" type="submit" name="preview" value="{L_PREVIEW}" tabindex="5" /&gt;&nbsp;
+                &lt;!-- END switch_preview --&gt;
+                &lt;!-- BEGIN switch_draft --&gt;
+                &nbsp;&lt;input class="button2" type="submit" name="draft" value="{L_DRAFT}" tabindex="7" accesskey="d" /&gt;&nbsp;
+                &lt;!-- END switch_draft --&gt;
+                &lt;!-- BEGIN switch_publish --&gt;
+                &nbsp;&lt;input class="button2" type="submit" name="publish" value="{L_PUBLISH}" tabindex="8" accesskey="p" /&gt;&nbsp;
+                &lt;!-- END switch_publish --&gt;
+                &nbsp;&lt;input class="button1" type="submit" name="post" value="{L_SUBMIT}" tabindex="6" accesskey="s" /&gt;
+                &lt;!-- BEGIN switch_signature --&gt;
+                &nbsp;&lt;input type="hidden" name="submit" value="{L_SUBMIT}" /&gt;
+                &lt;!-- END switch_signature --&gt;
+            &lt;/fieldset&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;br/&gt;
+  
+    &lt;!-----------------------------------------------&gt;
+    &lt;!-- SECTION : DÉS --------------&gt;
+
+    &lt;!-- BEGIN switch_roll_dice --&gt;
+    &lt;div class="h3"&gt;{ROLL_DICE_TITLE}&lt;/div&gt;
+    &lt;div class="panel row3"&gt;
+        &lt;script type="text/javascript"&gt;
+            function add_dice(dice_number, dice, number) {
+                var content = document.getElementById('post_dice').innerHTML;
+                document.getElementById('dice_to_del').innerHTML = '';
+                document.getElementById('dice_to_del').id = '';
+
+                var new_tr = document.createElement('tr');
+                new_tr.appendChild(document.createElement('td'));
+                new_tr.firstChild.innerHTML = '{ROLL_DICE_TITLE_LOW} #' + (dice_number + 1) + ' :&nbsp;&lt;select name="post_dice_' + dice_number + '" id="post_dice_' + dice_number + '" value="' + dice + '"&gt;' + content + '&lt;/select&gt;&nbsp;&lt;label for="nb_rolls"&gt;{switch_roll_dice.L_DICE_ROLLS} : &lt;/label&gt;&lt;input type="text" size="2" maxlength="3" name="nb_rolls_' + dice_number + '" id="nb_rolls" value="' + number + '" /&gt;&nbsp;&lt;span id="dice_to_del"&gt;&lt;a href="javascript:add_dice(' + (dice_number + 1) + ',\'\',1)"&gt;&lt;img src="{PATH_IMG_FA}tabs_more.gif" alt="plus" /&gt;&lt;/a&gt;&lt;/span&gt;';
+                document.getElementById('list_dice').lastChild.appendChild(new_tr);
+
+                var select_dice = document.getElementById('post_dice_' + dice_number);
+                if (dice == '') {
+                    select_dice.selectedIndex = 0;
+                }
+                for (var i = 1; select_dice.options[i]; i++) {
+                    select_dice.options[i].selected = (select_dice.options[i].value == dice);
+                }
+            }
+
+        &lt;/script&gt;
+        &lt;table style="width:100%" id="list_dice"&gt;
+            &lt;tr&gt;
+                &lt;td&gt;
+                    {ROLL_DICE_TITLE_LOW} #1 :&nbsp;
+                    &lt;select name="post_dice_0" id="post_dice"&gt;
+                        &lt;option value=""&gt;-&lt;/option&gt;
+                        &lt;!-- BEGIN row_replace --&gt;
+                        &lt;option value="{switch_roll_dice.row_replace.DICE_ID}" {switch_roll_dice.row_replace.DICE_SELECTED}&gt;{switch_roll_dice.row_replace.DICE_NAME}&lt;/option&gt;
+                        &lt;!-- END row_replace --&gt;
+                    &lt;/select&gt;
+                    &nbsp;&lt;label for="nb_rolls"&gt;{switch_roll_dice.L_DICE_ROLLS} : &lt;/label&gt;&lt;input type="text" size="2" maxlength="3" name="nb_rolls_0" id="nb_rolls" value="{switch_roll_dice.S_DICE_ROLLS_VALUE}" /&gt;
+                    &nbsp;&lt;span id="dice_to_del"&gt;&lt;a href="javascript:add_dice(1,'',1)"&gt;&lt;img src="{PATH_IMG_FA}tabs_more.gif" alt="plus" /&gt;&lt;/a&gt;&lt;/span&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+        {switch_roll_dice.DICE_SCRIPT}
+    &lt;/div&gt;
+    &lt;!-- END switch_roll_dice --&gt;
+
+
+    &lt;!-----------------------------------------------&gt;
+    &lt;!-- SECTION : OPTION DU MESSAGE --------------&gt;
+    
+    &lt;div class="h3"&gt;{L_OPTIONS}&lt;/div&gt;
+    &lt;div class="panel row3"&gt;
+        &lt;!-- BEGIN switch_topic_modif --&gt;
+        &lt;fieldset class="fields1"&gt;
+            &lt;!-- BEGIN switch_icon_checkbox --&gt;
+            &lt;dl&gt;
+                &lt;label&gt;{POST_ICON_TITLE}&lt;/label&gt;
+                &lt;dd&gt;
+                    &lt;!-- BEGIN row --&gt;
+                    &lt;!-- BEGIN cell --&gt;
+                    &lt;label&gt;&lt;input type="radio" name="post_icon" value="{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_ID}" id="post_icon_{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_ID}" {switch_topic_modif.switch_icon_checkbox.row.cell.ICON_CHECKED} /&gt;&nbsp;&lt;span onclick="document.forms['post'].post_icon_{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_ID}.checked=true"&gt;{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_IMG}&lt;/span&gt;&lt;/label&gt;
+                    &lt;!-- END cell --&gt;
+                    &lt;!-- END row --&gt;
+                &lt;/dd&gt;
+            &lt;/dl&gt;
+            &lt;!-- END switch_icon_checkbox --&gt;
+            &lt;dl&gt;
+                &lt;dt&gt;&lt;label for="modif_topic_title"&gt;{L_TOPIC_TITLE_MODIFY}&lt;/label&gt;&lt;/dt&gt;
+                &lt;dd&gt;
+                    &lt;input type="text" class="inputbox medium" name="modif_topic_title" id="modif_topic_title" value="{MODIF_TOPIC_TITLE}" maxlength="{TOPIC_DESCRIPTION_MAXLENGTH}" onkeypress="if (event.keyCode==13){return false}" /&gt;
+                    &lt;!-- BEGIN switch_topic_button --&gt;
+                    &nbsp;&lt;input type="button" class="button2" value="{L_SOLVED_WITHOUT_BRAKETS}" onclick="set_solved(this.form.elements['modif_topic_title'],'{L_SOLVED}')" style="display:none" id="button_solved" /&gt;
+                    &lt;script type="text/javascript"&gt;
+                        //&lt;![CDATA[
+                        document.getElementById('button_solved').style.display = 'inline';
+                        //]]&gt;
+
+                    &lt;/script&gt;
+                    &lt;!-- END switch_topic_button --&gt;
+                &lt;/dd&gt;
+            &lt;/dl&gt;
+        &lt;/fieldset&gt;
+        &lt;hr class="dashed" /&gt;
+        &lt;!-- END switch_topic_modif --&gt;
+        &lt;fieldset class="fields1"&gt;
+            &lt;!-- BEGIN switch_html_checkbox --&gt;
+            &lt;label&gt;&lt;input type="checkbox" name="disable_html" {S_HTML_CHECKED} /&gt;&nbsp;{L_DISABLE_HTML}&lt;/label&gt;&lt;br /&gt;
+            &lt;!-- END switch_html_checkbox --&gt;
+
+            &lt;!-- BEGIN switch_bbcode_checkbox --&gt;
+            &lt;label&gt;&lt;input type="checkbox" name="disable_bbcode" {S_BBCODE_CHECKED} /&gt;&nbsp;{L_DISABLE_BBCODE}&lt;/label&gt;&lt;br /&gt;
+            &lt;!-- END switch_bbcode_checkbox --&gt;
+
+            &lt;!-- BEGIN switch_smilies_checkbox --&gt;
+            &lt;label&gt;&lt;input type="checkbox" name="disable_smilies" {S_SMILIES_CHECKED} /&gt;&nbsp;{L_DISABLE_SMILIES}&lt;/label&gt;&lt;br /&gt;
+            &lt;!-- END switch_smilies_checkbox --&gt;
+
+            &lt;!-- BEGIN switch_signature_checkbox --&gt;
+            &lt;label&gt;&lt;input type="checkbox" name="attach_sig" {S_SIGNATURE_CHECKED} /&gt;&nbsp;{L_ATTACH_SIGNATURE}&lt;/label&gt;&lt;br /&gt;
+            &lt;!-- END switch_signature_checkbox --&gt;
+
+            &lt;!-- BEGIN switch_notify_checkbox --&gt;
+            &lt;label&gt;&lt;input type="checkbox" name="notify" {S_NOTIFY_CHECKED} /&gt;&nbsp;{L_NOTIFY_ON_REPLY}&lt;/label&gt;&lt;br /&gt;
+            &lt;!-- END switch_notify_checkbox --&gt;
+
+            &lt;!-- BEGIN switch_delete_checkbox --&gt;
+            &lt;label&gt;&lt;input type="checkbox" name="delete" /&gt;&nbsp;{L_DELETE_POST}&lt;/label&gt;&lt;br /&gt;
+            &lt;!-- END switch_delete_checkbox --&gt;
+
+            &lt;!-- BEGIN switch_type_toggle --&gt;
+            &lt;br /&gt;{S_TYPE_TOGGLE}
+            &lt;!-- END switch_type_toggle --&gt;
+        &lt;/fieldset&gt;
+    &lt;/div&gt;
+
+    &lt;!-----------------------------------------------&gt;
+    &lt;!-- SECTION : SONDAGE --------------&gt;
+    {POLLBOX}
+    
+&lt;/form&gt;
+
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- SAUTER VERS UN FORUM --------------&gt;
+
+&lt;!-- BEGIN switch_jumpbox --&gt;
+&lt;form action="{S_JUMPBOX_ACTION}" method="get" name="jumpbox" onsubmit="if(document.jumpbox.f.value == -1){return false}"&gt;
+    &lt;p class="right"&gt;{L_JUMP_TO}:&nbsp;{S_JUMPBOX_SELECT}&nbsp;&lt;input class="button2" type="submit" value="{L_GO}" /&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;!-- END switch_jumpbox --&gt;
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- HISTORIQUES DES MESSAGES --------------&gt;
+&lt;!-- (template : posting_topic_review (message) // privmsg_topic_review (messages privés)--&gt;
+
+{TOPIC_REVIEW_BOX}
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!----------------&gt;
+
+&lt;!-- BEGIN switch_privmsg --&gt;
+&lt;div id="find_username" class="jqmWindow"&gt;&lt;/div&gt;
+&lt;div id="group_pm_explain" class="jqmWindow"&gt;&lt;/div&gt;
+
+&lt;script src="{JQUERY_DIR}jqmodal/jqmodal.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;!-- END switch_privmsg --&gt;
+&lt;script type="text/javascript"&gt;
+    //&lt;![CDATA[
+    $(function() {
+        &lt;
+        !--BEGIN switch_privmsg-- &gt;
+        privmsg_add_username('{U_SEARCH_USER}', '&lt;br /&gt;&lt;input class="inputbox" style="width:15%;margin:1px 0" type="text" name="username[]" /&gt;'); &lt;
+        !--END switch_privmsg-- &gt;
+        &lt;
+        !--BEGIN switch_image_resize-- &gt;
+        resize_images({
+            'selector': '.postbody .content',
+            'max_width': {
+                switch_image_resize.IMG_RESIZE_WIDTH
+            },
+            'max_height': {
+                switch_image_resize.IMG_RESIZE_HEIGHT
+            }
+        }); &lt;
+        !--END switch_image_resize-- &gt;
+    });
+    //]]&gt;
+
+&lt;/script&gt;
+
+{SCEDITOR}
+
+            </code>
+            </pre>
         </div>
 
         <div id="T10" class="tabcontent">
-            Historique des messages (sujet)
+            <div class="tempname"><h1>Historique des messages (sujet)</h1>
+            <h1 class="temp">posting_topic_review</h1></div>
+
+            <pre class="language-markup">
+            <code class="language-markup">
+&lt;div class="wrapped"&gt;
+
+    &lt;!-- Titre "revue du sujet" --&gt;
+    &lt;!-- BEGIN switch_inline_mode --&gt;
+    &lt;div class="h3"&gt;{L_TOPIC_REVIEW}&lt;/div&gt;
+    &lt;!-- END switch_inline_mode --&gt;
+
+    &lt;!-- Affichage d'un message simplifié --&gt;
+    &lt;!-- BEGIN postrow --&gt;
+    &lt;!-- BEGIN displayed --&gt;
+    &lt;a name="{postrow.displayed.POST_ID}"&gt;&lt;/a&gt;
+    &lt;div class="panel {postrow.displayed.displayed.ROW_CLASS}"&gt;
+
+        &lt;!-- Contenu --&gt;
+        &lt;div class="postbody"&gt;
+            &lt;!-- Sujet par - Auteur - le - date --&gt;
+            &lt;span&gt; {postrow.displayed.L_TOPIC_BY} {postrow.displayed.POSTER_NAME} {postrow.displayed.L_TOPIC_ON} {postrow.displayed.POST_DATE}&lt;/span&gt;
+
+            &lt;!-- Message --&gt;
+            &lt;div class="content"&gt;{postrow.displayed.MESSAGE}&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="clear"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- END displayed --&gt;
+    &lt;!-- BEGIN hidden --&gt;
+    &lt;div class="post"&gt;
+        &lt;p style="text-align:center"&gt;{postrow.hidden.MESSAGE}&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- END hidden --&gt;
+    &lt;!-- END postrow --&gt;
+    &lt;!-- Fin de l'affichage --&gt;
+
+
+&lt;/div&gt;
+&lt;br /&gt;
+
+            </code>
+            </pre>
         </div>
 
         <div id="T11" class="tabcontent">
-            Historique des messages (mp)
+            <div class="tempname"><h1>Historique des messages (mp)</h1>
+            <h1 class="temp">privmsg_topic_review</h1></div>
+
+            <pre class="language-markup">
+            <code class="language-markup">
+&lt;div class="wrapped"&gt;
+
+    &lt;!-- Titre "revue du sujet" --&gt;
+    &lt;!-- BEGIN switch_inline_mode --&gt;
+    &lt;h2&gt;{L_TOPIC_REVIEW}&lt;/h2&gt;
+    &lt;!-- END switch_inline_mode --&gt;
+
+    &lt;!-- Affichage d'un message simplifié --&gt;
+    &lt;!-- BEGIN postrow --&gt;
+    &lt;div class="panel"&gt;
+
+        &lt;div&gt;
+            &lt;!-- Avatar --&gt;
+            &lt;div class="mini_img left"&gt;{postrow.POSTER_AVATAR}&lt;/div&gt;
+
+            &lt;!-- Sujet par - Auteur - le - date --&gt;
+            &lt;span class="author"&gt;{postrow.L_TOPIC_BY} {postrow.POSTER_NAME} {postrow.L_TOPIC_ON} {postrow.POST_DATE}&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Message --&gt;
+        &lt;div class="content"&gt;{postrow.MESSAGE}&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;!-- END postrow --&gt;
+&lt;/div&gt;
+
+            </code>
+            </pre>
         </div>
 
+        
 
         <!---------------------->
         <!-- Message privé -->
         <div id="T12" class="tabcontent">
-            Liste des messages privés
+            <div class="tempname"><h1>Liste des messages privés</h1>
+            <h1 class="temp">privmsgs_body</h1></div>
+
+            <pre class="language-markup">
+            <code class="language-markup">
+&lt;br /&gt;
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- MENU DE LA BOITE DE RECEPTION --------------&gt;
+
+&lt;ul id="privmsgs-menu"&gt;
+    &lt;!-- Boîte de reception (image / lien) --&gt;
+    &lt;li&gt;{INBOX_IMG} {INBOX}&lt;/li&gt;
+    &lt;!-- Messages envoyés (image / lien) --&gt;
+    &lt;li&gt;{SENTBOX_IMG} {SENTBOX}&lt;/li&gt;
+    &lt;!-- Boîte d'envoi (image / lien) --&gt;
+    &lt;li&gt;{OUTBOX_IMG} {OUTBOX}&lt;/li&gt;
+    &lt;!-- Archives (image / lien) --&gt;
+    &lt;li&gt;{SAVEBOX_IMG} {SAVEBOX}&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;!-- Début des interactions par MP --&gt;
+&lt;form action="{S_PRIVMSGS_ACTION}" method="post" name="privmsg_list"&gt;
+
+    &lt;!-----------------------------------------------&gt;
+    &lt;!-- BARRE DE GESTION --------------&gt;
+    &lt;div class="links_bar"&gt;
+
+        &lt;div&gt;
+            &lt;!-- Capacité de la boîte de réception --&gt;
+            &lt;!-- BEGIN switch_box_size_notice --&gt;
+            &lt;span&gt;{BOX_SIZE_STATUS}&lt;/span&gt;
+            &lt;!-- END switch_box_size_notice --&gt;
+
+            &lt;!-- Bouton "nouveau" --&gt;
+            &lt;div class="buttons"&gt;{POST_PM_IMG}&lt;/div&gt;
+        &lt;/div&gt;
+
+
+        &lt;!-- Montrer tous les messsages --&gt;
+        &lt;span class="right"&gt;
+            {L_DISPLAY_MESSAGES}:&nbsp;
+            &lt;select name="msgdays"&gt;{S_SELECT_MSG_DAYS}&lt;/select&gt;&nbsp;
+            &lt;input class="button2" type="submit" name="submit_msgdays" value="{L_GO}" /&gt;
+        &lt;/span&gt;
+
+    &lt;/div&gt;
+
+
+    &lt;!-----------------------------------------------&gt;
+    &lt;!-- LISTE DES MPs --------------&gt;
+
+    &lt;!-- Conteneur--&gt;
+    &lt;div class="container"&gt;
+
+        &lt;!-- Début d'un message privé --&gt;
+        &lt;!-- BEGIN listrow --&gt;
+        &lt;div class="mp_row"&gt;
+
+            &lt;!-- Image MP --&gt;
+            &lt;div class="mp_img"&gt;&lt;img src="{listrow.PRIVMSG_FOLDER_IMG}" /&gt;&lt;/div&gt;
+
+            &lt;div class="mp_infos"&gt;
+                &lt;!-- Titre du MP --&gt;
+                &lt;a href="{listrow.U_READ}" class="topictitle"&gt;{listrow.SUBJECT}&lt;/a&gt;&lt;br /&gt;
+                &lt;!-- Expéditeur et date --&gt;
+                &lt;span style="margin: 0 5px"&gt;&lt;em&gt;{listrow.FROM} - {listrow.DATE}&lt;/em&gt;&lt;/span&gt;
+                &lt;!-- Bouton de sélection --&gt;
+                &lt;input class="right" type="checkbox" name="mark[]2" value="{listrow.S_MARK_ID}" /&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- END listrow --&gt;
+        &lt;!-- Fin d'un message privé --&gt;
+
+        &lt;!-- Notion "pas de message" --&gt;
+        &lt;!-- BEGIN switch_no_messages --&gt;
+        &lt;center&gt;{L_NO_MESSAGES}&lt;/center&gt;
+        &lt;!-- END switch_no_messages --&gt;
+
+        &lt;!-- Tout sélectionner/déselectionner --&gt;
+        &lt;span class="right"&gt;&lt;a href="javascript:select_switch_privmsg(true);"&gt;{L_MARK_ALL}&lt;/a&gt; ou &lt;a href="javascript:select_switch_privmsg(false);"&gt;{L_UNMARK_ALL}&lt;/a&gt;&lt;/span&gt;
+        &lt;br /&gt;
+    &lt;/div&gt;
+
+
+    &lt;br /&gt;
+    &lt;!-----------------------------------------------&gt;
+    &lt;!-- BOUTONS DE GESTION --------------&gt;
+
+    &lt;div&gt;
+        {S_HIDDEN_FIELDS}
+        &lt;!-- BEGIN switch_save --&gt;
+        &lt;input class="button1" type="submit" name="save" value="{L_SAVE_MARKED}" /&gt;&nbsp;&nbsp;
+        &lt;!-- END switch_save --&gt;
+        &lt;!-- BEGIN switch_move_profile --&gt;
+        &lt;input class="button1" type="submit" name="moveprofile" value="{L_MOVE_PROFILE_MARKED}" /&gt;&nbsp;&nbsp;
+        &lt;!-- END switch_move_profile --&gt;
+        &lt;!-- BEGIN switch_mark_as_read --&gt;
+        &lt;input class="button2" type="submit" name="mark_as_read" value="{switch_mark_as_read.L_MARK_AS_READ}" /&gt;&nbsp;&nbsp;
+        &lt;input class="button2" type="submit" name="mark_as_unread" value="{switch_mark_as_read.L_MARK_AS_UNREAD}" /&gt;&nbsp;&nbsp;
+        &lt;!-- END switch_mark_as_read --&gt;
+        &lt;input class="button2" type="submit" name="delete" value="{L_DELETE_MARKED}" /&gt;&nbsp;&nbsp;
+        &lt;input class="button2" type="submit" name="deleteall" value="{L_DELETE_ALL}" /&gt;
+    &lt;/div&gt;
+
+
+&lt;/form&gt;
+&lt;!-- Fin des interactions par MP --&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- BARRE DE GESTION --------------&gt;
+
+&lt;div class="links_bar"&gt;
+
+    &lt;!-- Bouton "Nouveau" --&gt;
+    &lt;div class="buttons"&gt;{POST_PM_IMG}&lt;/div&gt;
+    &lt;!-- Pagination --&gt;
+    &lt;span class="pagination"&gt;{PAGINATION} {PAGE_NUMBER}&lt;/span&gt;
+&lt;/div&gt;
+
+
+&lt;!-- Sauter vers un forum --&gt;
+{JUMPBOX}
+
+&lt;br style="clear:both" /&gt;
+
+            </code>
+            </pre>
         </div>
 
         <div id="T13" class="tabcontent">
-            Message privé
+            <div class="tempname"><h1>Affichage d'un message privé</h1>
+            <h1 class="temp">privmsgs_read_body</h1></div>
+
+            <pre class="language-markup">
+            <code class="language-markup">
+&lt;br /&gt;
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- MENU DE LA BOÎTE DE RECEPTION --------------&gt;
+
+&lt;ul id="privmsgs-menu"&gt;
+    &lt;!-- Boîte de reception (image / lien) --&gt;
+    &lt;li&gt;{INBOX_IMG} {INBOX}&lt;/li&gt;
+    &lt;!-- Messages envoyés (image / lien) --&gt;
+    &lt;li&gt;{SENTBOX_IMG} {SENTBOX}&lt;/li&gt;
+    &lt;!-- Boîte d'envoi (image / lien) --&gt;
+    &lt;li&gt;{OUTBOX_IMG} {OUTBOX}&lt;/li&gt;
+    &lt;!-- Archives (image / lien) --&gt;
+    &lt;li&gt;{SAVEBOX_IMG} {SAVEBOX}&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;form action="{S_PRIVMSGS_ACTION}" method="post"&gt;
+
+   &lt;!-----------------------------------------------&gt;
+    &lt;!-- BARRE DE GESTION --------------&gt;
+    &lt;!-- BEGIN switch_post_reply --&gt;
+    &lt;div class="links_bar"&gt;
+       &lt;!-- Bouton: répondre --&gt;
+        &lt;div class="buttons"&gt;{REPLY_PM_IMG}&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- END switch_post_reply --&gt;
+
+
+   &lt;!-----------------------------------------------&gt;
+    &lt;!-- AFFICHAGE DU MESSAGE --------------&gt;
+    &lt;div class="container"&gt;
+
+        &lt;!-- Tire du message --&gt;
+        &lt;h1 class="page-title"&gt;{L_MESSAGE} : {POST_SUBJECT}&lt;/h1&gt;
+
+        &lt;!-- Conteneur du message --&gt;
+        &lt;div class="message"&gt;
+
+            &lt;!-- Conteneur des informations du message --&gt;
+            &lt;div class="message_infos"&gt;
+
+                &lt;!-- De XX à XX, date --&gt;
+                &lt;span&gt;{L_FROM} {MESSAGE_FROM} {L_TO} {MESSAGE_TO}, {POST_DATE}&lt;/span&gt;
+
+                &lt;!-- Boutons d'édition --&gt;
+                &lt;ul class="profile-icons"&gt;
+                    &lt;!-- BEGIN switch_quote --&gt;
+                    &lt;li&gt;{QUOTE_PM_IMG}&lt;/li&gt;
+                    &lt;!-- END switch_quote --&gt;
+                    &lt;li&gt;{EDIT_PM_IMG}&lt;/li&gt;
+                &lt;/ul&gt;
+
+            &lt;/div&gt;
+
+            &lt;!-- Profil de l'expéditeur --&gt;
+            &lt;div class="message_profil"&gt;
+
+                &lt;!-- avatar --&gt;
+                {AVATAR_FROM}&lt;br /&gt;&lt;br /&gt;
+
+                &lt;!-- pseudo --&gt;
+                {MESSAGE_FROM}
+
+                &lt;!-- Lien-image de contact --&gt;
+                &lt;!-- BEGIN switch_user_contact --&gt;
+                &lt;br /&gt;
+                {PROFILE_IMG} {PM_IMG} {EMAIL_IMG} {WWW_IMG}
+                &lt;!-- END switch_user_contact --&gt;
+            &lt;/div&gt;
+
+            &lt;!-- contenu du MP --&gt;
+            &lt;div class="message_content postbody content"&gt;
+                {MESSAGE}
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;!-- Fin du conteneur message --&gt;
+
+        &lt;br /&gt;
+        &lt;!-----------------------------------------------&gt;
+        &lt;!-- BOUTONS DE GESTION --------------&gt;
+       
+        &lt;fieldset class="submit-buttons"&gt;
+            {S_HIDDEN_FIELDS}
+
+            &lt;!-- Bouton "sauvegarder le message" --&gt;
+            &lt;!-- BEGIN switch_save --&gt;
+            &lt;input class="button2" type="submit" name="save" value="{L_SAVE_MSG}" /&gt;&nbsp;&nbsp;
+            &lt;!-- END switch_save --&gt;
+
+            &lt;!-- --&gt;
+            &lt;!-- BEGIN switch_move_profile --&gt;
+            &lt;input class="button2" type="submit" name="moveprofile" value="{L_MOVE_PROFILE}" /&gt;&nbsp;&nbsp;
+            &lt;!-- END switch_move_profile --&gt;
+
+            &lt;!-- Bouton "supprimer le message" --&gt;
+            &lt;input class="button2" type="submit" name="delete" value="{L_DELETE_MSG}" /&gt;
+        &lt;/fieldset&gt;
+
+    &lt;/div&gt;
+    &lt;!-- Fin de l'affichage du message --&gt;
+
+&lt;/form&gt;
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- HISTORIQUE DES MESSAGES --------------&gt;
+&lt;!-- (template : privmsg_topic_review)--&gt;
+
+&lt;!-- BEGIN switch_review_box --&gt;
+{TOPIC_REVIEW_BOX}
+&lt;!-- END switch_review_box --&gt;
+
+
+&lt;!-- Sauter vers un forum --&gt;
+{JUMPBOX}
+
+
+
+&lt;!-- BEGIN switch_image_resize --&gt;
+&lt;script type="text/javascript"&gt;
+    //&lt;![CDATA[
+    $(resize_images({
+        'selector': '.postbody .content',
+        'max_width': {
+            switch_image_resize.IMG_RESIZE_WIDTH
+        },
+        'max_height': {
+            switch_image_resize.IMG_RESIZE_HEIGHT
+        }
+    }));
+    //]]&gt;
+
+&lt;/script&gt;
+&lt;!-- END switch_image_resize --&gt;
+
+            </code>
+            </pre>
         </div>
 
 
+       
         <!---------------------->
         <!-- Membres -->
         <div id="T14" class="tabcontent">
-            Liste des membres
+            <div class="tempname"><h1>Liste des membres</h1>
+            <h1 class="temp">memberlist_body</h1></div>
+
+            <pre class="language-markup">
+            <code class="language-markup">
+&lt;!-----------------------------------------------&gt;
+&lt;!-- BARRE DE SELECTION --------------&gt;
+
+&lt;div class="links_bar"&gt;
+    &lt;form action="{S_MODE_ACTION}" method="get"&gt;
+        &lt;span&gt;
+            {L_USER_SELECT}&nbsp;&lt;input type="text" class="inputbox tiny" name="username" maxlength="25" size="20" value="{L_USER_SELECT_VALUE}" /&gt;&nbsp;&nbsp;&nbsp;&nbsp;
+            {L_SELECT_SORT_METHOD}&nbsp;{S_MODE_SELECT}&nbsp;&nbsp;&nbsp;&nbsp;
+            {L_ORDER}&nbsp;{S_ORDER_SELECT}&nbsp;&nbsp;&nbsp;&nbsp;
+            {S_HIDDEN_SID}
+            &lt;input class="button2" type="submit" name="submit" value="{L_SUBMIT}" /&gt;
+        &lt;/span&gt;
+
+        &lt;!-- Pagination --&gt;
+        &lt;!-- BEGIN switch_pagination --&gt;
+        &lt;span class="pagination right"&gt;
+            {PAGINATION}
+        &lt;/span&gt;
+        &lt;!-- END switch_pagination --&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- LISTE DES MEMBRES --------------&gt;
+
+&lt;div class="container"&gt;
+
+    &lt;!-- Titre de la liste des membres --&gt;
+    &lt;h1 class="page-title"&gt;{PAGE_TITLE}&lt;/h1&gt;
+
+    &lt;!-- Liste des membres --&gt;
+    &lt;div class="userlist"&gt;
+
+        &lt;!-- Affichage d'un profil --&gt;
+        &lt;!-- BEGIN memberrow --&gt;
+        &lt;div class="userlist_profil"&gt;
+
+            &lt;!-- Avatar --&gt;
+            &lt;div class="userlist_avatar"&gt;
+                {memberrow.AVATAR_IMG}
+            &lt;/div&gt;
+
+            &lt;!-- Conteneurs des informations de membre --&gt;
+            &lt;div class="userlist_details"&gt;
+
+                &lt;!-- Pseudo --&gt;
+                &lt;span class="pseudo"&gt;
+                    &lt;a href="{memberrow.U_VIEWPROFILE}"&gt;{memberrow.USERNAME}&lt;/a&gt;
+                &lt;/span&gt;
+
+                &lt;!-- Champs de profil --&gt;
+                &lt;div class="userlist_infos"&gt;
+                    {memberrow.JOINED}&lt;br /&gt;
+                    {memberrow.LASTVISIT}&lt;br /&gt;
+                    {memberrow.LASTVISIT}&lt;br /&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Lien de contact --&gt;
+                &lt;div class="userlist_contact right"&gt;
+                    {memberrow.PM_IMG}&nbsp;
+                    {memberrow.WWW_IMG}
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;!-- END memberrow --&gt;
+        &lt;!-- Fin d'un profil --&gt;
+
+    &lt;/div&gt;
+    &lt;!-- Fin liste des membres --&gt;
+&lt;/div&gt;
+            </code>
+            </pre>
         </div>
 
         <div id="T15" class="tabcontent">
-            Profil utilisateur
+            <div class="tempname"><h1>Profil utilisateur</h1>
+            <h1 class="temp">profile_view_body</h1></div>
+
+            <pre class="language-markup">
+            <code class="language-markup">
+&lt;div class="container"&gt;
+
+    &lt;!-- Pseudo de l'utlisateur --&gt;
+    &lt;h1 class="page-title"&gt;{USERNAME}&lt;/h1&gt;
+
+
+    &lt;!-- Contenu du profil --&gt;
+    &lt;div class="user_profil"&gt;
+
+        &lt;!-- Avatar --&gt;
+        &lt;div class="profil_avatar" id="user_avatar"&gt;{AVATAR_IMG}&lt;/div&gt;
+
+
+        &lt;!-- Colonne d'information --&gt;
+        &lt;div class="profil_infos"&gt;
+
+            &lt;div class="profil_contact right"&gt;
+                &lt;!-- Lien-image de contact --&gt;
+                &lt;form action="{S_PROFILE_ACTION}" method="post" name="post"&gt;
+                    &lt;!-- BEGIN contact_field --&gt;
+                    &lt;div id="field_id{contact_field.ID}"&gt;{contact_field.CONTENT}&lt;/div&gt;
+                    &lt;!-- END contact_field --&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Rang--&gt;
+            &lt;strong&gt;{POSTER_RANK}&lt;/strong&gt;&lt;br /&gt;
+
+            &lt;!-- Statut : en ligne --&gt;
+            &lt;!-- BEGIN switch_show_status --&gt;
+            {USER_ONLINE}
+            &lt;!-- END switch_show_status --&gt;
+
+
+            &lt;!-- CHAMPS DE PROFIL
+                Conseil : gardez la structure ainsi, elle est totalement personnalisable en CSS 
+                --&gt;
+            &lt;div class="profil_content"&gt;
+
+                &lt;div class="profil_field"&gt;
+                    &lt;label&gt;{L_LAST_VISITED} :&lt;/label&gt;
+                    &lt;field&gt;{LAST_VISIT_TIME}&lt;/field&gt;
+                &lt;/div&gt;
+
+                &lt;!-- BEGIN switch_dhow_mp --&gt;
+                &lt;div class="profil_field"&gt;
+                    &lt;label&gt;{L_PRIVATE_MSG} :&lt;/label&gt;
+                    &lt;field&gt;{PRIVATE_MSG}&lt;/field&gt;
+                &lt;/div&gt;
+                &lt;!-- END switch_dhow_mp --&gt;
+
+                &lt;h3&gt;Profil&lt;/h3&gt;
+                &lt;!-- BEGIN profile_field --&gt;
+                &lt;div class="profil_field" id="field_id{profile_field.ID}"&gt;
+                    &lt;label&gt;{profile_field.LABEL}&lt;/label&gt;
+                    &lt;field&gt;{profile_field.CONTENT}
+
+                        &lt;!-- BEGIN profil_type_user_posts --&gt;
+                        [{POST_PERCENT_STATS} / {POST_DAY_STATS}]
+
+                        &lt;!-- Trouver tous les sujets ouverts par X --&gt;
+                        &lt;br /&gt;&lt;a rel="nofollow" href="/st/{PUSERNAME}"&gt;{L_SEARCH_USER_POSTS} :&lt;/a&gt;
+
+                        &lt;br /&gt;&lt;a rel="nofollow" href="/sta/{PUSERNAME}"&gt;{L_TOPICS}&lt;/a&gt;
+                        &lt;a rel="nofollow" href="/spa/{PUSERNAME}"&gt;{L_POSTS}&lt;/a&gt;
+                        &lt;!-- END profil_type_user_posts --&gt;
+                    &lt;/field&gt;
+                &lt;/div&gt;
+                &lt;!-- END profile_field --&gt;
+
+                &lt;!-- BEGIN switch_rpg --&gt;
+                &lt;h3&gt;Feuille de personnage&lt;/h3&gt;
+
+                &lt;!-- BEGIN rpg_fields --&gt;
+                &lt;div class="profil_field"&gt;
+                    &lt;label&gt;{switch_rpg.rpg_fields.F_NAME} :&lt;/label&gt;
+                    &lt;field&gt;{switch_rpg.rpg_fields.F_VALUE_NEW}&lt;/field&gt;
+                &lt;/div&gt;
+                &lt;!-- END rpg_fields --&gt;
+
+                &lt;fieldset class="submit-buttons"&gt;{U_ADMIN_RPG_NEW}&lt;/fieldset&gt;
+                &lt;!-- END switch_rpg --&gt;
+
+
+            &lt;/div&gt;
+            &lt;!-- Fin des champs de profil --&gt;
+
+        &lt;/div&gt;
+
+
+    &lt;/div&gt;
+
+    &lt;!-- Lien de modération du profil --&gt;
+    &lt;!-- BEGIN switch_auth_user --&gt;
+    &lt;div class="profil_admin"&gt;{ADMINISTRATE_USER} - {BAN_USER}&lt;/div&gt;
+    &lt;!-- END switch_auth_user --&gt;
+
+
+&lt;/div&gt;
+
+
+
+
+&lt;script src="{JQUERY_ROOT}json/jquery.json-1.3.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+    //&lt;![CDATA[
+    $(document).ready(function() {
+        $('[id^=field_id]').each(function() {
+            if ($(this).find('.field_editable').is('span, div')) {
+                $(this).hover(function() {
+                    if ($(this).find('.field_editable.invisible').is('span, div')) {
+                        $(this).find('.field_editable').prev().addClass('ajax-profil_hover').parent().addClass('ajax-profil_parent').append('&lt;div class="ajax-profil_edit"&gt;&lt;img src="{AJAX_EDIT_IMG}" /&gt;&lt;/div&gt;');
+                        $(this).find('.ajax-profil_edit').attr({
+                            alt: "{L_FIELD_EDIT_VALUE}",
+                            title: "{L_FIELD_EDIT_VALUE}"
+                        }).click(function() {
+                            $(this).prev().prev().removeClass('ajax-profil_hover').addClass('invisible').next().removeClass('invisible').append('&lt;img src="{AJAX_VALID_IMG}" class="ajax-profil_valid" /&gt;').find('input,select');
+                            $(this).prev().find('.ajax-profil_valid').attr({
+                                alt: "{L_VALIDATE}",
+                                title: "{L_VALIDATE}"
+                            }).click(function() {
+                                var content = new Array();
+                                $(this).parent().find('[name]').each(function() {
+                                    var type_special = $(this).is('input[type=radio],input[type=checkbox]');
+                                    if ((type_special && $(this).is(':checked')) || !type_special) {
+                                        content.push(new Array($(this).attr('name'), $(this).attr('value')));
+                                    }
+                                });
+                                var id_name = $(this).parents('[id^=field_id]').attr('id');
+                                var id = id_name.substring(8, id_name.length);
+                                $.post(
+                                    "{U_AJAX_PROFILE}", {
+                                        id: id,
+                                        user: "{CUR_USER_ID}",
+                                        active: "{CUR_USER_ACTIVE}",
+                                        content: $.toJSON(content),
+                                        tid: "{TID}"
+                                    },
+                                    function(data) {
+                                        $.each(data, function(i, item) {
+                                            $('[id=field_id' + i + ']').find('.field_uneditable').html(item).end().find('.ajax-profil_valid').remove().end().find('.field_editable').addClass('invisible').end().find('.field_uneditable').removeClass('invisible');
+                                        });
+                                    },
+                                    "json"
+                                );
+                            });
+                            $(this).remove();
+                        });
+                    }
+                }, function() {
+                    if ($(this).find('.field_editable.invisible').is('span, div')) {
+                        $(this).find('.field_editable').prev().removeClass('ajax-profil_hover');
+                        $(this).find('.ajax-profil_edit').remove();
+                    }
+                });
+            }
+        });
+    });
+    //]]&gt;
+&lt;/script&gt;
+            </code>
+            </pre>
         </div>
 
         <div id="T16" class="tabcontent">
-            Profil simplifié au survol des tags
+            <div class="tempname"><h1>Profil simplifié au survol des tags</h1>
+            <h1 class="temp">mentions_tooltip</h1></div>
+            
+            <pre class="language-markup">
+            <code class="language-markup">
+&lt;div class="main-tooltip"&gt;
+
+   &lt;!-- Contenu de la bulle de prévisualisation --&gt;
+    &lt;div class="preview_content"&gt;
+
+        &lt;!-- Avatar --&gt;
+        &lt;div class="preview_avatar"&gt;&lt;img src="{USER_AVATAR}" alt="{USER_NAME}" /&gt;&lt;/div&gt;
+
+       &lt;!-- Informations --&gt;
+        &lt;div class="preview_infos"&gt;
+           &lt;!-- Pseudo --&gt;
+            &lt;span class="preview_pseudo"&gt;{USER_NAME_COLORED}&lt;/span&gt;
+          &lt;br /&gt;
+            
+            &lt;!-- Rang--&gt;
+            &lt;!-- BEGIN switch_rank_info --&gt;
+            {switch_rank_info.L_RANK}: {switch_rank_info.RANK_TITLE}&lt;br /&gt;
+            &lt;!-- END switch_rank_info --&gt;
+            
+            &lt;!-- Message --&gt;
+            {L_POSTS}: &lt;b&gt;{POSTS}&lt;/b&gt;
+
+           &lt;!-- Image de contact --&gt;
+            &lt;div class="preview_contacts right"&gt;
+                &lt;!-- BEGIN switch_button_tooltip_PROFILE --&gt;
+                &lt;a href="{switch_button_tooltip_PROFILE.URL}" title="{switch_button_tooltip_PROFILE.LANG}"&gt;
+                    &lt;img src="{switch_button_tooltip_PROFILE.IMAGE}" alt="{switch_button_tooltip_PROFILE.LANG}" /&gt;
+                &lt;/a&gt;
+                &lt;!-- END switch_button_tooltip_PROFILE --&gt;
+
+                &lt;!-- BEGIN switch_button_tooltip_PM --&gt;
+                &lt;a href="{switch_button_tooltip_PM.URL}" title="{switch_button_tooltip_PM.LANG}"&gt;
+                    &lt;img src="{switch_button_tooltip_PM.IMAGE}" alt="{switch_button_tooltip_PM.LANG}" /&gt;
+                &lt;/a&gt;
+                &lt;!-- END switch_button_tooltip_PM --&gt;
+
+                &lt;!-- BEGIN switch_button_tooltip_MESSAGES --&gt;
+                &lt;a href="{switch_button_tooltip_MESSAGES.URL}" rel="nofollow" title="{switch_button_tooltip_MESSAGES.LANG}"&gt;
+                    &lt;img src="{switch_button_tooltip_MESSAGES.IMAGE}" alt="{switch_button_tooltip_MESSAGES.LANG}" /&gt;
+                &lt;/a&gt;
+                &lt;!-- END switch_button_tooltip_MESSAGES --&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;!-- Fin des informations --&gt;
+
+    &lt;/div&gt;
+    &lt;!-- Fin du contenu --&gt;
+
+&lt;/div&gt;
+            </code>
+            </pre>
         </div>
 
 
+       
         <!---------------------->
         <!-- Blogs -->
         <div id="T17" class="tabcontent">
-            Affichages des blogs
+            <div class="tempname"><h1>Affichage des blogs</h1>
+            <h1 class="temp">topics_blog_box</h1></div>
+
+            <pre class="language-markup">
+            <code class="language-markup">
+&lt;!-----------------------------------------------&gt;
+&lt;!-- LISTE DES BLOGS --------------&gt;
+&lt;!-- BEGIN topics_blog_box --&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- AFFICHAGE D'UN BLOG --------------&gt;
+&lt;!-- BEGIN row --&gt;
+&lt;!-- BEGIN topic --&gt;
+
+&lt;div class="bloglist"&gt;
+
+    &lt;!-- Conteneur de la date --&gt;
+    &lt;div class="bloglist_date"&gt;
+        &lt;span class="blog_daymonth"&gt;
+            &lt;!-- Jour --&gt;
+            {topics_blog_box.row.FIRST_POST_DMY_VALUE0}.
+            &lt;!-- Mois --&gt;
+            {topics_blog_box.row.FIRST_POST_DMY_VALUE1}
+        &lt;/span&gt;&lt;br /&gt;
+        &lt;!-- Année --&gt;
+        &lt;span class="blog_year"&gt;{topics_blog_box.row.FIRST_POST_DMY_VALUE2}&lt;/span&gt;
+
+    &lt;/div&gt;
+
+    &lt;!-- Conteneur des informations --&gt;
+    &lt;div class="bloglist_infos"&gt;
+        &lt;div&gt;
+
+            &lt;!-- Image du blog --&gt;
+            &lt;div class="mini_img left"&gt;&lt;img src="{topics_blog_box.row.TOPIC_FOLDER_IMG}" /&gt;&lt;/div&gt;
+
+            &lt;!-- Icon sujet récent --&gt;
+            {topics_blog_box.row.NEWEST_POST_IMG}
+            &lt;!-- Icon "vous avez posté dans ce sujet" --&gt;
+            {topics_blog_box.row.PARTICIPATE_POST_IMG}&nbsp;
+            {topics_blog_box.row.TOPIC_TYPE}
+
+           &lt;!-- Titre du blog --&gt;
+            &lt;h2&gt;&lt;a class="topictitle" href="{topics_blog_box.row.U_VIEW_TOPIC}"&gt;{topics_blog_box.row.TOPIC_TITLE}&lt;/a&gt;&lt;/h2&gt;&lt;br /&gt;
+            &lt;!-- Auteur --&gt;
+            {topics_blog_box.row.L_BY} &lt;strong&gt;{topics_blog_box.row.TOPIC_AUTHOR}&lt;/strong&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- Commentaires et vues --&gt;
+        &lt;div class="bloglist_details"&gt;
+            {topics_blog_box.row.REPLIES} &lt;a href="{topics_blog_box.row.U_VIEW_TOPIC}#comments"&gt;{L_COMMENTS}&lt;/a&gt;&lt;br /&gt;
+            {topics_blog_box.row.VIEWS} {L_VIEWS}
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+   
+    &lt;div class="bloglist_resum"&gt;
+       &lt;!-- Description du blog --&gt;
+        &lt;!-- BEGIN switch_description --&gt;
+        &lt;span class="specials_links"&gt;{topics_blog_box.row.topic.switch_description.TOPIC_DESCRIPTION}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+        &lt;!-- END switch_description --&gt;
+
+       &lt;!-- Résumé du contenu du blog --&gt;
+        &lt;div&gt;{topics_blog_box.row.FIRST_POST_TEXT}&lt;/div&gt;
+
+    &lt;/div&gt;
+
+
+&lt;/div&gt;
+&lt;!-- END topic --&gt;
+&lt;!-- END row --&gt;
+&lt;!-- Fin d'un affichage de blog --&gt;
+
+&lt;!-- Indication "pas de sujet" --&gt;
+&lt;!-- BEGIN no_topics --&gt;
+&lt;center&gt;&lt;strong&gt;{topics_blog_box.row.L_NO_TOPICS}&lt;/strong&gt;&lt;/center&gt;
+&lt;!-- END no_topics --&gt;
+
+
+&lt;!-- END topics_blog_box --&gt;
+&lt;!-- Fin de la liste de blog --&gt;
+
+
+
+&lt;!-- BEGIN multi_selection --&gt;
+&lt;script type="text/javascript"&gt;
+    function check_uncheck_main_ {
+        topics_blog_box.row.header_table.BOX_ID
+    }() {
+        alert('MAIN');
+
+        var all_checked = true;
+
+        for (i = 0;
+            (i &lt; document. {
+                topics_blog_box.FORMNAME
+            }.elements.length) && all_checked; i++) {
+            if (document. {
+                    topics_blog_box.FORMNAME
+                }.elements[i].name == '{topics_blog_box.FIELDNAME}[]{topics_blog_box.row.header_table.BOX_ID}') {
+                all_checked = document. {
+                    topics_blog_box.FORMNAME
+                }.elements[i].checked;
+            }
+        }
+
+        document. {
+            topics_blog_box.FORMNAME
+        }.all_mark_ {
+            topics_blog_box.row.header_table.BOX_ID
+        }.checked = all_checked;
+    }
+
+    function check_uncheck_all_ {
+        topics_blog_box.row.header_table.BOX_ID
+    }() {
+        alert('ALL');
+
+        for (i = 0; i &lt; document. {
+                topics_blog_box.FORMNAME
+            }.length; i++) {
+            if (document. {
+                    topics_blog_box.FORMNAME
+                }.elements[i].name == '{topics_blog_box.FIELDNAME}[]{topics_blog_box.row.header_table.BOX_ID}') {
+                document. {
+                    topics_blog_box.FORMNAME
+                }.elements[i].checked = document. {
+                    topics_blog_box.FORMNAME
+                }.all_mark_ {
+                    topics_blog_box.row.header_table.BOX_ID
+                }.checked;
+            }
+        }
+    }
+
+&lt;/script&gt;
+&lt;!-- END multi_selection --&gt;
+
+&lt;!-- BEGIN switch_image_resize --&gt;
+&lt;script type="text/javascript"&gt;
+    //&lt;![CDATA[
+    $(resize_images({
+        'selector': '.blog_message',
+        'max_width': {
+            switch_image_resize.IMG_RESIZE_WIDTH
+        },
+        'max_height': {
+            switch_image_resize.IMG_RESIZE_HEIGHT
+        }
+    }));
+    //]]&gt;
+
+&lt;/script&gt;
+&lt;!-- END switch_image_resize --&gt;
+
+            </code>
+            </pre>
         </div>
 
         <div id="T18" class="tabcontent">
-            Affichage des commentaires
+            <div class="tempname"><h1>Affichage des commentaires</h1>
+            <h1 class="temp">viewcomments_body</h1></div>
+
+            <pre class="language-markup">
+            <code class="language-markup">
+&lt;!-- Chaîne de lien : Catégorie &gt; Forum &gt; Sous-fo --&gt;
+&lt;span class="navigation_chain"&gt;
+    {NAV_CAT_DESC}
+&lt;/span&gt;
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- BARRE DE GESTION --------------&gt;
+
+
+&lt;div class="links_bar"&gt;
+    &lt;span&gt;
+        &lt;!-- Boutons : nouveau --&gt;
+        &lt;!-- BEGIN switch_user_authpost --&gt;
+        &lt;a class="buttons" href="{U_POST_NEW_TOPIC}" rel="nofollow"&gt;&lt;img src="{POST_IMG}" class="{POST_IMG_CLASS}" alt="{L_POST_NEW_TOPIC}" /&gt;&lt;/a&gt;&nbsp;&nbsp;&nbsp;
+        &lt;!-- END switch_user_authpost --&gt;
+
+        &lt;!-- Bouton : répondre --&gt;
+        &lt;!-- BEGIN switch_user_authreply --&gt;
+        &lt;a class="buttons" href="{U_POST_REPLY_TOPIC}"&gt;&lt;img src="{REPLY_IMG}" class="i_reply" alt="{L_POST_REPLY_TOPIC}" /&gt;&lt;/a&gt;
+        &lt;!-- END switch_user_authreply --&gt;
+    &lt;/span&gt;
+
+
+    &lt;span class="right"&gt;
+        &lt;a href="{JS_AUTH_FAVOURITES}"&gt;Ajouter le sujet à ses favoris&lt;/a&gt;
+    &lt;/span&gt;
+
+&lt;/div&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- AFFICHAGE DU BLOG --------------&gt;
+
+&lt;!-- Conteneur du blog --&gt;
+&lt;div class="container"&gt;
+
+    &lt;!-- Titre du blog --&gt;
+    &lt;h1 class="page-title"&gt;{TOPIC_TITLE}&lt;/h1&gt;
+
+
+    &lt;!-- Sondage (template : viewtopic_poll_ballot // viewtopic_poll_result) --&gt;
+    {POLL_DISPLAY}
+
+   
+    &lt;!-- Début du post --&gt;
+    &lt;!-- BEGIN postrow --&gt;
+    &lt;!-- BEGIN displayed --&gt;
+    &lt;div class="blog_post" id="{postrow.displayed.U_POST_ID}"&gt;
+
+        &lt;!-- Conteneur des informations du message --&gt;
+        &lt;div class="blog_details"&gt;
+
+            &lt;!-- Auteur du blog --&gt;
+            &lt;span class="blog_author"&gt;
+                {L_TOPIC_BY}&nbsp;{postrow.displayed.POSTER_NAME}
+            &lt;/span&gt;
+
+            &lt;!-- Bouton d'édition de message --&gt;
+            &lt;ul class="profile-icons "&gt;
+                &lt;li&gt;{postrow.displayed.THANK_IMG}&lt;/li&gt;
+                &lt;li&gt;{postrow.displayed.MULTIQUOTE_IMG}&lt;/li&gt;
+                &lt;li&gt;{postrow.displayed.QUOTE_IMG}&lt;/li&gt;
+                &lt;li&gt;{postrow.displayed.EDIT_IMG}&lt;/li&gt;
+                &lt;li&gt;{postrow.displayed.DELETE_IMG}&lt;/li&gt;
+                &lt;li&gt;{postrow.displayed.IP_IMG}&lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;!-- Conteneur du bouton like --&gt;
+            &lt;!-- BEGIN switch_likes_active --&gt;
+            &lt;div class="like_button"&gt;
+
+                &lt;!-- Bouton "j'aime" --&gt;
+                &lt;button class="rep-button {postrow.displayed.switch_likes_active.C_VOTE_LIKE}" data-href="{postrow.displayed.switch_likes_active.U_VOTE_LIKE}" data-href-rm="{postrow.displayed.switch_likes_active.U_VOTE_RM_LIKE}"&gt;
+
+                    &lt;!-- Texte "j'aime" --&gt;
+                    &lt;span class="like_text"&gt;{postrow.displayed.switch_likes_active.L_LIKE}&lt;/span&gt;
+                    &lt;!-- Compte des "j'aime" --&gt;
+                    {postrow.displayed.switch_likes_active.COUNT_VOTE_LIKE}
+
+                &lt;/button&gt;
+            &lt;/div&gt;
+            &lt;!-- END switch_likes_active --&gt;
+            &lt;!-- Fin du bouton like --&gt;
+
+
+        &lt;/div&gt;
+        &lt;!-- Fin détails --&gt;
+
+
+        &lt;!-- Contenu du message --&gt;
+        &lt;div class="post_message postbody content"&gt;
+            {postrow.displayed.MESSAGE}
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;!-- END displayed --&gt;
+    &lt;!-- END postrow --&gt;
+    &lt;!-- Fin du post --&gt;
+
+&lt;/div&gt;
+&lt;!-- Fin du blog --&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- COMMENTAIRES --------------&gt;
+
+&lt;!-- Conteneur des commentaires --&gt;
+&lt;div class="wrapped"&gt;
+
+    &lt;!-- Titre "commentaires" --&gt;
+    &lt;h3&gt;{L_COMMENTS}&lt;/h3&gt;
+
+    &lt;!-- Affichage d'un commentaire --&gt;
+    &lt;!-- BEGIN comment --&gt;
+    &lt;!-- BEGIN displayed --&gt;
+    &lt;div id="p{comment.displayed.U_POST_ID}" class="post--{comment.displayed.U_POST_ID} blog_comment"&gt;
+
+        &lt;!-- Conteneur des informations du commentaire --&gt;
+        &lt;div class="comment_details" id="profile{comment.displayed.U_POST_ID}"&gt;
+            &lt;div class="left"&gt;
+                &lt;!-- avatar du commentaire --&gt;
+                &lt;div class="comment_avatar"&gt;
+                    {comment.displayed.POSTER_AVATAR}
+                &lt;/div&gt;
+
+                &lt;!-- Lien du commentaire --&gt;
+                &lt;a href="{comment.displayed.POST_URL}" name="{comment.displayed.U_POST_ID}"&gt;Réponse de&lt;/a&gt;&nbsp;
+                &lt;!-- Auteur du commentaire --&gt;
+                {comment.displayed.POSTER_NAME}
+                &lt;!-- En ligne --&gt;
+                {comment.displayed.L_ONLINE}
+
+                &lt;br /&gt;
+                &lt;!-- Date du commentaire --&gt;
+                &lt;span&gt;{comment.displayed.POST_DATE_NEW}&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Bouton d'édition --&gt;
+            &lt;ul class="profile-icons"&gt;
+                &lt;li&gt;{comment.displayed.MULTIQUOTE_IMG}&lt;/li&gt;
+                &lt;li&gt;{comment.displayed.QUOTE_IMG}&lt;/li&gt;
+                &lt;li&gt;{comment.displayed.EDIT_IMG}&lt;/li&gt;
+                &lt;li&gt;{comment.displayed.DELETE_IMG}&lt;/li&gt;
+                &lt;li&gt;{comment.displayed.IP_IMG}&lt;/li&gt;
+            &lt;/ul&gt;
+
+
+        &lt;/div&gt;
+        &lt;!-- Fin des informations --&gt;
+
+        &lt;!-- Contenu du commentaire --&gt;
+        &lt;div class="comment_content"&gt;
+            {comment.displayed.MESSAGE}
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;!-- END displayed --&gt;
+    &lt;!-- END comment --&gt;
+    &lt;!-- Fin d'un commentaire --&gt;
+
+    &lt;!-- Indication "pas de commentaire --&gt;
+    &lt;!-- BEGIN no_comment --&gt;
+    &lt;div class="blog_comment"&gt;
+        &lt;center&gt;{no_comment.L_NO_COMMENT}&lt;/center&gt;
+    &lt;/div&gt;
+    &lt;!-- END no_comment --&gt;
+
+&lt;/div&gt;
+&lt;!-- Fin des commentaires --&gt;
+
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- BARRE DE GESTION --------------&gt;
+
+
+&lt;div class="links_bar"&gt;
+    &lt;!-- Surveiller le blog --&gt;
+    &lt;span&gt;
+        &lt;!-- Surveiller le sujet --&gt;
+        &lt;!-- BEGIN switch_user_logged_in --&gt;
+        &lt;!-- BEGIN watchtopic --&gt;
+        &lt;span class="specials_links"&gt;{S_WATCH_TOPIC}&lt;/span&gt;
+        &lt;!-- END watchtopic --&gt;
+        &lt;!-- END switch_user_logged_in --&gt;
+
+        &lt;!-- Sujets surveillés --&gt;
+        &nbsp;&lt;a class="specials_links" href="{U_WATCHSEARCH_JS_PLUS_MENU}"&gt;Sujets surveillés&lt;/a&gt;
+    &lt;/span&gt;
+
+
+    &lt;!-- Pagination des commentaires --&gt;
+    &lt;!-- BEGIN topicpagination --&gt;
+    &lt;span class="pagination right"&gt;{PAGINATION}&lt;/span&gt;
+    &lt;!-- END topicpagination --&gt;
+&lt;/div&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- REPONSE RAPIDE --------------&gt;
+
+&lt;div class="container quickreply"&gt;
+    &lt;!-- BEGIN switch_user_logged_in --&gt;
+    {QUICK_REPLY_FORM}
+    &lt;!-- END switch_user_logged_in --&gt;
+&lt;/div&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- BARRE DE GESTION --------------&gt;
+
+
+&lt;div class="links_bar"&gt;
+    &lt;span&gt;
+        &lt;!-- Boutons : nouveau --&gt;
+        &lt;!-- BEGIN switch_user_authpost --&gt;
+        &lt;a class="buttons" href="{U_POST_NEW_TOPIC}" rel="nofollow"&gt;&lt;img src="{POST_IMG}" class="{POST_IMG_CLASS}" alt="{L_POST_NEW_TOPIC}" /&gt;&lt;/a&gt;&nbsp;&nbsp;&nbsp;
+        &lt;!-- END switch_user_authpost --&gt;
+
+        &lt;!-- Bouton : répondre --&gt;
+        &lt;!-- BEGIN switch_user_authreply --&gt;
+        &lt;a class="buttons" href="{U_POST_REPLY_TOPIC}"&gt;&lt;img src="{REPLY_IMG}" class="i_reply" alt="{L_POST_REPLY_TOPIC}" /&gt;&lt;/a&gt;
+        &lt;!-- END switch_user_authreply --&gt;
+    &lt;/span&gt;
+
+
+    &lt;span class="right"&gt;
+        &lt;a href="{JS_AUTH_FAVOURITES}"&gt;Ajouter le sujet à ses favoris&lt;/a&gt;
+    &lt;/span&gt;
+
+&lt;/div&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- SAUTER VERS UN FORUM  --------------&gt;
+
+&lt;form action="{S_JUMPBOX_ACTION}" method="get" onsubmit="if(document.jumpbox.f.value == -1){return false;}"&gt;
+    &lt;fieldset class="jumpbox"&gt;
+        &lt;label&gt;{L_JUMP_TO}:&nbsp;&lt;/label&gt;
+        {S_JUMPBOX_SELECT}&nbsp;
+        &lt;input class="button2" type="submit" value="{L_GO}" /&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- BOUTONS DE MODERATION --------------&gt;
+
+&lt;!-- BEGIN viewtopic_bottom --&gt;
+&lt;form method="get" action="{S_FORM_MOD_ACTION}"&gt;
+    &lt;fieldset class="quickmod"&gt;
+        &lt;input type="hidden" name="t" value="{TOPIC_ID}" /&gt;
+
+        &lt;!-- &lt;input type="hidden" name="sid" value="{S_SID}" /&gt; --&gt;
+        &lt;input type="hidden" name="{SECURE_ID_NAME}" value="{SECURE_ID_VALUE}" /&gt;
+        &lt;label&gt;{L_MOD_TOOLS}:&nbsp;&lt;/label&gt;
+        {S_SELECT_MOD}&nbsp;
+        &lt;input class="button2" type="submit" value="{L_GO}" /&gt;
+    &lt;/fieldset&gt;
+    &lt;br /&gt;&lt;br /&gt;
+    &lt;span class="right"&gt;{S_TOPIC_ADMIN}&lt;/span&gt;
+&lt;/form&gt;
+&lt;!-- END viewtopic_bottom --&gt;
+
+
+
+&lt;div class="clear"&gt;&lt;/div&gt;
+&lt;br /&gt;
+
+
+
+
+
+&lt;!-- BEGIN switch_plus_menu --&gt;
+&lt;script type="text/javascript"&gt;
+    //&lt;![CDATA[
+    var multiquote_img_off = '{JS_MULTIQUOTE_IMG_OFF}',
+        multiquote_img_on = '{JS_MULTIQUOTE_IMG_ON}';
+
+&lt;/script&gt;
+&lt;!-- END switch_plus_menu --&gt;
+&lt;script type="text/javascript"&gt;
+    var hiddenMsgLabel = {
+        visible: '{JS_HIDE_HIDDEN_MESSAGE}',
+        hidden: '{JS_SHOW_HIDDEN_MESSAGE}'
+    };
+    showHiddenMessage = function(id) {
+        try {
+            var regId = parseInt(id, 10);
+            if (isNaN(regId)) {
+                regId = 0;
+            }
+
+            if (regId &gt; 0) {
+                $('.post--' + id).toggle(0, function() {
+                    if ($(this).is(":visible")) {
+                        $('#hidden-title--' + id).html(hiddenMsgLabel.visible);
+                    } else {
+                        $('#hidden-title--' + id).html(hiddenMsgLabel.hidden);
+                    }
+                });
+            }
+        } catch (e) {}
+
+        return false;
+    };
+
+    //]]&gt;Visi
+
+&lt;/script&gt;
+
+
+&lt;!-- BEGIN switch_image_resize --&gt;
+&lt;script type="text/javascript"&gt;
+    //&lt;![CDATA[
+    $(resize_images({
+        'selector': '.postbody .content',
+        'max_width': {
+            switch_image_resize.IMG_RESIZE_WIDTH
+        },
+        'max_height': {
+            switch_image_resize.IMG_RESIZE_HEIGHT
+        }
+    }));
+    //]]&gt;
+
+&lt;/script&gt;
+&lt;!-- END switch_image_resize --&gt;
+
+            </code>
+            </pre>
         </div>
 
 
+       
         <!---------------------->
         <!-- Footer -->
         <div id="T19" class="tabcontent">
-            Début du bas de page
+            <div class="tempname"><h1>Début du bas de page</h1>
+            <h1 class="temp">overall_footer_begin</h1></div>
+
+            <pre class="language-markup">
+            <code class="language-markup">
+&lt;!-- BEGIN html_validation --&gt;
+&lt;div&gt;
+	&lt;div&gt;
+		&lt;div&gt;
+			&lt;div&gt;
+				&lt;div&gt;
+					&lt;div&gt;
+						&lt;div&gt;
+							&lt;div&gt;
+&lt;!-- END html_validation --&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;!-- Ascenseur --&gt;
+&lt;div class="elevator"&gt;
+  &lt;a href="#top"&gt;Aller en haut&lt;/a&gt;
+  &lt;a href="#bottom"&gt;Aller en bas&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--------------------------------&gt;
+&lt;!--------------------------------&gt;
+
+
+&lt;br/&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;
+
+&lt;!-- Conteneur du bas de page, ne pas retirer l'ID --&gt;
+&lt;div id="page-footer"&gt;
+  
+    &lt;!-- Liens : Panneau d'admin et modifier forum/profil --&gt;
+    &lt;div class="specials_links adminlink"&gt;
+      &lt;center&gt;{ADMIN_LINK}&lt;/center&gt;
+    &lt;/div&gt;
+  	
+  	&lt;!-- Barre de liens en bas de page --&gt;
+	&lt;div id="bottom" class="links_bar"&gt;
+          	
+        	&lt;!-- Liens : Panneau d'admin et modifier forum/profil --&gt;
+		&lt;a href="#top" class="specials_links"&gt;Retour en haut&lt;/a&gt;
+                          
+          	&lt;!-- Liens de copyright de FA --&gt;
+		&lt;span class="right"&gt;
+&lt;!-- BEGIN html_validation --&gt;
+                  &lt;/span&gt;
+	&lt;/div&gt;
+  	&lt;!-- Fin de la barre de lien --&gt;
+&lt;/div&gt;
+&lt;!-- Fin de bas de page --&gt;
+&lt;!-- END html_validation --&gt;
+            </code>
+            </pre>
         </div>
 
         <div id="T20" class="tabcontent">
-            Fin du bas de page
+            <div class="tempname"><h1>Fin du pas de page</h1>
+            <h1 class="temp">overall_footer_end</h1></div>
+
+            <pre class="language-markup">
+            <code class="language-markup">
+&lt;!-- BEGIN html_validation --&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;body&gt;
+&lt;div&gt;
+	&lt;div&gt;
+		&lt;div&gt;
+			&lt;div&gt;
+				&lt;div&gt;
+					&lt;div&gt;
+						&lt;div&gt;
+							&lt;ul&gt;
+								&lt;li&gt;
+&lt;!-- END html_validation --&gt;
+								&lt;/li&gt;
+							&lt;/ul&gt;
+
+						&lt;/div&gt;
+					&lt;/div&gt;
+                                  
+				&lt;/div&gt;
+				{PROTECT_FOOTER}
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+	fa_endpage();
+//]]&gt;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+            </pre>
         </div>
 
 
