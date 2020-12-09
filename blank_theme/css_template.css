@@ -11,11 +11,15 @@
 
 * {box-sizing: border-box;}
 
+html { overflow-y: scroll; }      
+
 body {
     background: var(--grey);
     font-family: var(--font);
     font-size: 12px;
     color: var(--text);
+    margin: 0;
+    position: relative;
 }
 
 a { 
@@ -101,10 +105,18 @@ h3 { margin: 15px 0 8px;}
     font-size: 13px;
     position: relative;
     z-index: 1;
-    transition: all 0.5s;
+    transition: height 0.5s;.
 }
 
-.tab button:hover, .tab button.active { height: auto}
+.tab button:hover:nth-of-type(2), .tab button.active:-of-type(2) { height: 208px}
+.tab button:hover:nth-of-type(3), .tab button.active:nth-child(3) { height: 130px}
+.tab button:hover:nth-of-type(4), .tab button.active:nth-child(4) { height: 130px}
+.tab button:hover:nth-of-type(5), .tab button.active:nth-child(5) { height: 104px}
+.tab button:hover:nth-of-type(6), .tab button.active:nth-child(6) { height: 78px}
+.tab button:hover:nth-of-type(7), .tab button.active:nth-child(7) { height: 104px}
+.tab button:hover:-of-type(8), .tab button.active:nth-of-type(8) { height: 130px}
+.tab button:hover:-of-type(9), .tab button.active:nth-of-type(9) { height: 78px}
+.tab button:hover:-of-type(10), .tab button.active:nth-of-type(10) { height: 104px}
 
 .tab button:before {
     content: '';
@@ -113,7 +125,7 @@ h3 { margin: 15px 0 8px;}
     border-radius: 5px;
     position: absolute;
     left: 0; right: 0;
-    top: 0; bottom: 200px;
+    top: 0; bottom: 100px;
     transition: all 0.5s;
 }
 
@@ -136,6 +148,8 @@ h3 { margin: 15px 0 8px;}
     padding-left:20px;
     flex-grow: 100;
 }
+
+.tabcontent h3:first-of-type { margin-top: 0}
 
 h1 {
     margin-top: 0;
@@ -191,4 +205,3 @@ pre button.copy-button:before {
 }
 
 pre button.copy-button:active:before, pre button.copy-button:focus:before {font-weight: 900;}
-
