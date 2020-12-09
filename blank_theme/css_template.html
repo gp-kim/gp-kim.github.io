@@ -1,0 +1,3177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/blank_theme/css_template.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://www.aht.li/3568909/prism_blank_theme.css">
+    <script src="https://www.aht.li/3568908/prism_blank_theme.js"></script>
+    <script src="https://www.aht.li/3566377/prism.js"></script>
+
+
+    <script src="https://www.aht.li/3566719/clipboardauto.js"></script>
+    <script src="https://kit.fontawesome.com/f96772d3f9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        
+        <a href="" class="back previous">
+            <i class="fas fa-align-left"></i>
+             <span>Explications</span>
+        </a>
+        <a href="https://gp-kim.github.io/blank_theme/template.html" class="back code_ls">
+            <i class="fas fa-code"></i>
+             <span>Templates</span>
+        </a>
+
+        <div class="tab">
+           <button class="tablinks" onclick="openTemp(event, 'T1')" id="defaultOpen">
+                Feuille de CSS</button>
+                
+            <button class="tablinks" onclick="openTemp(event, 'T2')">
+                <div>Structure du forum</div>
+                 
+                 <span>Root</span> 
+                 <span>Fond de la page</span> 
+                 <span>Conteneur généraux</span> 
+                 <span>Scrollbar</span> 
+                 <span>Tires des pages</span> 
+                 <span>Input et boutons</span> 
+                 <span>Ascenseur</span>
+            </button>
+                  
+            <button class="tablinks" onclick="openTemp(event, 'T3')"><div></div>
+                Généralités
+                 
+                 <span>Liens et textes</span> 
+                 <span>Éléments esthétiques </span> 
+                 <span>Pagination</span>
+                 <span>Editeur de texte</span> 
+            </button>
+                 
+            <button class="tablinks" onclick="openTemp(event, 'T4')">
+                Entête du forum
+                 
+                 <span>Toolbar</span> 
+                 <span>Bannière</span> 
+                 <span>Barre de navigation</span> 
+                 <span>Annonces défilantes</span>
+            </button>
+                 
+            <button class="tablinks" onclick="openTemp(event, 'T5')">
+                Page principale
+                 
+                 <span>Page d'accueil</span> 
+                 <span>Catégories</span> 
+                 <span>Qui est en ligne</span> 
+            </button>
+                 
+            <button class="tablinks" onclick="openTemp(event, 'T6')">
+                Forums
+                 
+                 <span>Entête et footer d'un forum</span> 
+                 <span>Liste des sujets</span>
+            </button>
+                 
+            <button class="tablinks" onclick="openTemp(event, 'T7')">
+                Sujets
+                 
+                 <span>Affichage d'un sujet</span> 
+                 <span>Sondages</span> 
+                 <span>Textes, balises,...</span> 
+            </button>
+                 
+            <button class="tablinks" onclick="openTemp(event, 'T8')">
+                Membres
+                 
+                 <span>Page de profil</span> 
+                 <span>Profil simplié des tags</span> 
+                 <span>Modifier le profil</span>
+                 <span>Liste des membres</span> 
+            </button>
+                 
+            <button class="tablinks" onclick="openTemp(event, 'T9')">
+                Messages privés
+                 
+                 <span>Liste des messages privés</span> 
+                 <span>Affichage d'un message privé</span> 
+            </button>
+                 
+            <button class="tablinks" onclick="openTemp(event, 'T10')">
+                Blogs
+                 
+                 <span>Liste des blogs</span> 
+                 <span>Affichage d'un blog</span> 
+                 <span>Commentaires d'un blogs</span> 
+            </button>
+                 
+            <button class="tablinks" onclick="openTemp(event, 'T11')">
+                Poubelle de Forumactif
+            </button>
+                  
+                  
+                   
+                
+                
+
+
+ 
+
+
+        </div>
+
+
+        <div id="T1" class="tabcontent">
+            
+            <div class="tempname"><h1>Feuille de CSS</h1></div>
+
+            <pre class="language-css cssall">
+            <code class="language-css">
+/****** STRUCTURE DU FORUM ----------------------------------------------------------- 
+ ****** Elements du forum qui déifnissent sa structure et hiérachie sur toutes les pages 
+ ****** (ne les RENOMMEZ PAS, ils sont généraux aux pages Web ou à Forumactif) ------- ******/
+
+/*** ROOT 
+ *** tuto : geniuspandalab.tumblr.com/post/634694343906689024/cssroot ***/
+:root {
+    --text: #333;
+    --link: #000;
+    --light: #FFF;
+    --lighter: #fafafa;
+    --grey: #F4F4F4;
+    --greyer: #E5E5E5;
+    --border: 1px solid #E5E5E5;
+    --font: 'Open Sans';
+}
+
+/*** ------------------------------- ***/
+/*** FOND DE LA PAGE --------------- ***/
+body {
+    background: var(--grey);
+    font-family: 'Open Sans';
+}
+
+
+/*** ------------------------------- ***/
+/*** CONTENEUR GENERAUX --------------- ***/
+
+/*structure principale*/
+.main_forum {
+    width: 840px;/*largeur forum*/
+    margin: 10px auto 10px;/*espace top - centrer auto - espace bottom*/
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+/* Conteneur de toutes les sous-sections
+ * comme les encadrés d'options, de rappel, etc... */
+.panel {
+    background: var(--light) !important;
+    border: var(--border);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+/* Conteneur des parties inaccessibles de FA (comme la liste des sujets les plus actifs, par ex.)
+ * Il est conseillé de les personnaliser de la même façon que le reste de votre design.
+ * Pour les repérer, n'hésitez pas à utiliser l'outil d'inspecteur Web */
+
+.forabg, .forumbg {
+    background: var(--grey);
+    background-image: none !important;
+    border: var(--border);
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 10px !important;}
+
+.row, .row1, .row2 {
+    border: none !important;
+    background: transparent !important;
+}
+
+/*** ------------------------------- ***/
+/*** SCROLLBAR --------------------- ***/
+
+/* Scrollbar entière */
+::-webkit-scrollbar {width: px;}
+
+/* Rail */
+::-webkit-scrollbar-track {}
+
+/* Poignée */
+::-webkit-scrollbar-thumb {}
+
+
+
+/*** ------------------------------- ***/
+/*** TITRES DES PAGES -------------- ***/
+
+/* Utilisé pour des titres de pages */
+h1, h1.page-title {
+    color: var(--link);
+    margin: 10px 0 20px;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Utilisé pour des titres de sujets, blogs... */
+h2 {
+    display: inline-block !important;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Utilisé pour des titres de sous-sections, petit encadré, ...*/
+.h3, h3 {
+    color: var(--text);
+    border: none !important;
+    padding-bottom: 10px;
+    margin: 0;
+    text-transform: none !important;
+    font-size: 14px;
+}
+
+
+/*** ------------------------------- ***/
+/*** BOUTONS D'INTERACTION ET BARRE DE TEXTE ***/
+
+/* BARRE DE TEXTE ---*/
+input.inputbox {
+    border: var(--border) !important;
+    border-radius: 5px;
+    background: var(--grey) !important;
+}
+
+
+/* BOUTONS D'INTERACTION --- *
+ * Envoyer, prévisualiser, sauvegarder, aller,... */
+.button1, .button2, a.button1, a.button2, button.button2, input.button1, input.button2 {
+    font-size: 12px;
+    padding: 2px 3px!important;
+    border: var(--border) !important;
+    border-radius: 5px;
+    background: var(--grey) !important;
+}
+
+
+/* MENUS DEROULANTS --- */
+select {
+    background: transparent !important;
+    border: var(--border) !important;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+
+
+/*** ------------------------------- ***/
+/*** ASCENSEUR --------------------- ***/
+
+/* Conteneur de l'ascenseur
+ * Sert essentiellement à définir où le placer dans la page */
+.elevator {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    width: 100px;
+}
+
+/* Lien de renvoi haut/bas */
+.elevator a {
+    display: block;
+    padding: 5px 8px;
+    background: var(--light);
+    border: var(--border);
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+/****** ------------------------------------------------------------------------------
+ ****** GÉNÉRALITÉS ------------------------------------------------------------------ 
+ ****** Sélecteurs généraux s'appliquant à plusieurs reprises sur tout le forum ******/
+
+/* S'applique à TOUS les éléments du forum*/
+* { box-sizing: border-box; /*évite que les éléments soient agrandis par le padding*/
+    font-size: 12px;}
+
+/*** ------------------------------- ***/
+/*** LIENS ET TEXTE -------------------- ***/
+
+/* LIENS DU FORUM --- */
+a {
+    font-weight: 600;
+    text-decoration: none !important;}
+
+/*liens au survol*/
+a:hover {}
+
+/*liens visités*/
+a:visited {}
+
+
+/* TEXTES --*/
+
+p {font-size: 12px !important;}
+
+/* Contenu de tous les messages postés (en sujet comme en MP)*/
+.postbody, .content {
+  width: 100%; /*ne pas retirer*/
+}
+
+
+/* Emoji mis par défaut de FA
+ * Les réduire les rend moins horribles à voir */
+.emojione {
+    width: 13px !important
+}
+
+
+/*** ------------------------------- ***/
+/*** ELEMENTS ESTHETIQUES ---------- ***/
+
+/* Contenur général qui sert généralement de fond et/ou de contour*/
+.container {
+    background: var(--grey);
+    border: var(--border);
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* Barre de séparation */
+.separator {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid var(--grey);
+    clear: both;
+}
+
+/* Conteneur moins large (les historiques des messages essentiellement) */
+.wrapped {
+    width: 80%;
+    margin: 20px auto !important;
+}
+
+/* Permet d'aligner un élément à droite ou à gauche */
+.right {float: right}
+.left {float: left}
+
+
+
+/* Barre de gestion 
+ * Contient des boutons ou des liens spéciaux */
+.links_bar {
+    height: 38px;
+    border: var(--border);
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    clear: both;
+}
+
+/* Mise en valeur d'un lien spécial */
+a.specials_links,
+.specials_links a,
+span.specials_links {
+    background: var(--grey);
+    border-radius: 5px;
+    height: 24px;
+    padding: 2px 8px;
+}
+
+/* Image/avatar réduit */
+.mini_img img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    margin-right: 10px;
+    background: var(--grey);
+}
+
+
+/*** ------------------------------- ***/
+/*** PAGINATION -------------------- ***/
+
+/* FA utilise la même classe .pagination partout intégrée dans ses variables (on ne peut donc pas la retirer des templates)
+ * Ici, on la "reset" pour en faire ce qu'on veut. */
+.pagination {
+    float: none !important;
+    margin-top: 0 !important;
+    text-align: left !important;
+}
+
+/*lien unique vers les pages numérotées*/
+.pagination span a {
+    background-color: var(--grey) !important;
+    border: none !important;
+    color: var(--link) !important;
+    border-radius: 3px;
+    font-size: 12px !important;
+    margin: 0 2px;
+    padding: 1px 4px;
+}
+
+/*survol des liens uniques des pages*/
+.pagination span a:hover {
+    background-color: var(--greyer) !important;
+}
+
+/*lien actif : page sur laquelle vous vous trouvez */
+.pagination span strong {
+    background-color: var(--link);
+    border-radius: 3px;
+    border: none !important;
+    margin: 0 2px;
+    padding: 1px 4px;
+}
+
+
+/*suppression de l'image-lien "aller à la page suivante" */
+.page-topic span a:last-child {
+    display: none;
+}
+
+
+
+
+/*** ------------------------------- ***/
+/*** EDITEUR DE TEXTE -------------- ***/
+
+/*conteneur de l'éditeur de texte*/
+.quickreply div#textarea_content {
+    width: 70% !important;
+}
+
+/* Editeur de texte */
+.sceditor-container {}
+
+/* Barre d'outils de l'éditeur de texte*/
+div.sceditor-toolbar {
+    background: var(--light) !important;
+    border-bottom: var(--border) !important;
+}
+
+/* Conteneur des groupes d'outils */
+div.sceditor-group {
+    background: var(--grey) !important;
+    border-bottom: var(--border) !important;
+}
+
+/* Bouton d'un outil */
+a.sceditor-button {
+    height: 26px !important;
+    /*ne pas retirer*/
+    width: 26px !important;
+    /*ne pas retirer*/
+}
+
+/* Conteneur de la zone de texte */
+.sceditor-container iframe,
+.sceditor-container textarea {
+    /*ne pas supprimer*/
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 5px !important;
+    /*ne pas supprimer*/
+
+    min-height: 150px !important;
+}
+
+
+
+
+/****** ------------------------------------------------------------------------------ 
+ ****** ENTETE DU FORUM --------------------------------------------------------------
+ ****** Tous les éléments qui s'affichent en tête de toutes les pages ---------------- ******/
+
+/*** ------------------------------- ***/
+/*** TOOLBAR ----------------------- ***/
+
+/* Supression de la barre de recherche, des boutons sociaux et des flèches */
+#fa_search,
+#fa_share,
+#fa_hide {
+    display: none !important
+}
+
+/* Logo Forumactif : 
+ * ATTENTION, il est techniquement interdit de supprimer de logo de FA. 
+ * Techniquement. Faites-en donc ce que vous voulez. */
+#fa_left {}
+
+/* Toute la toolbar */
+#fa_toolbar {
+    font-size: 12px !important;
+    font-family: var(--font);
+    background: transparent !important;
+}
+
+
+/* Conteneur du lien de bienvenue et notification */
+#fa_right {
+    margin-top: 5px;
+    margin-right: 50px;
+    background: var(--light);
+    border: var(--border);
+    border-radius: 5px;
+    height: 40px;
+    display: flex !important;
+    align-items: center;
+    padding: 5px;
+    font-size: 12px !important;
+}
+
+/* Liens contenus à droite */
+#fa_right a {
+    color: var(--link) !important;
+    font-weight: 600 !important;
+    margin-left: 0 !important;
+}
+
+/* Lien "Connexion" */
+#fa_right a.rightHeaderLink:first-child { margin-right: 10px;}
+
+/* Lien "S'enregistrer" */
+#fa_right a.rightHeaderLink:last-child {}
+
+/* Lien "Bienvenue (pseudo)" */
+#fa_welcome {}
+
+/* Lien "notification"*/
+#fa_notifications
+
+/* liens "bienvenue" et "notification" [AU CLIC] */
+#fa_right.welcome #fa_menu #fa_welcome,
+#fa_toolbar > #fa_right.notification > #fa_notifications {
+    background: var(--grey);
+    border-radius: 5px;
+}
+
+/* Affichage du menu bienvenue [ET] liste des notification */
+ul#fa_menulist,
+ul#notif_list {
+    border: var(--border) !important;
+    background: var(--light);
+    border-radius: 5px;
+}
+
+/* Menu bienvenue */
+ul#fa_menulist {
+    margin-top: 10px;
+}
+
+/* Image de l'avatar dans le menu bienvenue */
+#fa_usermenu img {
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Liste des notifications*/
+ul#notif_list {
+    top: 50px;
+    font-size: 12px !important;
+    font-family: var(--font);
+}
+
+/* Lien dans une notification*/
+ul#notif_list a {
+    text-decoration: none !important
+}
+
+/* Notifications non lues */
+#notif_list .unread {
+    background: var(--grey) !important;
+}
+
+/* Lien "voir toutes les notifications" */
+#notif_list .see_all {
+    background: var(--grey) !important;
+    border-radius: 5px;
+    margin: 5px !important;
+}
+
+/* Conteneur de l'avatar toolbar */
+.fa_avatar {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: var(--border);
+    background: var(--light);
+    display: grid;
+    place-items: center;
+}
+
+/* Image de l'avatar */
+.fa_avatar img {
+    object-fit: cover;
+    object-position: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+
+/*** ------------------------------- ***/
+/*** BANNIERE ---------------------- ***/
+
+#header { }
+
+#header img {
+    width: 800px;
+    height: 500px;
+    border-radius: 5px;
+    border: var(--border);
+    background: var(--grey);
+}
+
+
+/*** ------------------------------- ***/
+/*** BARRE DE NAVIGATION ----------- ***/
+
+/* Conteneur de la barre de nav */
+.navbar {
+    background: var(--grey) !important;
+    border: var(--border);
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px;
+    height: 40px;
+
+    display: flex;
+    /*ne pas supprimer*/
+    align-items: center;
+    /*centre verticalement*/
+    justify-content: center;
+    /*centre horizontalement*/
+
+}
+
+/* Suprresion des liens peu utilisé en les identifiant par leur numéro d'ordre*/
+.navbar li:nth-child(2), /*calendrier*/
+.navbar li:nth-child(3), /*faq*/
+.navbar li:nth-child(6) /*groupes*/
+    {
+    display: none !important
+}
+
+/* liens de navigation */
+a.mainmenu {
+    padding: 6px;
+}
+
+/* Lien navigation au survol*/
+a.mainmenu:hover {
+    background: var(--light);
+    border-radius: 5px;
+}
+
+/* Image des liens */
+a.mainmenu img {
+    display: none
+}
+
+
+/*** ------------------------------- ***/
+/*** ANNONCES DEFILANTES ----------- ***/
+
+/* Barre défilante */
+.module {
+    background: transparent !important;
+    border-radius: 5px;
+    border: var(--border);
+    margin: 10px 0;
+    padding: 4px 8px;
+}
+
+/* Intérieur d'une annonce*/
+#fa_ticker_container {
+    margin-bottom: 4px;/*ne pas retirer*/
+}
+
+
+
+
+/****** ------------------------------------------------------------------------------
+ ****** PAGE PRINCIPALE -------------------------------------------------------------- ******/
+
+/* PAGE D'ACCUEIL ---*/
+.introduction { }
+
+/* CADRE DE CONNEXION RAPIDE --- */
+.user_login_form {margin: 0 !important}
+
+
+/*** ------------------------------- ***/
+/*** CATEGORIES -------------------- ***/
+
+/* Titre d'une catégorie
+ * Il est conseillé de garder le selecteur ".cate_title h2"
+ */
+.cate_title h2 {
+    display: block !important;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin: 10px 0 20px;
+}
+
+.forums {}
+
+.forum_row {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+    grid-row-gap: 1px;
+    margin-bottom: 10px;
+}
+
+.forum_row:last-child {margin-bottom: 0}
+
+.forum_row > div {
+    background: var(--light);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.top_row {border-radius: 5px 5px 0 0;}
+
+a.forumtitle {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+img.forum-img {
+    background: var(--grey);
+    width: 60px;
+    height: 60px;
+}
+
+.forum_desc {
+    height: 60px;
+    overflow: auto;
+    width: 435px;
+    margin: 0 10px;
+}
+
+.forum_lastpost-avatar {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.forum_lastpost-avatar img {
+    background: var(--grey);
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.forum_lastpost {
+    display: flex;
+    align-items: center;
+    width: 152px;
+}
+
+.bottom_row {border-radius: 0 0 5px 5px;}
+
+
+#ssforum {font-size: 0}
+
+#ssforum a {font-size: 12px;margin-right: 10px;}
+
+.forum_stats {
+    font-weight: 600;
+    float: right;
+}
+
+
+
+
+/*** ------------------------------- ***/
+/*** QUI EST EN LIGNE -------------- ***/
+
+.qeel {
+    background: var(--grey);
+    border: var(--border);
+    border-radius: 5px;
+    padding: 8px;
+
+    display: grid;
+    grid-template-columns: 247px 286px 247px;
+    grid-gap: 1px;
+    margin-bottom: 10px;
+}
+
+.qeel > div {
+    background: var(--light);
+    padding: 15px 10px;
+}
+
+.qeel-right {
+    border-radius: 5px 0 0 5px;
+}
+
+.qeel-right #last_user {display: flex; align-items: center;}
+
+.qeel-right #lastuser_avatar img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.qeel-right a.groups {
+    display: block;
+    background: var(--grey);
+    border-radius: 5px;
+    text-align: center;
+    padding: 2px 0;
+    margin-bottom: 5px;
+}
+
+.qeel-right a.groups:hover {
+    background: var(--lighter)
+}
+
+.qeel-right a.groups:last-child {margin-bottom: 0}
+
+
+/*X connectés :: 1 membre, 0 invisible, 0 invité*/
+#total_users {}
+
+/*Connectés en ce moment*/
+#online_users {
+    min-height: 72px;
+    max-height: 72px;
+    overflow: auto;
+}
+
+/*ne pas supprimer*/
+#online_users br {
+    display: none
+}
+
+.qeel-middle .credits {
+    font-size: 10px;
+    border: var(--border);
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.qeel-left {
+    border-radius: 0 5px 5px 0;
+    text-align: justify;
+}
+
+
+
+/****** ------------------------------------------------------------------------------
+ ****** FORUMS ----------------------------------------------------------------------- ******/
+
+/*** ------------------------------- ***/
+/*** ENTETE ET FOOTER DE LA LISTE DES SUJETS ***/
+
+/* Chaîne de navigation et pagination
+ * (réutilisé dans l'affichage d'un sujet (viewtopic_body)) */
+.navigation_links {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* chaîne de lien de navigation : catégorie > forum > sous-fo */
+.navigation_chain {
+    font-size: 0;
+    /*retire les :: de séparation */
+}
+
+.navigation_chain a {
+    font-size: 12px;
+    /*rétablit le font-size: 0*/
+    margin-right: 8px;
+}
+
+.navigation_chain a:before {
+    content: '›';
+    /*symbole ou texte modifiable*/
+    font-size: 14px;
+    margin-right: 3px;
+}
+
+
+/* BOUTONS DE SUJET ---* 
+ * (réutilisé dans l'affichage d'un sujet (viewtopic_body) et les MP (privmsgs_body) */
+.buttons {
+    background: var(--grey);
+    padding: 1px 8px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.buttons:hover {background: var(--lighter);}
+
+/*ne pas retirer*/
+#users_here br {display: none}
+
+
+
+/*** ------------------------------- ***/
+/*** LISTE DES SUJETS -------------- ***/
+
+.topicslist_row {
+    background: var(--light);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: 50px 375px 95px 50px 152px;
+    grid-template-rows: 50px auto;
+    align-items: center;
+}
+
+.topicslist_row:last-child {margin-bottom: 0}
+
+.topicslist_row:hover {background: var(--lighter)}
+
+.topicslist-img {
+    width: 50px;
+    height: 50px;
+    background: var(--grey);
+}
+
+.topicslist-infos {}
+
+.topictitle {}
+
+.topic_msgicon { margin-right: 5px }
+
+.topic-type {}
+
+.topic-author {}
+
+.topiclist-infos img {margin-right: 3px}
+
+.topicslist_icon {}
+
+.topicslist-stats {text-align: right;}
+
+.topicslist-avatar-lastpost img {
+    object-fit: cover;
+    object-position: center;
+    width: 50px;
+    height: 50px;
+    background: var(--grey);
+}
+
+.topicslist-description {
+    grid-column: 1 / span 5;
+    border-top: 1px solid var(--grey);
+    margin: 10px -10px 0;
+    padding: 5px 10px 0;
+}
+
+
+
+/****** ------------------------------------------------------------------------------
+ ****** AFFICHAGE D'UN SUJET --------------------------------------------------------- ******/
+
+/*** ------------------------------- ***/
+/*** SUJET ------------------------- ***/
+
+
+.post_row {
+    background: var(--light);
+    display: grid;
+    grid-template-columns: 220px 563px;
+    grid-template-rows: 38px auto;
+    border-radius: 5px 5px 0 0;
+}
+
+.post_row:first-child {border-radius: 0 0 5px 5px;}
+
+.post_row:last-child {border-radius: 0 0 5px 5px;}
+
+.post_details {
+    grid-column: 1 / span 2;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--grey);
+}
+
+.post_date {flex-grow: 100;}
+
+
+/* BOUTONS D'EDITION DU MESSAGE --- */
+/* Conteneur boutons d'édition */
+ul.profile-icons {
+    margin-top: 0 !important;
+    flex-grow: 1;
+}
+
+/*UN SEUL bouton d'édition */
+ul.profile-icons li {
+    margin: 0 0 0 6px !important;
+    padding: 2px;
+}
+
+/*hover d'un bouton d'édition*/
+ul.profile-icons li:hover {
+    background: var(--grey);
+    border-radius: 5px;
+}
+
+
+/* BOUTON LIKE --- */
+/* Conteneur du bouton like */
+.like_button {
+    float: right;
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+/* Bouton like
+ * Le bouton de base de forumactif étant déjà très personnalisé, 
+ * il est conseillé d'appliquer !important à chaque déclaration
+ */
+.rep-button,
+.rep-button:active,
+.rep-button:focus {
+    margin: 0 !important;
+    background: var(--grey) !important;
+    border: none !important;
+    box-shadow: none !important;
+    float: none !important;
+    font-family: var(--font) !important;
+    padding: 3px 5px !important;
+    border-radius: 5px;
+    text-transform: inherit !important;
+    line-height: normal !important;
+    color: var(--text) !important;
+    font-weight: 600 !important
+}
+
+/*Bouton au survol*/
+.rep-button:hover {background: var(--greyer) !important;}
+
+/* Texte "j'aime" */
+button.rep-button .like_text {}
+
+/*compteur de like*/
+button.rep-button .rep-nb {
+    line-height: normal !important;
+    margin-left: 5px;
+    padding: 0 3px;
+    background: var(--light);
+    border-radius: 3px;
+    border: none !important;
+}
+
+
+.post_profil {
+    padding: 10px;
+    border-right: 1px solid var(--grey);
+    border-bottom: 1px solid var(--grey);
+}
+
+/* La variable de l'image "en ligne" s'applique en background-image,
+ * il faut donc donner au conteneur la taille de l'image pour qu'elle apparaisse pleinement 
+ */
+.online {width: 46px;height: 16px;}
+
+.post_message {
+    padding: 10px;
+    border-bottom: 1px solid var(--grey);
+}
+
+
+/* REPONSE RAPIDE --- */
+/*supression de la mention "réponse rapide" */
+.quickreply div.h3 {display: none}
+
+
+/*** ------------------------------- ***/
+/*** SONDAGE ----------------------- ***/
+
+.poll {
+    background: var(--light);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.head_poll {
+    padding: 10px;
+    border-bottom: 1px solid var(--grey);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.poll_list {
+    display: grid;
+    grid-template-columns: 220px auto;
+}
+
+.poll_option {
+    padding: 10px 20px 0 10px;
+    border-right: 1px solid var(--grey);
+    text-align: right;
+}
+
+.poll_vote {
+    padding: 10px 10px 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.poll_send {
+    margin-left: 220px;
+    padding: 20px 10px 20px 20px;
+    border-left: 1px solid var(--grey);
+}
+
+.poll_vote:nth-child(2),
+.poll_option:first-child 
+{padding-top: 20px;}
+
+
+
+/*** ------------------------------- ***/
+/*** TEXTES, BALISES, ETC ---------- ***/
+
+
+/* Lien-tag des utilisateurs */
+.mentiontag {}
+
+
+/* BALISES DE MESSAGE : spoiler, code, quote...
+ * Utilisez !important pour personnaliser au-dessus des bases de FA si besoin
+ */
+
+/*Balise code*/
+#blank_code {
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: var(--border) !important;
+}
+
+/* titre "code" */
+#blank_code dt {
+    background: var(--grey);
+    border-radius: 5px;
+    padding: 2px 5px;
+    border: none !important;
+    margin: 0 !important;
+}
+
+/*contenu code*/
+#blank_code code {}
+
+/*Balise spoiler*/
+#blank_spoiler {
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: var(--border) !important;
+}
+
+/*titre "spoiler*/
+#blank_spoiler dt {
+    background: var(--grey);
+    border-radius: 5px;
+    padding: 2px 5px;
+    border: none !important;
+    margin: 0 !important;
+}
+
+/*contenu spoiler*/
+.spoiler_content {margin: 5px 5px 2px;}
+
+/*Balise citation*/
+blockquote#blank_quote {
+    margin: 15px !important;
+    border: none !important;
+    border-left: 2px solid var(--grey) !important;
+    ;
+}
+
+/*Citation : titre "XXX a écrit"*/
+blockquote#blank_quote cite {}
+
+/*Balise hide*/
+#blank_hide {
+    padding: 10px;
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 5px;
+    background: var(--lighter);
+    border: none !important;
+}
+
+/*Balise blockquote*/
+blockquote {border: none !important;}
+
+
+
+
+/****** ------------------------------------------------------------------------------
+ ****** MEMBRES ------------------------------------------------------ ******/
+
+/*** ------------------------------- ***/
+/*** PAGE DE PROFIL ---------------- ***/
+
+.user_profil {
+    background: var(--light);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 220px auto;
+}
+
+.profil_avatar {
+    padding: 10px;
+    border-right: 1px solid var(--grey);
+}
+
+.profil_infos {padding: 10px;}
+
+.profil_contact form {display: flex;}
+
+.profil_contact form > div {margin-left: 5px;}
+
+/* Suppression des cases vides de contact qui affichent " - " 
+ * nth-child(n+4) supprime toutes les cases après la quatrième */
+.profil_contact form div:nth-child(n+4) {display: none}
+
+.profil_content {
+    margin-top: 20px;
+    height: 265px;
+    overflow: auto;
+}
+
+.profil_field {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 120px auto;
+}
+
+.profil_field label {
+    font-weight: 600;
+    color: var(--link);
+}
+
+.profil_field field {}
+
+.profil_admin {
+    text-align: center;
+    margin: 10px 0 0;
+}
+
+
+/*** ------------------------------- ***/
+/*** PROFILS SIMPLIFIÉS DES TAGS ---- ***/
+
+/* Supression de la flèche peu esthétique*/
+.tooltipster-arrow {display: none !important}
+
+.tooltipster-default {}
+
+.preview_content {display: flex;}
+
+.preview_avatar img {
+    object-fit: cover;
+    object-position: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.preview_infos {
+    width: 100%;
+    padding-top: 3px
+}
+
+.preview_pseudo, .preview_pseudo strong {
+    font-size: 16px !important;
+}
+
+.preview_contacts {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+}
+
+.preview_contacts a {margin-left: 5px}
+
+.tooltipster-arrow {display: none}
+
+
+
+/*** ------------------------------- ***/
+/*** MODIFIER LE PROFIL ------------ ***/
+
+/* Onglets dans la modification de profil */
+div#tabs {margin: 20px 0 10px !important;}
+
+/* Permet d'espacer équitablement tout les onglets*/
+#tabs ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Onglet selectionné */
+#tabs li.activetab {
+    background: var(--grey);
+    border-radius: 5px;
+}
+
+/* Liens d'onglet */
+#tabs a {padding: 4px !important;}
+
+#tabs a:hover {
+    background: var(--grey);
+    border-radius: 5px;
+}
+
+/* Texte contenu dans l'onglet */
+#tabs a span {padding: 0 !important;}
+
+/* Suppression de l'onglet "amis et ignorés"
+ * Déjà supprimé dans le profil seul et permet d'aligner tous les onglets sur une ligne */
+div#tabs li:nth-child(5) { display: none;}
+
+
+
+
+/*** ------------------------------- ***/
+/*** LISTE DES MEMBRES ------------- ***/
+
+.userlist {
+    display: grid;
+    grid-template-columns: 385px 385px;
+    grid-gap: 10px;
+}
+
+.userlist_profil {
+    display: grid;
+    grid-template-columns: 95px auto;
+    grid-gap: 1px;
+}
+
+.userlist_avatar {
+    background: var(--light);
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+.userlist_avatar img {
+    width: 75px;
+    height: 120px;
+}
+
+.userlist_details {
+    background: var(--light);
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+}
+
+.userlist_pseudo {font-size: 14px;}
+
+.userlist_infos {}
+
+.userlist_contact {}
+
+
+
+
+
+/****** ------------------------------------------------------------------------------ 
+ ****** MESSAGES PRIVES -------------------------------------------------------------- ******/
+
+/*** ------------------------------- ***/
+/*** LISTE DES MPs ----------------- ***/
+.mp_row {
+    background: var(--light);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 55px auto;
+    margin-bottom: 5px;
+}
+
+.mp_row:hover {background: var(--lighter);}
+
+.mp_img {
+    padding: 10px;
+    border-right: 1px solid var(--grey);
+}
+
+.mp_img img {
+    width: 35px;
+    height: 35px;
+    background: var(--grey);
+}
+
+.mp_infos {padding: 10px;}
+
+
+/*** ------------------------------- ***/
+/*** AFFICHAGE D'UN MESSAGE PRIVÉ -- ***/
+
+.message {
+    background: var(--light);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 220px auto;
+    grid-template-rows: 38px auto;
+}
+
+.message_infos {
+    grid-column: 1 / span 2;
+    border-bottom: 1px solid var(--grey);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.message_profil {
+    padding: 10px;
+    border-right: 1px solid var(--grey);
+    text-align: center;
+}
+
+.message_content { padding: 10px;}
+
+
+
+/****** ------------------------------------------------------------------------------
+ ****** BLOGS ------------------------------------------------------------------------ ******/
+
+/*** ------------------------------- ***/
+/*** LISTE DES BLOGS --------------- ***/
+
+
+.bloglist {
+    background: var(--light);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 65px auto;
+    grid-template-rows: 60px auto;
+    margin-bottom: 10px;
+}
+
+
+.bloglist_date {
+    grid-row: 1 / span 2;
+    padding: 10px;
+    border-right: 1px solid var(--grey);
+    line-height: 22px;
+    text-align: center;
+}
+
+.blog_daymonth {font-size: 16px;font-weight: 700;}
+.blog_year {font-size: 18px;}
+
+.bloglist_infos {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.bloglist_details {text-align: right}
+
+.bloglist_resum { padding: 0 10px 10px;}
+
+
+/*** ------------------------------- ***/
+/***  AFFICHAGE D'UN BLOG ---------- ***/
+
+.blog_post {
+    background: var(--light);
+    display: grid;
+    grid-template-rows: 38px auto;
+    border-radius: 5px;
+}
+
+.blog_details {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--grey);
+}
+
+.blog_author {flex-grow: 100;}
+
+
+/*** ------------------------------- ***/
+/*** COMMENTAIRES D'UN BLOG -------- ***/
+
+
+.blog_comment {
+    border: var(--border);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px auto 10px;
+}
+
+.comment_avatar {margin-right: 10px;float: left;}
+
+.comment_avatar img {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    width: 40px !important;
+    height: 40px !important;
+    margin:0!important;
+}
+
+.comment_details {
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment_details .left {flex-grow: 100;}
+
+.comment_content {margin-left: 50px;}
+
+
+
+/****** ------------------------------------------------------------------------------
+ ****** POUBELLE DE FORUMACTIF ------------------------------------------------------- 
+ ****** Les éléments dont on veut plus ----------------------------------------------- ******/
+
+.adminlink br {display: none}
+
+.corners-top {display: none !important}
+.corners-bottom {display: none !important}
+
+li.header dl.icon, ul.topiclist li.header, table.table1 thead { display: none !important;}
+
+.forumbg table.table1 {margin: 0;}
+
+#cp-main {float: none !important; margin: 0 auto !important;}
+
+
+
+            </code>
+            </pre>
+
+        </div>
+
+        <div id="T2" class="tabcontent">
+            <div class="tempname"><h1>Structure du forum</h1></div>
+
+            <h3>Root</h3>
+                <pre class="language-css">
+                <code class="language-css">
+/*** tuto : geniuspandalab.tumblr.com/post/634694343906689024/cssroot ***/
+:root {
+    --text: #333;
+    --link: #000;
+    --light: #FFF;
+    --lighter: #fafafa;
+    --grey: #F4F4F4;
+    --greyer: #E5E5E5;
+    --border: 1px solid #E5E5E5;
+    --font: 'Open Sans';
+}
+                </code>
+                </pre>
+                
+             <h3>Fond de la page</h3>
+                <pre class="language-css">
+                <code class="language-css">
+body {
+    background: var(--grey);
+    font-family: 'Open Sans';
+}
+
+                </code>
+                </pre> 
+                
+            <h3>Conteneur généraux</h3>
+                <pre class="language-css">
+                <code class="language-css">
+/*structure principale*/
+.main_forum {
+    width: 840px;/*largeur forum*/
+    margin: 10px auto 10px;/*espace top - centrer auto - espace bottom*/
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+/* Conteneur de toutes les sous-sections
+ * comme les encadrés d'options, de rappel, etc... */
+.panel {
+    background: var(--light) !important;
+    border: var(--border);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+/* Conteneur des parties inaccessibles de FA (comme la liste des sujets les plus actifs, par ex.)
+ * Il est conseillé de les personnaliser de la même façon que le reste de votre design.
+ * Pour les repérer, n'hésitez pas à utiliser l'outil d'inspecteur Web */
+
+.forabg, .forumbg {
+    background: var(--grey);
+    background-image: none !important;
+    border: var(--border);
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 10px !important;}
+
+.row, .row1, .row2 {
+    border: none !important;
+    background: transparent !important;
+}
+                </code>
+                </pre>
+                
+            <h3>Scrollbar</h3>
+                <pre class="language-css">
+                <code class="language-css">
+/* Scrollbar entière */
+::-webkit-scrollbar {width: px;}
+
+/* Rail */
+::-webkit-scrollbar-track {}
+
+/* Poignée */
+::-webkit-scrollbar-thumb {}
+                </code>
+                </pre>
+                
+            <h3>Tire des pages</h3>
+                <pre class="language-css">
+                <code class="language-css">
+/* Utilisé pour des titres de pages */
+h1, h1.page-title {
+    color: var(--link);
+    margin: 10px 0 20px;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Utilisé pour des titres de sujets, blogs... */
+h2 {
+    display: inline-block !important;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Utilisé pour des titres de sous-sections, petit encadré, ...*/
+.h3, h3 {
+    color: var(--text);
+    border: none !important;
+    padding-bottom: 10px;
+    margin: 0;
+    text-transform: none !important;
+    font-size: 14px;
+}
+                </code>
+                </pre>
+                
+            <h3>Boutons d'interaction et barre de texte</h3>
+                <pre class="language-css">
+                <code class="language-css">
+/* BARRE DE TEXTE ---*/
+input.inputbox {
+    border: var(--border) !important;
+    border-radius: 5px;
+    background: var(--grey) !important;
+}
+
+
+/* BOUTONS D'INTERACTION --- *
+ * Envoyer, prévisualiser, sauvegarder, aller,... */
+.button1, .button2, a.button1, a.button2, button.button2, input.button1, input.button2 {
+    font-size: 12px;
+    padding: 2px 3px!important;
+    border: var(--border) !important;
+    border-radius: 5px;
+    background: var(--grey) !important;
+}
+
+
+/* MENUS DEROULANTS --- */
+select {
+    background: transparent !important;
+    border: var(--border) !important;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+                </code>
+                </pre>
+                
+            <h3>Ascenseur</h3>
+                <pre class="language-css">
+                <code class="language-css">
+/* Conteneur de l'ascenseur
+ * Sert essentiellement à définir où le placer dans la page */
+.elevator {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    width: 100px;
+}
+
+/* Lien de renvoi haut/bas */
+.elevator a {
+    display: block;
+    padding: 5px 8px;
+    background: var(--light);
+    border: var(--border);
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 5px;
+}
+                </code>
+                </pre>  
+            
+        </div>
+
+        <div id="T3" class="tabcontent">
+            <div class="tempname"><h1>Généralités</h1></div>
+            
+                <pre class="language-css">
+                <code class="language-css">
+/* S'applique à TOUS les éléments du forum*/
+* { box-sizing: border-box; /*évite que les éléments soient agrandis par le padding*/
+    font-size: 12px;}
+                </code>
+                </pre>
+
+            <h3>Liens et textes</h3>
+                <pre class="language-css">
+                <code class="language-css">
+/* LIENS DU FORUM --- */
+a {
+    font-weight: 600;
+    text-decoration: none !important;}
+
+/*liens au survol*/
+a:hover {}
+
+/*liens visités*/
+a:visited {}
+
+
+/* TEXTES --*/
+
+p {font-size: 12px !important;}
+
+/* Contenu de tous les messages postés (en sujet comme en MP)*/
+.postbody, .content {
+  width: 100%; /*ne pas retirer*/
+}
+
+
+/* Emoji mis par défaut de FA
+ * Les réduire les rend moins horribles à voir */
+.emojione {
+    width: 13px !important
+}
+
+                </code>
+                </pre>
+                
+            <h3>Éléments esthétiques</h3>
+                <pre class="language-css">
+                <code class="language-css">
+/* Contenur général qui sert généralement de fond et/ou de contour*/
+.container {
+    background: var(--grey);
+    border: var(--border);
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* Barre de séparation */
+.separator {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid var(--grey);
+    clear: both;
+}
+
+/* Conteneur moins large (les historiques des messages essentiellement) */
+.wrapped {
+    width: 80%;
+    margin: 20px auto !important;
+}
+
+/* Permet d'aligner un élément à droite ou à gauche */
+.right {float: right}
+.left {float: left}
+
+
+
+/* Barre de gestion 
+ * Contient des boutons ou des liens spéciaux */
+.links_bar {
+    height: 38px;
+    border: var(--border);
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    clear: both;
+}
+
+/* Mise en valeur d'un lien spécial */
+a.specials_links,
+.specials_links a,
+span.specials_links {
+    background: var(--grey);
+    border-radius: 5px;
+    height: 24px;
+    padding: 2px 8px;
+}
+
+/* Image/avatar réduit */
+.mini_img img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    margin-right: 10px;
+    background: var(--grey);
+}
+                </code>
+                </pre>
+                
+            <h3>Pagination</h3>
+                <pre class="language-css">
+                <code class="language-css">
+/* FA utilise la même classe .pagination partout intégrée dans ses variables (on ne peut donc pas la retirer des templates)
+ * Ici, on la "reset" pour en faire ce qu'on veut. */
+.pagination {
+    float: none !important;
+    margin-top: 0 !important;
+    text-align: left !important;
+}
+
+/*lien unique vers les pages numérotées*/
+.pagination span a {
+    background-color: var(--grey) !important;
+    border: none !important;
+    color: var(--link) !important;
+    border-radius: 3px;
+    font-size: 12px !important;
+    margin: 0 2px;
+    padding: 1px 4px;
+}
+
+/*survol des liens uniques des pages*/
+.pagination span a:hover {
+    background-color: var(--greyer) !important;
+}
+
+/*lien actif : page sur laquelle vous vous trouvez */
+.pagination span strong {
+    background-color: var(--link);
+    border-radius: 3px;
+    border: none !important;
+    margin: 0 2px;
+    padding: 1px 4px;
+}
+
+
+/*suppression de l'image-lien "aller à la page suivante" */
+.page-topic span a:last-child {
+    display: none;
+}
+                </code>
+                </pre>
+                
+            <h3>Editeur de texte</h3>
+                <pre class="language-css">
+                <code class="language-css">
+/*conteneur de l'éditeur de texte*/
+.quickreply div#textarea_content {
+    width: 70% !important;
+}
+
+/* Editeur de texte */
+.sceditor-container {}
+
+/* Barre d'outils de l'éditeur de texte*/
+div.sceditor-toolbar {
+    background: var(--light) !important;
+    border-bottom: var(--border) !important;
+}
+
+/* Conteneur des groupes d'outils */
+div.sceditor-group {
+    background: var(--grey) !important;
+    border-bottom: var(--border) !important;
+}
+
+/* Bouton d'un outil */
+a.sceditor-button {
+    height: 26px !important;
+    /*ne pas retirer*/
+    width: 26px !important;
+    /*ne pas retirer*/
+}
+
+/* Conteneur de la zone de texte */
+.sceditor-container iframe,
+.sceditor-container textarea {
+    /*ne pas supprimer*/
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 5px !important;
+    /*ne pas supprimer*/
+
+    min-height: 150px !important;
+}
+                </code>
+                </pre>
+
+        </div>
+
+        <div id="T4" class="tabcontent">
+            <div class="tempname"><h1>Entête du forum</h1></div>
+            
+            <h3>Toolbar</h3>
+                <pre class="language-css">
+                <code class="language-css">
+/* Supression de la barre de recherche, des boutons sociaux et des flèches */
+#fa_search,
+#fa_share,
+#fa_hide {
+    display: none !important
+}
+
+/* Logo Forumactif : 
+ * ATTENTION, il est techniquement interdit de supprimer de logo de FA. 
+ * Techniquement. Faites-en donc ce que vous voulez. */
+#fa_left {}
+
+/* Toute la toolbar */
+#fa_toolbar {
+    font-size: 12px !important;
+    font-family: var(--font);
+    background: transparent !important;
+}
+
+
+/* Conteneur du lien de bienvenue et notification */
+#fa_right {
+    margin-top: 5px;
+    margin-right: 50px;
+    background: var(--light);
+    border: var(--border);
+    border-radius: 5px;
+    height: 40px;
+    display: flex !important;
+    align-items: center;
+    padding: 5px;
+    font-size: 12px !important;
+}
+
+/* Liens contenus à droite */
+#fa_right a {
+    color: var(--link) !important;
+    font-weight: 600 !important;
+    margin-left: 0 !important;
+}
+
+/* Lien "Connexion" */
+#fa_right a.rightHeaderLink:first-child { margin-right: 10px;}
+
+/* Lien "S'enregistrer" */
+#fa_right a.rightHeaderLink:last-child {}
+
+/* Lien "Bienvenue (pseudo)" */
+#fa_welcome {}
+
+/* Lien "notification"*/
+#fa_notifications
+
+/* liens "bienvenue" et "notification" [AU CLIC] */
+#fa_right.welcome #fa_menu #fa_welcome,
+#fa_toolbar > #fa_right.notification > #fa_notifications {
+    background: var(--grey);
+    border-radius: 5px;
+}
+
+/* Affichage du menu bienvenue [ET] liste des notification */
+ul#fa_menulist,
+ul#notif_list {
+    border: var(--border) !important;
+    background: var(--light);
+    border-radius: 5px;
+}
+
+/* Menu bienvenue */
+ul#fa_menulist {
+    margin-top: 10px;
+}
+
+/* Image de l'avatar dans le menu bienvenue */
+#fa_usermenu img {
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Liste des notifications*/
+ul#notif_list {
+    top: 50px;
+    font-size: 12px !important;
+    font-family: var(--font);
+}
+
+/* Lien dans une notification*/
+ul#notif_list a {
+    text-decoration: none !important
+}
+
+/* Notifications non lues */
+#notif_list .unread {
+    background: var(--grey) !important;
+}
+
+/* Lien "voir toutes les notifications" */
+#notif_list .see_all {
+    background: var(--grey) !important;
+    border-radius: 5px;
+    margin: 5px !important;
+}
+
+/* Conteneur de l'avatar toolbar */
+.fa_avatar {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: var(--border);
+    background: var(--light);
+    display: grid;
+    place-items: center;
+}
+
+/* Image de l'avatar */
+.fa_avatar img {
+    object-fit: cover;
+    object-position: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+                </code>
+                </pre>
+                
+            <h3>Bannière</h3>
+                <pre class="language-css">
+                <code class="language-css">
+#header { }
+
+#header img {
+    width: 800px;
+    height: 500px;
+    border-radius: 5px;
+    border: var(--border);
+    background: var(--grey);
+}
+                </code>
+                </pre>
+                
+            <h3>Barre de navigation</h3>
+                <pre class="language-css">
+                <code class="language-css">
+/* Conteneur de la barre de nav */
+.navbar {
+    background: var(--grey) !important;
+    border: var(--border);
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px;
+    height: 40px;
+
+    display: flex;
+    /*ne pas supprimer*/
+    align-items: center;
+    /*centre verticalement*/
+    justify-content: center;
+    /*centre horizontalement*/
+
+}
+
+/* Suprresion des liens peu utilisé en les identifiant par leur numéro d'ordre*/
+.navbar li:nth-child(2), /*calendrier*/
+.navbar li:nth-child(3), /*faq*/
+.navbar li:nth-child(6) /*groupes*/
+    {
+    display: none !important
+}
+
+/* liens de navigation */
+a.mainmenu {
+    padding: 6px;
+}
+
+/* Lien navigation au survol*/
+a.mainmenu:hover {
+    background: var(--light);
+    border-radius: 5px;
+}
+
+/* Image des liens */
+a.mainmenu img {
+    display: none
+}
+                </code>
+                </pre>
+                
+            <h3>Annonces défilantes</h3>
+                <pre class="language-css">
+                <code class="language-css">
+/* Barre défilante */
+.module {
+    background: transparent !important;
+    border-radius: 5px;
+    border: var(--border);
+    margin: 10px 0;
+    padding: 4px 8px;
+}
+
+/* Intérieur d'une annonce*/
+#fa_ticker_container {
+    margin-bottom: 4px;/*ne pas retirer*/
+}
+                </code>
+                </pre>
+
+        </div>
+
+        <div id="T5" class="tabcontent">
+            <div class="tempname"><h1>Page principale</h1></div>
+            
+            <h3>Page d'accueil</h3>
+                <pre class="language-css">
+                <code class="language-css">
+/* PAGE D'ACCUEIL ---*/
+.introduction { }
+
+/* CADRE DE CONNEXION RAPIDE --- */
+.user_login_form {margin: 0 !important}
+
+                </code>
+                </pre>
+                
+            <h3>Catégories</h3>
+                <pre class="language-css">
+                <code class="language-css">
+/* Titre d'une catégorie
+ * Il est conseillé de garder le selecteur ".cate_title h2"
+ */
+.cate_title h2 {
+    display: block !important;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin: 10px 0 20px;
+}
+
+.forums {}
+
+.forum_row {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+    grid-row-gap: 1px;
+    margin-bottom: 10px;
+}
+
+.forum_row:last-child {margin-bottom: 0}
+
+.forum_row > div {
+    background: var(--light);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.top_row {border-radius: 5px 5px 0 0;}
+
+a.forumtitle {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+img.forum-img {
+    background: var(--grey);
+    width: 60px;
+    height: 60px;
+}
+
+.forum_desc {
+    height: 60px;
+    overflow: auto;
+    width: 435px;
+    margin: 0 10px;
+}
+
+.forum_lastpost-avatar {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.forum_lastpost-avatar img {
+    background: var(--grey);
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.forum_lastpost {
+    display: flex;
+    align-items: center;
+    width: 152px;
+}
+
+.bottom_row {border-radius: 0 0 5px 5px;}
+
+
+#ssforum {font-size: 0}
+
+#ssforum a {font-size: 12px;margin-right: 10px;}
+
+.forum_stats {
+    font-weight: 600;
+    float: right;
+}
+
+                </code>
+                </pre>
+                
+            <h3>Qui est en ligne</h3>
+                <pre class="language-css">
+                <code class="language-css">
+.qeel {
+    background: var(--grey);
+    border: var(--border);
+    border-radius: 5px;
+    padding: 8px;
+
+    display: grid;
+    grid-template-columns: 247px 286px 247px;
+    grid-gap: 1px;
+    margin-bottom: 10px;
+}
+
+.qeel > div {
+    background: var(--light);
+    padding: 15px 10px;
+}
+
+.qeel-right {
+    border-radius: 5px 0 0 5px;
+}
+
+.qeel-right #last_user {display: flex; align-items: center;}
+
+.qeel-right #lastuser_avatar img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.qeel-right a.groups {
+    display: block;
+    background: var(--grey);
+    border-radius: 5px;
+    text-align: center;
+    padding: 2px 0;
+    margin-bottom: 5px;
+}
+
+.qeel-right a.groups:hover {
+    background: var(--lighter)
+}
+
+.qeel-right a.groups:last-child {margin-bottom: 0}
+
+
+/*X connectés :: 1 membre, 0 invisible, 0 invité*/
+#total_users {}
+
+/*Connectés en ce moment*/
+#online_users {
+    min-height: 72px;
+    max-height: 72px;
+    overflow: auto;
+}
+
+/*ne pas supprimer*/
+#online_users br {
+    display: none
+}
+
+.qeel-middle .credits {
+    font-size: 10px;
+    border: var(--border);
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.qeel-left {
+    border-radius: 0 5px 5px 0;
+    text-align: justify;
+}
+
+                </code>
+                </pre>
+            
+        </div>
+
+        <div id="T6" class="tabcontent">
+            <div class="tempname"><h1>Forums</h1></div>
+            
+            <h3>Entête et footer d'un forum</h3>
+                <pre class="language-css">
+                <code class="language-css">
+/* Chaîne de navigation et pagination
+ * (réutilisé dans l'affichage d'un sujet (viewtopic_body)) */
+.navigation_links {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* chaîne de lien de navigation : catégorie > forum > sous-fo */
+.navigation_chain {
+    font-size: 0;
+    /*retire les :: de séparation */
+}
+
+.navigation_chain a {
+    font-size: 12px;
+    /*rétablit le font-size: 0*/
+    margin-right: 8px;
+}
+
+.navigation_chain a:before {
+    content: '›';
+    /*symbole ou texte modifiable*/
+    font-size: 14px;
+    margin-right: 3px;
+}
+
+
+/* BOUTONS DE SUJET ---* 
+ * (réutilisé dans l'affichage d'un sujet (viewtopic_body) et les MP (privmsgs_body) */
+.buttons {
+    background: var(--grey);
+    padding: 1px 8px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.buttons:hover {background: var(--lighter);}
+
+/*ne pas retirer*/
+#users_here br {display: none}
+                </code>
+                </pre>
+                
+            <h3>Liste des sujets</h3>
+                <pre class="language-css">
+                <code class="language-css">
+.topicslist_row {
+    background: var(--light);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: 50px 375px 95px 50px 152px;
+    grid-template-rows: 50px auto;
+    align-items: center;
+}
+
+.topicslist_row:last-child {margin-bottom: 0}
+
+.topicslist_row:hover {background: var(--lighter)}
+
+.topicslist-img {
+    width: 50px;
+    height: 50px;
+    background: var(--grey);
+}
+
+.topicslist-infos {}
+
+.topictitle {}
+
+.topic_msgicon { margin-right: 5px }
+
+.topic-type {}
+
+.topic-author {}
+
+.topiclist-infos img {margin-right: 3px}
+
+.topicslist_icon {}
+
+.topicslist-stats {text-align: right;}
+
+.topicslist-avatar-lastpost img {
+    object-fit: cover;
+    object-position: center;
+    width: 50px;
+    height: 50px;
+    background: var(--grey);
+}
+
+.topicslist-description {
+    grid-column: 1 / span 5;
+    border-top: 1px solid var(--grey);
+    margin: 10px -10px 0;
+    padding: 5px 10px 0;
+}
+                </code>
+                </pre>
+
+        </div>
+
+        <div id="T7" class="tabcontent">
+            <div class="tempname"><h1>Sujets</h1></div>
+            
+            <h3>Sujet</h3>
+                <pre class="language-css">
+                <code class="language-css">
+.post_row {
+    background: var(--light);
+    display: grid;
+    grid-template-columns: 220px 563px;
+    grid-template-rows: 38px auto;
+    border-radius: 5px 5px 0 0;
+}
+
+.post_row:first-child {border-radius: 0 0 5px 5px;}
+
+.post_row:last-child {border-radius: 0 0 5px 5px;}
+
+.post_details {
+    grid-column: 1 / span 2;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--grey);
+}
+
+.post_date {flex-grow: 100;}
+
+
+/* BOUTONS D'EDITION DU MESSAGE --- */
+/* Conteneur boutons d'édition */
+ul.profile-icons {
+    margin-top: 0 !important;
+    flex-grow: 1;
+}
+
+/*UN SEUL bouton d'édition */
+ul.profile-icons li {
+    margin: 0 0 0 6px !important;
+    padding: 2px;
+}
+
+/*hover d'un bouton d'édition*/
+ul.profile-icons li:hover {
+    background: var(--grey);
+    border-radius: 5px;
+}
+
+
+/* BOUTON LIKE --- */
+/* Conteneur du bouton like */
+.like_button {
+    float: right;
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+/* Bouton like
+ * Le bouton de base de forumactif étant déjà très personnalisé, 
+ * il est conseillé d'appliquer !important à chaque déclaration
+ */
+.rep-button,
+.rep-button:active,
+.rep-button:focus {
+    margin: 0 !important;
+    background: var(--grey) !important;
+    border: none !important;
+    box-shadow: none !important;
+    float: none !important;
+    font-family: var(--font) !important;
+    padding: 3px 5px !important;
+    border-radius: 5px;
+    text-transform: inherit !important;
+    line-height: normal !important;
+    color: var(--text) !important;
+    font-weight: 600 !important
+}
+
+/*Bouton au survol*/
+.rep-button:hover {background: var(--greyer) !important;}
+
+/* Texte "j'aime" */
+button.rep-button .like_text {}
+
+/*compteur de like*/
+button.rep-button .rep-nb {
+    line-height: normal !important;
+    margin-left: 5px;
+    padding: 0 3px;
+    background: var(--light);
+    border-radius: 3px;
+    border: none !important;
+}
+
+
+.post_profil {
+    padding: 10px;
+    border-right: 1px solid var(--grey);
+    border-bottom: 1px solid var(--grey);
+}
+
+/* La variable de l'image "en ligne" s'applique en background-image,
+ * il faut donc donner au conteneur la taille de l'image pour qu'elle apparaisse pleinement 
+ */
+.online {width: 46px;height: 16px;}
+
+.post_message {
+    padding: 10px;
+    border-bottom: 1px solid var(--grey);
+}
+
+
+/* REPONSE RAPIDE --- */
+/*supression de la mention "réponse rapide" */
+.quickreply div.h3 {display: none}
+                </code>
+                </pre>
+                
+            <h3>Sondages</h3>
+                <pre class="language-css">
+                <code class="language-css">
+.poll {
+    background: var(--light);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.head_poll {
+    padding: 10px;
+    border-bottom: 1px solid var(--grey);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.poll_list {
+    display: grid;
+    grid-template-columns: 220px auto;
+}
+
+.poll_option {
+    padding: 10px 20px 0 10px;
+    border-right: 1px solid var(--grey);
+    text-align: right;
+}
+
+.poll_vote {
+    padding: 10px 10px 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.poll_send {
+    margin-left: 220px;
+    padding: 20px 10px 20px 20px;
+    border-left: 1px solid var(--grey);
+}
+
+.poll_vote:nth-child(2),
+.poll_option:first-child 
+{padding-top: 20px;}
+                </code>
+                </pre>
+                
+            <h3>Textes, balises, ...</h3>
+                <pre class="language-css">
+                <code class="language-css">
+/* Lien-tag des utilisateurs */
+.mentiontag {}
+
+
+/* BALISES DE MESSAGE : spoiler, code, quote...
+ * Utilisez !important pour personnaliser au-dessus des bases de FA si besoin
+ */
+
+/*Balise code*/
+#blank_code {
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: var(--border) !important;
+}
+
+/* titre "code" */
+#blank_code dt {
+    background: var(--grey);
+    border-radius: 5px;
+    padding: 2px 5px;
+    border: none !important;
+    margin: 0 !important;
+}
+
+/*contenu code*/
+#blank_code code {}
+
+/*Balise spoiler*/
+#blank_spoiler {
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: var(--border) !important;
+}
+
+/*titre "spoiler*/
+#blank_spoiler dt {
+    background: var(--grey);
+    border-radius: 5px;
+    padding: 2px 5px;
+    border: none !important;
+    margin: 0 !important;
+}
+
+/*contenu spoiler*/
+.spoiler_content {margin: 5px 5px 2px;}
+
+/*Balise citation*/
+blockquote#blank_quote {
+    margin: 15px !important;
+    border: none !important;
+    border-left: 2px solid var(--grey) !important;
+    ;
+}
+
+/*Citation : titre "XXX a écrit"*/
+blockquote#blank_quote cite {}
+
+/*Balise hide*/
+#blank_hide {
+    padding: 10px;
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 5px;
+    background: var(--lighter);
+    border: none !important;
+}
+
+/*Balise blockquote*/
+blockquote {border: none !important;}
+                </code>
+                </pre>
+
+        </div>
+
+        <div id="T8" class="tabcontent">
+            <div class="tempname"><h1>Membres</h1></div>
+            
+            <h3>Page de profil</h3>
+                <pre class="language-css">
+                <code class="language-css">
+.user_profil {
+    background: var(--light);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 220px auto;
+}
+
+.profil_avatar {
+    padding: 10px;
+    border-right: 1px solid var(--grey);
+}
+
+.profil_infos {padding: 10px;}
+
+.profil_contact form {display: flex;}
+
+.profil_contact form > div {margin-left: 5px;}
+
+/* Suppression des cases vides de contact qui affichent " - " 
+ * nth-child(n+4) supprime toutes les cases après la quatrième */
+.profil_contact form div:nth-child(n+4) {display: none}
+
+.profil_content {
+    margin-top: 20px;
+    height: 265px;
+    overflow: auto;
+}
+
+.profil_field {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 120px auto;
+}
+
+.profil_field label {
+    font-weight: 600;
+    color: var(--link);
+}
+
+.profil_field field {}
+
+.profil_admin {
+    text-align: center;
+    margin: 10px 0 0;
+}
+                </code>
+                </pre>
+                
+            <h3>Profil simplié au survol des tags</h3>
+                <pre class="language-css">
+                <code class="language-css">
+/* Supression de la flèche peu esthétique*/
+.tooltipster-arrow {display: none !important}
+
+.tooltipster-default {}
+
+.preview_content {display: flex;}
+
+.preview_avatar img {
+    object-fit: cover;
+    object-position: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.preview_infos {
+    width: 100%;
+    padding-top: 3px
+}
+
+.preview_pseudo, .preview_pseudo strong {
+    font-size: 16px !important;
+}
+
+.preview_contacts {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+}
+
+.preview_contacts a {margin-left: 5px}
+
+.tooltipster-arrow {display: none}
+                </code>
+                </pre>
+                
+            <h3>Modifier le profil</h3>
+                <pre class="language-css">
+                <code class="language-css">
+/* Onglets dans la modification de profil */
+div#tabs {margin: 20px 0 10px !important;}
+
+/* Permet d'espacer équitablement tout les onglets*/
+#tabs ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Onglet selectionné */
+#tabs li.activetab {
+    background: var(--grey);
+    border-radius: 5px;
+}
+
+/* Liens d'onglet */
+#tabs a {padding: 4px !important;}
+
+#tabs a:hover {
+    background: var(--grey);
+    border-radius: 5px;
+}
+
+/* Texte contenu dans l'onglet */
+#tabs a span {padding: 0 !important;}
+
+/* Suppression de l'onglet "amis et ignorés"
+ * Déjà supprimé dans le profil seul et permet d'aligner tous les onglets sur une ligne */
+div#tabs li:nth-child(5) { display: none;}
+                </code>
+                </pre>
+                
+            <h3>Liste des membres</h3>
+                <pre class="language-css">
+                <code class="language-css">
+.userlist {
+    display: grid;
+    grid-template-columns: 385px 385px;
+    grid-gap: 10px;
+}
+
+.userlist_profil {
+    display: grid;
+    grid-template-columns: 95px auto;
+    grid-gap: 1px;
+}
+
+.userlist_avatar {
+    background: var(--light);
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+.userlist_avatar img {
+    width: 75px;
+    height: 120px;
+}
+
+.userlist_details {
+    background: var(--light);
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+}
+
+.userlist_pseudo {font-size: 14px;}
+
+.userlist_infos {}
+
+.userlist_contact {}
+                </code>
+                </pre>
+
+        </div>
+
+        <div id="T9" class="tabcontent">
+            <div class="tempname"><h1>Messages privés</h1></div>
+            
+            <h3>Liste des messages privés</h3>
+                <pre class="language-css">
+                <code class="language-css">
+.mp_row {
+    background: var(--light);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 55px auto;
+    margin-bottom: 5px;
+}
+
+.mp_row:hover {background: var(--lighter);}
+
+.mp_img {
+    padding: 10px;
+    border-right: 1px solid var(--grey);
+}
+
+.mp_img img {
+    width: 35px;
+    height: 35px;
+    background: var(--grey);
+}
+
+.mp_infos {padding: 10px;}
+                </code>
+                </pre>
+                
+            <h3>Affichage d'un message privé</h3>
+                <pre class="language-css">
+                <code class="language-css">
+.message {
+    background: var(--light);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 220px auto;
+    grid-template-rows: 38px auto;
+}
+
+.message_infos {
+    grid-column: 1 / span 2;
+    border-bottom: 1px solid var(--grey);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.message_profil {
+    padding: 10px;
+    border-right: 1px solid var(--grey);
+    text-align: center;
+}
+
+.message_content { padding: 10px;}
+                </code>
+                </pre>
+
+        </div>
+
+        <div id="T10" class="tabcontent">
+            <div class="tempname"><h1>Blogs</h1></div>
+            
+            <h3>Liste des blogs</h3>
+                <pre class="language-css">
+                <code class="language-css">
+.bloglist {
+    background: var(--light);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 65px auto;
+    grid-template-rows: 60px auto;
+    margin-bottom: 10px;
+}
+
+
+.bloglist_date {
+    grid-row: 1 / span 2;
+    padding: 10px;
+    border-right: 1px solid var(--grey);
+    line-height: 22px;
+    text-align: center;
+}
+
+.blog_daymonth {font-size: 16px;font-weight: 700;}
+.blog_year {font-size: 18px;}
+
+.bloglist_infos {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.bloglist_details {text-align: right}
+
+.bloglist_resum { padding: 0 10px 10px;}
+                </code>
+                </pre>
+                
+            <h3>Affichage d'un blog</h3>
+                <pre class="language-css">
+                <code class="language-css">
+.blog_post {
+    background: var(--light);
+    display: grid;
+    grid-template-rows: 38px auto;
+    border-radius: 5px;
+}
+
+.blog_details {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--grey);
+}
+
+.blog_author {flex-grow: 100;}
+                </code>
+                </pre>
+                
+            <h3>Commentaires d'un blog</h3>
+                <pre class="language-css">
+                <code class="language-css">
+.blog_comment {
+    border: var(--border);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px auto 10px;
+}
+
+.comment_avatar {margin-right: 10px;float: left;}
+
+.comment_avatar img {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    width: 40px !important;
+    height: 40px !important;
+    margin:0!important;
+}
+
+.comment_details {
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment_details .left {flex-grow: 100;}
+
+.comment_content {margin-left: 50px;}
+                </code>
+                </pre>
+
+        </div>
+
+        <div id="T11" class="tabcontent">
+            <div class="tempname"><h1>Poubelle de Forumactif</h1></div>
+
+                <pre class="language-css">
+                <code class="language-css">
+.adminlink br {display: none}
+
+.corners-top {display: none !important}
+.corners-bottom {display: none !important}
+
+li.header dl.icon, ul.topiclist li.header, table.table1 thead { display: none !important;}
+
+.forumbg table.table1 {margin: 0;}
+
+#cp-main {float: none !important; margin: 0 auto !important;}
+                </code>
+                </pre>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <script>
+        document.getElementById("defaultOpen").click();
+
+        function openTemp(evt, tempName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tempName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+    </script>
+
+
+    <script>
+        (function() {
+
+            // Get the elements.
+            // - the 'pre' element.
+            // - the 'div' with the 'paste-content' id.
+
+            var pre = document.getElementsByTagName('pre');
+            var pasteContent = document.getElementById('paste-content');
+
+            // Add a copy button in the 'pre' element.
+            // which only has the className of 'language-'.
+
+            for (var i = 0; i < pre.length; i++) {
+                var isLanguage = pre[i].children[0].className.indexOf('language-');
+
+                if (isLanguage === 0) {
+                    var button = document.createElement('button');
+                    button.className = 'copy-button';
+                    button.textContent = 'Copier';
+
+                    pre[i].appendChild(button);
+                }
+            };
+
+            // Run Clipboard
+
+            var copyCode = new Clipboard('.copy-button', {
+                target: function(trigger) {
+                    return trigger.previousElementSibling;
+                }
+            });
+
+            // On success:
+            // - Change the "Copy" text to "Copied".
+            // - Swap it to "Copy" in 2s.
+            // - Lead user to the "contenteditable" area with Velocity scroll.
+
+            copyCode.on('success', function(event) {
+                event.clearSelection();
+                event.trigger.textContent = 'Copié!';
+                window.setTimeout(function() {
+                    event.trigger.textContent = 'Copier';
+                }, 2000);
+
+                $.Velocity(pasteContent, 'scroll', {
+                    duration: 1000
+                });
+            });
+
+            // On error (Safari):
+            // - Change the  "Press Ctrl+C to copy"
+            // - Swap it to "Copy" in 2s.
+
+            copyCode.on('error', function(event) {
+                event.trigger.textContent = 'Press "Ctrl + C" to copy';
+                window.setTimeout(function() {
+                    event.trigger.textContent = 'Copié!';
+                }, 5000);
+            });
+
+        })();
+
+    </script>
+
+
+</body>
+
+</html>
