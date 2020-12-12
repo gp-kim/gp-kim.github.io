@@ -30,7 +30,7 @@ a {
     border-radius: 5px;
     display: flex;
     width: 1000px;
-    margin: 50px auto;
+    margin: 20px auto;
     padding: 20px;
     position: relative;
 }
@@ -60,10 +60,10 @@ a.back:hover {
 
 .code_ls {
     top: 35px;
-    left: -85px;
+    left: -110px;
     width: 100px;
 }
-a.code_ls:nth-child(2) { top: 70px;width: 75px;}
+a.code_ls:nth-child(2) { top: 70px;width: 75px;left: -85px;}
 .code_ls div {
     font-weight: 700;
 }
