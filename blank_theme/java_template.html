@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/blank_theme/java_template.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://www.aht.li/3568909/prism_blank_theme.css">
+    <script src="https://www.aht.li/3568908/prism_blank_theme.js"></script>
+    <script src="https://www.aht.li/3566377/prism.js"></script>
+
+
+    <script src="https://www.aht.li/3566719/clipboardauto.js"></script>
+
+    <script src="https://kit.fontawesome.com/f96772d3f9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="tab">
+            <h3>Scripts utilisés</h3>
+            <button class="tablinks" onclick="openTemp(event, 'T1')" id="defaultOpen">
+                Avatar dans la toolbar <span>par Tech</span></button>
+            <button class="tablinks" onclick="openTemp(event, 'T2')">
+                Simplification des balises <span>par Milouze17</span></button>
+            <button class="tablinks" onclick="openTemp(event, 'T3')">
+                Avatar du dernier inscrit <span>par Lyxiae</span></button>
+
+            <button class="tablinks" onclick="openTemp(event, 'T4')">
+                Icône des messages <span>par Milouze14</span></button>
+            <button class="tablinks" onclick="openTemp(event, 'T5')">
+                Sélectionner le code <span>par Ea</span></button>
+
+            <button class="tablinks" onclick="openTemp(event, 'T6')">
+                Mention facile dans le profil <span>par Shadow </span></button>
+
+
+
+        </div>
+
+
+        <div id="T1" class="tabcontent">
+            
+            <div class="tempname"><h1>Avatar dans la toolbar</h1>
+            <h1 class="temp">Sur toutes les pages</h1></div>
+            
+            <pre class="language-js">
+            <code class="language-js">
+// Par Tech
+// https://forum.forumactif.com/t355862-afficher-l-avatar-du-membre-dans-la-toolbar
+
+$(function() {
+    $(function() {
+        $('#fa_welcome').prepend('<span class="fa_avatar">' + _userdata.avatar + '</span>')
+    })
+});
+            </code>
+            </pre>
+
+        </div>
+
+        <div id="T2" class="tabcontent">
+            <div class="tempname"><h1>Simplification des balises</h1>
+            <h1 class="temp">Sur toutes les pages</h1></div>
+
+            <pre class="language-javascript">
+            <code class="language-javascript">
+//Script par Milouze14
+//https://www.milouze14.com/t27816-phpbb3-personnaliser-les-balises-hide-code-quote-et-spoiler
+    
+$(function(){
+$('cite').closest('blockquote').attr('id','blank_quote');
+$('code').closest('.codebox').attr('id','blank_code');
+$('.codebox.spoiler').attr('id','blank_spoiler');
+$('.codebox.hidecode').attr('id','blank_hide');
+});
+            </code>
+            </pre>
+        </div>
+
+        <div id="T3" class="tabcontent">
+            <div class="tempname"><h1>Avatar du dernier inscrit</h1>
+            <h1 class="temp">Sur l'index</h1></div>
+
+            <pre class="language-javascript">
+            <code class="language-javascript">
+// Tutorial par Lyxiae
+// https://ohanart.forumactif.com/t1821-avatar-du-dernier-inscrit-sur-l-index-facile-lyxiae
+
+$(function(){
+    $.get($("#newest_user a[href^='/u']")[0].href,function(d){
+    (a=$("#user_avatar img",$(d))).length&&$("#lastuser_avatar").html(a);})
+    });
+            </code>
+            </pre>
+        </div>
+
+        <div id="T4" class="tabcontent">
+            <div class="tempname"><h1>Icône des messages</h1>
+            <h1 class="temp">Sur les sous-forums</h1></div>
+
+            <pre class="language-javascript">
+            <code class="language-javascript">
+// Solution par Milouze14
+// https://forum.forumactif.com/t400216-afficher-les-icones-de-sujets-dans-la-colonne-derniers-messages#3340636
+
+$(function(){
+$('.topicslist_row').find('.topicslist_infos[style*="background-image"]').each(function(){
+var a= $(this).css('background-image');
+a= a.replace('url(','').replace(')','').replace(/\"/gi, "");if(a){
+$(this).css('background-image','url(https://2img.net/i/fa/empty.gif)');
+$(this).find('.topic_msgicon').append('<img src="'+a+'"/>');
+}});});
+            </code>
+            </pre>
+        </div>
+
+        <div id="T5" class="tabcontent">
+            <div class="tempname"><h1>Sélectionner le code</h1>
+            <h1 class="temp">Sur toutes les pages</h1></div>
+            
+            <pre class="language-javascript">
+            <code class="language-javascript">
+// Par Ea
+// https://forum.forumactif.com/t309759-bouton-selectionner-le-contenu-pour-les-balises-de-code
+
+function selectCode(e) {
+    var s = $(e).closest("dl").find(".cont_code,code").get(0), range, selection;
+    var a = s, z = s;
+    while(a.nodeType == 1 && a.childNodes.length) a=a.firstChild;
+    while(z.nodeType == 1 && z.childNodes.length) z=z.lastChild;
+    if (!$(a).is('.fixff')) {
+        var fix = $('<span class="fixff"/>').insertBefore(a);
+    } else {
+      a = a.nextSibling;
+    }
+    if (document.body.createTextRange) {
+        range = document.body.createTextRange();
+        range.moveToElementText(s);
+        range.select();
+    } else if (window.getSelection) {
+        selection = window.getSelection();
+        range = document.createRange();
+        range.setStart(a, 0);
+        range.setEnd(z, z.nodeValue ? z.nodeValue.length : 0);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
+};
+$(function(){$("dl.codebox:not(.spoiler,.hidecode)  > dd.code, dl.codebox:not(.spoiler,.hidecode)  > dd > code").closest("dl").find('dt').append('<span onClick="selectCode(this)" class="selectCode">Sélectionner</span>')});
+            </code>
+            </pre>
+        </div>
+
+        <div id="T6" class="tabcontent">
+            <div class="tempname"><h1>Mention facile dans le profil</h1>
+            <h1 class="temp">Sur toutes les pages</h1></div>
+            
+            <pre class="language-javascript">
+            <code class="language-javascript">
+// Par Shadow
+// https://forum.forumactif.com/t378492-rendre-le-systeme-de-mentions-plus-facile-a-utiliser
+
+
+$(function() {
+   var version = 0;
+ 
+   if (/mode=reply/.test(window.location.search) && my_getcookie('fa_mention')) {
+      document.post.message.value += '@"' + my_getcookie('fa_mention') + '" ';
+      my_setcookie('fa_mention',''); 
+   } if (!/\/t\d+/.test(window.location.pathname)) return;
+ 
+   for (var a = $(['.post_pseudo a'][version]), b, i = 0, j = a.length, t = document.getElementById('text_editor_textarea'); i&lt;j; i++) {
+      b = document.createElement('A');
+      b.title = 'Mentionner ' + $(a[i]).text();
+      b.style.marginRight = '3px';
+      b.className = 'fa-mention';
+      b.innerHTML = '@';
+      b.href = '#';
+      b.onclick = function() {
+         var n = this.title.replace(/^.*?\s/,'');
+    
+         if ($.sceditor) t.insertText('@"' + n + '" ');
+         else {
+            my_setcookie('fa_mention', n);
+            window.location.href = '/post?t=' + window.location.pathname.replace(/\/t(\d+)-.*/,'$1') + '&mode=reply';
+         }
+    
+         return false;
+      };
+ 
+      a[i].parentNode.insertBefore(b, a[i]);
+   }
+ 
+   $(function(){
+      if (!$.sceditor) return;
+      t=$(t).sceditor('instance');
+   });
+});
+            </code>
+            </pre>
+            
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <script>
+        document.getElementById("defaultOpen").click();
+
+        function openTemp(evt, tempName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tempName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+    </script>
+
+
+    <script>
+        (function() {
+
+            // Get the elements.
+            // - the 'pre' element.
+            // - the 'div' with the 'paste-content' id.
+
+            var pre = document.getElementsByTagName('pre');
+            var pasteContent = document.getElementById('paste-content');
+
+            // Add a copy button in the 'pre' element.
+            // which only has the className of 'language-'.
+
+            for (var i = 0; i < pre.length; i++) {
+                var isLanguage = pre[i].children[0].className.indexOf('language-');
+
+                if (isLanguage === 0) {
+                    var button = document.createElement('button');
+                    button.className = 'copy-button';
+                    button.textContent = 'Copier';
+
+                    pre[i].appendChild(button);
+                }
+            };
+
+            // Run Clipboard
+
+            var copyCode = new Clipboard('.copy-button', {
+                target: function(trigger) {
+                    return trigger.previousElementSibling;
+                }
+            });
+
+            // On success:
+            // - Change the "Copy" text to "Copied".
+            // - Swap it to "Copy" in 2s.
+            // - Lead user to the "contenteditable" area with Velocity scroll.
+
+            copyCode.on('success', function(event) {
+                event.clearSelection();
+                event.trigger.textContent = 'Copié!';
+                window.setTimeout(function() {
+                    event.trigger.textContent = 'Copier';
+                }, 2000);
+
+                $.Velocity(pasteContent, 'scroll', {
+                    duration: 1000
+                });
+            });
+
+            // On error (Safari):
+            // - Change the  "Press Ctrl+C to copy"
+            // - Swap it to "Copy" in 2s.
+
+            copyCode.on('error', function(event) {
+                event.trigger.textContent = 'Press "Ctrl + C" to copy';
+                window.setTimeout(function() {
+                    event.trigger.textContent = 'Copié!';
+                }, 5000);
+            });
+
+        })();
+
+    </script>
+
+
+</body>
+
+</html>
