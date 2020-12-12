@@ -113,7 +113,7 @@ h3 { margin: 15px 0 8px;}
 .tab button:hover:nth-of-type(4), .tab button.active:nth-child(4) { height: 130px}
 .tab button:hover:nth-of-type(5), .tab button.active:nth-child(5) { height: 104px}
 .tab button:hover:nth-of-type(6), .tab button.active:nth-child(6) { height: 78px}
-.tab button:hover:nth-of-type(7), .tab button.active:nth-child(7) { height: 104px}
+.tab button:hover:nth-of-type(7), .tab button.active:nth-child(7) { height: 130px}
 .tab button:hover:-of-type(8), .tab button.active:nth-of-type(8) { height: 130px}
 .tab button:hover:-of-type(9), .tab button.active:nth-of-type(9) { height: 78px}
 .tab button:hover:-of-type(10), .tab button.active:nth-of-type(10) { height: 104px}
