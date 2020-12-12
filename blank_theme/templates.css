@@ -67,7 +67,7 @@ a.back:hover {
 .code_ls div {
     font-weight: 700;
 }
-
+.code_ls:nth-child(2) { top: 70px;}
 
 h3 { margin: 15px 0 8px;}
 
