@@ -61,9 +61,9 @@ a.back:hover {
 .code_ls {
     top: 35px;
     left: -85px;
-    width: 75px;
+    width: 100px;
 }
-a.code_ls:nth-child(2) { top: 70px;}
+a.code_ls:nth-child(2) { top: 70px;width: 75px;}
 .code_ls div {
     font-weight: 700;
 }
