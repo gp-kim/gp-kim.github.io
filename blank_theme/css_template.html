@@ -87,6 +87,7 @@
                  <span>Affichage d'un sujet</span> 
                  <span>Sondages</span> 
                  <span>Textes, balises,...</span> 
+                 <span>Prévisualisation d'un message</span> 
             </button>
                  
             <button class="tablinks" onclick="openTemp(event, 'T8')">
@@ -1104,6 +1105,9 @@ button.rep-button .rep-nb {
     border-bottom: 1px solid var(--grey);
 }
 
+/* Lien "@" de mention */
+a.fa-mention { }
+
 /* La variable de l'image "en ligne" s'applique en background-image,
  * il faut donc donner au conteneur la taille de l'image pour qu'elle apparaisse pleinement 
  */
@@ -1195,6 +1199,14 @@ button.rep-button .rep-nb {
     margin: 0 !important;
 }
 
+/* Sélectionner le code */
+.selectCode { 
+    float:right; 
+    text-transform: uppercase; 
+    cursor:pointer;
+    font-size: 10px;
+}
+
 /*contenu code*/
 #blank_code code {}
 
@@ -1242,6 +1254,16 @@ blockquote#blank_quote cite {}
 /*Balise blockquote*/
 blockquote {border: none !important;}
 
+
+/*** ------------------------------- ***/
+/*** PREVISUALISATION D'UN MESSAGE - ***/
+
+#preview {
+    background: var(--light)!important;
+    padding: 0 10px 10px;
+    border: var(--border)!important;
+    border-radius: 5px;
+}
 
 
 
@@ -2590,6 +2612,9 @@ button.rep-button .rep-nb {
     border-bottom: 1px solid var(--grey);
 }
 
+/* Lien "@" de mention */
+a.fa-mention { }
+
 /* La variable de l'image "en ligne" s'applique en background-image,
  * il faut donc donner au conteneur la taille de l'image pour qu'elle apparaisse pleinement 
  */
@@ -2681,6 +2706,14 @@ button.rep-button .rep-nb {
     margin: 0 !important;
 }
 
+/* Sélectionner le code */
+.selectCode { 
+    float:right; 
+    text-transform: uppercase; 
+    cursor:pointer;
+    font-size: 10px;
+}
+
 /*contenu code*/
 #blank_code code {}
 
@@ -2729,7 +2762,18 @@ blockquote#blank_quote cite {}
 blockquote {border: none !important;}
                 </code>
                 </pre>
-
+            
+                        <h3>Textes, balises, ...</h3>
+                <pre class="language-css">
+                <code class="language-css">
+#preview {
+    background: var(--light)!important;
+    padding: 0 10px 10px;
+    border: var(--border)!important;
+    border-radius: 5px;
+}
+                </code>
+                </pre>
         </div>
 
         <div id="T8" class="tabcontent">
