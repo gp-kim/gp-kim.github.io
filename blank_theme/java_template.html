@@ -127,7 +127,7 @@ $('.topicslist_row').find('.topicslist_infos[style*="background-image"]').each(f
 var a= $(this).css('background-image');
 a= a.replace('url(','').replace(')','').replace(/\"/gi, "");if(a){
 $(this).css('background-image','url(https://2img.net/i/fa/empty.gif)');
-$(this).find('.topic_msgicon').append('<img src="'+a+'"/>');
+$(this).find('.topic_msgicon').append('&lt;img src="'+a+'"/&gt;');
 }});});
             </code>
             </pre>
@@ -148,7 +148,7 @@ function selectCode(e) {
     while(a.nodeType == 1 && a.childNodes.length) a=a.firstChild;
     while(z.nodeType == 1 && z.childNodes.length) z=z.lastChild;
     if (!$(a).is('.fixff')) {
-        var fix = $('<span class="fixff"/>').insertBefore(a);
+        var fix = $('&lt;span class="fixff"/&gt;').insertBefore(a);
     } else {
       a = a.nextSibling;
     }
@@ -165,7 +165,7 @@ function selectCode(e) {
         selection.addRange(range);
     }
 };
-$(function(){$("dl.codebox:not(.spoiler,.hidecode)  > dd.code, dl.codebox:not(.spoiler,.hidecode)  > dd > code").closest("dl").find('dt').append('<span onClick="selectCode(this)" class="selectCode">Sélectionner</span>')});
+$(function(){$("dl.codebox:not(.spoiler,.hidecode)  > dd.code, dl.codebox:not(.spoiler,.hidecode)  > dd > code").closest("dl").find('dt').append('&lt;span onClick="selectCode(this)" class="selectCode"&gt;Sélectionner&lt;/span&gt;')});
             </code>
             </pre>
         </div>
