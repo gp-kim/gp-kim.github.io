@@ -914,7 +914,20 @@ document.getElementById('24hconnected').innerHTML = document.getElementById('24h
 
 &lt;a href="{U_EGOSEARCH_JS_PLUS_MENU}"&gt;Voir ses messages&lt;/a&gt;&lt;br /&gt;
 &lt;a href="{U_NEWPOSTS_JS_PLUS_MENU}"&gt;Nouveaux messages depuis la dernière visite&lt;/a&gt;&lt;br /&gt;
-&lt;a href="{U_UNANSWERED_JS_PLUS_MENU}"&gt;Messages sans réponses&lt;/a&gt;&lt;br /&gt;
+&lt;a href="{U_UNANSWERED_JS_PLUS_MENU}"&gt;Messages sans réponses&lt;/a&gt;
+
+&lt;br /&gt;&lt;br /&gt;
+
+&lt;!-----------------------------------------------&gt;
+&lt;!-- OUTILS DE MODERATION ------------&gt;
+&lt;div id="moderation_forum_tools"&gt;
+  {S_AUTH_LIST}
+&lt;/div&gt;
+
+&lt;!-- Changement de texte du lien "modérer ce forum" --&gt;
+&lt;script type="text/javascript"&gt;
+document.getElementById('moderation_forum_tools').innerHTML = document.getElementById('moderation_forum_tools').innerHTML.replace(/modérer ce forum/, "Modérer les sujets du forum");&lt;/script&gt;
+
 
 
 
@@ -1177,6 +1190,7 @@ document.getElementById('24hconnected').innerHTML = document.getElementById('24h
     &lt;!-- Affichage d'un message --&gt;
     &lt;!-- BEGIN postrow --&gt;
     &lt;!-- BEGIN displayed --&gt;
+    &lt;div id="{postrow.displayed.U_POST_ID}"&gt;&lt;/div&gt;
     &lt;div class="post_row" id="p{postrow.displayed.U_POST_ID}"&gt;
 
         &lt;!-- Conteneur informations du message--&gt;
@@ -1187,7 +1201,7 @@ document.getElementById('24hconnected').innerHTML = document.getElementById('24h
                 &lt;a href="{postrow.displayed.POST_URL}"&gt;{postrow.displayed.POST_SUBJECT}&lt;/a&gt;&nbsp;
 
                 &lt;!-- Date du message --&gt;
-                {postrow.displayed.POST_DATE_NEW}
+                &nbsp;{postrow.displayed.POST_DATE_NEW}
             &lt;/span&gt;
               
                 &lt;!-- Boutons d'édition de message --&gt;
