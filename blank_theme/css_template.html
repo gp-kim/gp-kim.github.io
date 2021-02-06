@@ -187,6 +187,17 @@ body {
     margin: 10px 0;
 }
 
+/* FACULTATIF : on annules toutes les propriétés établies pour la classe .panel
+ * dans le cas où la classe .panel se repète deux fois. Ca évite les doublons et l'effet répétitif. */
+.panel .panel {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
+
 /* Conteneur des parties inaccessibles de FA (comme la liste des sujets les plus actifs, par ex.)
  * Il est conseillé de les personnaliser de la même façon que le reste de votre design.
  * Pour les repérer, n'hésitez pas à utiliser l'outil d'inspecteur Web */
@@ -958,6 +969,21 @@ img.forum-img {
 #users_here br {display: none}
 
 
+/* OUTILS DE MODÉRATION D'UN FORUM ---*/
+/*Supprime le texte inutile*/
+#moderation_forum_tools, #moderation_forum_tools strong {
+  font-size: 0px;
+}
+
+/* Lien de modération du forum */
+#moderation_forum_tools a {
+  background: var(--grey);
+  border-radius: 5px;
+  height: 24px;
+  padding: 2px 8px;
+}
+
+
 
 /*** ------------------------------- ***/
 /*** LISTE DES SUJETS -------------- ***/
@@ -1678,6 +1704,17 @@ body {
     padding: 5px;
     margin: 10px 0;
 }
+
+/* FACULTATIF : on annules toutes les propriétés établies pour la classe .panel
+ * dans le cas où la classe .panel se repète deux fois. Ca évite les doublons et l'effet répétitif. */
+.panel .panel {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
 
 /* Conteneur des parties inaccessibles de FA (comme la liste des sujets les plus actifs, par ex.)
  * Il est conseillé de les personnaliser de la même façon que le reste de votre design.
@@ -2472,6 +2509,20 @@ img.forum-img {
 
 /*ne pas retirer*/
 #users_here br {display: none}
+
+/* OUTILS DE MODÉRATION D'UN FORUM ---*/
+/*Supprime le texte inutile*/
+#moderation_forum_tools, #moderation_forum_tools strong {
+  font-size: 0px;
+}
+
+/* Lien de modération du forum */
+#moderation_forum_tools a {
+  background: var(--grey);
+  border-radius: 5px;
+  height: 24px;
+  padding: 2px 8px;
+}
                 </code>
                 </pre>
                 
@@ -3143,7 +3194,7 @@ li.header dl.icon, ul.topiclist li.header, table.table1 thead { display: none !i
 
 .forumbg table.table1 {margin: 0;}
 
-#cp-main {float: none !important; margin: 0 auto !important;}
+#cp-main#cp-main#cp-main {float: none; margin: 0 auto; width: 100%}
                 </code>
                 </pre>
         </div>
