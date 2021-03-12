@@ -106,11 +106,14 @@
             <code class="language-markup">
 &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml" dir="{S_CONTENT_DIRECTION}" id="min-width" lang="{L_LANG_HTML}" xml:lang="{L_LANG_HTML}" {NAMESPACE_FB_LIKE} {NAMESPACE_FB} {NAMESPACE_BBCODE}&gt;
+
 &lt;head&gt;
 
-&lt;!-- INSTALLATION DE NOUVELLE POLICE D'ECRITURE --&gt;
+&lt;!--   INSTALLATION DE NOUVELLE POLICE D'ECRITURE --&gt;
     &lt;link rel="preconnect" href="https://fonts.gstatic.com"&gt;
     &lt;link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet"&gt;
+
+
 
 
     &lt;title&gt;{SITENAME_TITLE}{PAGE_TITLE}&lt;/title&gt;
@@ -140,209 +143,178 @@
     &lt;script src="{JS_DIR}{L_LANG}.js" type="text/javascript"&gt;&lt;/script&gt;
     {RICH_SNIPPET_GOOGLE}
 
-    &lt;!-- BEGIN switch_ticker --&gt;
-    &lt;link type="text/css" rel="stylesheet" href="{JQUERY_DIR}ticker/ticker.css" /&gt;
-    &lt;script src="{JQUERY_DIR}ticker/ticker.js" type="text/javascript"&gt;&lt;/script&gt;
-    &lt;!-- END switch_ticker --&gt;
+    
+	&lt;!-- BEGIN switch_ticker --&gt;
+	&lt;link type="text/css" rel="stylesheet" href="{JQUERY_DIR}ticker/ticker.css"/&gt;
+	&lt;script src="{JQUERY_DIR}ticker/ticker.js" type="text/javascript"&gt;&lt;/script&gt;
+	&lt;!-- END switch_ticker --&gt;
 
-    &lt;!-- BEGIN switch_ticker_new --&gt;
-    &lt;script src="{JQUERY_DIR}jcarousel/jquery.jcarousel.js" type="text/javascript"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript"&gt;
-        //&lt;![CDATA[
-        /* Definir le sens de direction en fonction du panneau admin */
-        var tickerDirParam = "{switch_ticker.DIRECTION}";
-        var slid_vert = false;
-        var auto_dir = 'next';
-        var h_perso = parseInt({
-            switch_ticker.HEIGHT
-        });
+	&lt;!-- BEGIN switch_ticker_new --&gt;
+	&lt;script src="{JQUERY_DIR}jcarousel/jquery.jcarousel.js" type="text/javascript"&gt;&lt;/script&gt;
+	&lt;script type="text/javascript"&gt;//&lt;![CDATA[
+		/* Definir le sens de direction en fonction du panneau admin */
+		var tickerDirParam = "{switch_ticker.DIRECTION}";
+		var slid_vert = false;
+		var auto_dir = 'next';
+		var h_perso = parseInt({switch_ticker.HEIGHT});
 
-        switch (tickerDirParam) {
-            case 'top':
-                slid_vert = true;
-                break;
+		switch (tickerDirParam) {
+			case 'top' :
+				slid_vert = true;
+				break;
 
-            case 'left':
-                break;
+			case 'left':
+				break;
 
-            case 'bottom':
-                slid_vert = true;
-                auto_dir = 'prev';
-                break;
+			case 'bottom':
+				slid_vert = true;
+				auto_dir = 'prev';
+				break;
 
-            case 'right':
-                auto_dir = 'prev';
-                break;
+			case 'right':
+				auto_dir = 'prev';
+				break;
 
-            default:
-                slid_vert = true;
-        }
+			default:
+				slid_vert = true;
+		}
 
-        $(document).ready(function() {
+		$(document).ready(function () {
 
-            $('#fa_ticker_content').css('display', 'block');
+			$('#fa_ticker_content').css('display', 'block');
 
-            var width_max = $('ul#fa_ticker_content').width();
-            var width_item = Math.floor(width_max / {
-                switch_ticker.SIZE
-            });
+			var width_max = $('ul#fa_ticker_content').width();
+			var width_item = Math.floor(width_max / {switch_ticker.SIZE});
 
-            if (width_max &gt; 0) {
-                $('ul#fa_ticker_content li').css('float', 'left').css('list-style', 'none').width(width_item).find('img').each(function() {
-                    if ($(this).width() &gt; width_item) {
-                        var ratio = $(this).width() / width_item;
-                        var new_height = Math.round($(this).height() / ratio);
-                        $(this).height(new_height).width(width_item);
-                    }
-                });
+			if (width_max &gt; 0) {
+				$('ul#fa_ticker_content li').css('float', 'left').css('list-style', 'none').width(width_item).find('img').each(function () {
+					if ($(this).width() &gt; width_item) {
+						var ratio = $(this).width() / width_item;
+						var new_height = Math.round($(this).height() / ratio);
+						$(this).height(new_height).width(width_item);
+					}
+				});
 
-                if (slid_vert) {
-                    var height_max = h_perso;
+				if (slid_vert) {
+					var height_max = h_perso;
 
-                    $('ul#fa_ticker_content li').each(function() {
-                        if ($(this).height() &gt; height_max) {
-                            height_max = $(this).height();
-                        }
-                    });
+					$('ul#fa_ticker_content li').each(function () {
+						if ($(this).height() &gt; height_max) {
+							height_max = $(this).height();
+						}
+					});
 
-                    $('ul#fa_ticker_content').width(width_item).height(height_max).css('marginLeft', 'auto').css('marginRight', 'auto');
-                    $('ul#fa_ticker_content li').height(height_max);
-                }
+					$('ul#fa_ticker_content').width(width_item).height(height_max).css('marginLeft', 'auto').css('marginRight', 'auto');
+					$('ul#fa_ticker_content li').height(height_max);
+				}
 
 
-                $('#fa_ticker_content').jcarousel({
-                    vertical: slid_vert,
-                    wrap: 'circular',
-                    auto: {
-                        switch_ticker.STOP_TIME
-                    },
-                    auto_direction: auto_dir,
-                    scroll: 1,
-                    size: {
-                        switch_ticker.SIZE
-                    },
-                    height_max: height_max,
-                    animation: {
-                        switch_ticker.SPEED
-                    }
-                });
-            } else {
-                $('ul#fa_ticker_content li:not(:first)').css('display', 'none');
-                $('ul#fa_ticker_content li:first').css('list-style', 'none').css('text-align', 'center');
-            }
-        });
-        //]]&gt;
+				$('#fa_ticker_content').jcarousel({
+					vertical: slid_vert,
+					wrap: 'circular',
+					auto: {switch_ticker.STOP_TIME},
+					auto_direction: auto_dir,
+					scroll: 1,
+					size: {switch_ticker.SIZE},
+					height_max: height_max,
+					animation: {switch_ticker.SPEED}
+				});
+			} else {
+				$('ul#fa_ticker_content li:not(:first)').css('display', 'none');
+				$('ul#fa_ticker_content li:first').css('list-style', 'none').css('text-align', 'center');
+			}
+		});
+		//]]&gt;
+	&lt;/script&gt;
+	&lt;!-- END switch_ticker_new --&gt;
 
-    &lt;/script&gt;
-    &lt;!-- END switch_ticker_new --&gt;
+	&lt;script type="text/javascript"&gt;//&lt;![CDATA[
+		$(document).ready(function () {
+			&lt;!-- BEGIN switch_enable_pm_popup --&gt;
+			pm = window.open('{U_PRIVATEMSGS_POPUP}', '_faprivmsg', 'HEIGHT=225,resizable=yes,WIDTH=400');
+			if (pm != null) {
+				pm.focus();
+			}
+			&lt;!-- END switch_enable_pm_popup --&gt;
+			&lt;!-- BEGIN switch_report_popup --&gt;
+			report = window.open('{switch_report_popup.U_REPORT_POPUP}', '_phpbbreport', 'HEIGHT={switch_report_popup.S_HEIGHT},resizable=yes,scrollbars=no,WIDTH={switch_report_popup.S_WIDTH}');
+			if (report != null) {
+				report.focus();
+			}
+			&lt;!-- END switch_report_popup --&gt;
+			&lt;!-- BEGIN switch_ticker --&gt;
+			$(document).ready(function () {
+				Ticker.start({
+					height: {switch_ticker.HEIGHT},
+					spacing: {switch_ticker.SPACING},
+					speed: {switch_ticker.SPEED},
+					direction: '{switch_ticker.DIRECTION}',
+					pause: {switch_ticker.STOP_TIME}
+				});
+			});
+			&lt;!-- END switch_ticker --&gt;
+		});
 
-    &lt;script type="text/javascript"&gt;
-        //&lt;![CDATA[
-        $(document).ready(function() {
-            &lt;
-            !--BEGIN switch_enable_pm_popup-- &gt;
-            pm = window.open('{U_PRIVATEMSGS_POPUP}', '_faprivmsg', 'HEIGHT=225,resizable=yes,WIDTH=400');
-            if (pm != null) {
-                pm.focus();
-            } &lt;
-            !--END switch_enable_pm_popup-- &gt;
-            &lt;
-            !--BEGIN switch_report_popup-- &gt;
-            report = window.open('{switch_report_popup.U_REPORT_POPUP}', '_phpbbreport', 'HEIGHT={switch_report_popup.S_HEIGHT},resizable=yes,scrollbars=no,WIDTH={switch_report_popup.S_WIDTH}');
-            if (report != null) {
-                report.focus();
-            } &lt;
-            !--END switch_report_popup-- &gt;
-            &lt;
-            !--BEGIN switch_ticker-- &gt;
-            $(document).ready(function() {
-                Ticker.start({
-                    height: {
-                        switch_ticker.HEIGHT
-                    },
-                    spacing: {
-                        switch_ticker.SPACING
-                    },
-                    speed: {
-                        switch_ticker.SPEED
-                    },
-                    direction: '{switch_ticker.DIRECTION}',
-                    pause: {
-                        switch_ticker.STOP_TIME
-                    }
-                });
-            }); &lt;
-            !--END switch_ticker-- &gt;
-        });
+		&lt;!-- BEGIN switch_login_popup --&gt;
+		var logInPopUpLeft, logInPopUpTop, logInPopUpWidth = {LOGIN_POPUP_WIDTH},
+			logInPopUpHeight = {LOGIN_POPUP_HEIGHT}, logInBackgroundResize = true, logInBackgroundClass = false;
+		&lt;!-- END switch_login_popup --&gt;
 
+		&lt;!-- BEGIN switch_login_popup --&gt;
+		$(document).ready(function () {
+			$(window).resize(function () {
+				var windowWidth = document.documentElement.clientWidth;
+				var popupWidth = $("#login_popup").width();
+				var mypopup = $("#login_popup");
 
-        //]]&gt;
+				$("#login_popup").css({
+					"left": windowWidth / 2 - popupWidth / 2
+				});
+			});
+		});
+		&lt;!-- END switch_login_popup --&gt;
+		//]]&gt;
+	&lt;/script&gt;
+	{GREETING_POPUP}
+	&lt;style type="text/css"&gt;
+		#page-footer, div.navbar, div.navbar ul.linklist {
+			display: block !important;
+		}
 
-    &lt;/script&gt;
-    {GREETING_POPUP}
-    &lt;style type="text/css"&gt;
-        #page-footer,
-        div.navbar,
-        div.navbar ul.linklist {
-            display: block !important;
-        }
+		ul.linklist li.rightside, ul.linklist li.rightside a.copyright {
+			display: inline !important;
+		}
 
-        ul.linklist li.rightside,
-        ul.linklist li.rightside a.copyright {
-            display: inline !important;
-        }
+		&lt;!-- BEGIN switch_ticker_new --&gt;
+		.jcarousel-skin-tango .jcarousel-item {
+			text-align: center;
+			width: 10px;
+		}
 
-        &lt; !-- BEGIN switch_ticker_new --&gt;.jcarousel-skin-tango .jcarousel-item {
-            text-align: center;
-            width: 10px;
-        }
+		.jcarousel-skin-tango .jcarousel-item-horizontal {
+			margin-right: {switch_ticker.SPACING}px;
+		}
 
-        .jcarousel-skin-tango .jcarousel-item-horizontal {
-            margin-right: {
-                switch_ticker.SPACING
-            }
+		.jcarousel-skin-tango .jcarousel-item-vertical {
+			margin-bottom: {switch_ticker.SPACING}px;
+		}
 
-            px;
-        }
+		&lt;!-- END switch_ticker_new --&gt;
+	&lt;/style&gt;
+	{HOSTING_JS}
 
-        .jcarousel-skin-tango .jcarousel-item-vertical {
-            margin-bottom: {
-                switch_ticker.SPACING
-            }
-
-            px;
-        }
-
-        &lt; !-- END switch_ticker_new --&gt;
-
-    &lt;/style&gt;
-    {HOSTING_JS}
-    &lt;!-- BEGIN google_analytics_code --&gt;
-    &lt;script async src="https://www.googletagmanager.com/gtag/js?id={G_ANALYTICS_ID}"&gt;&lt;/script&gt;
-    &lt;script&gt;
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', '{G_ANALYTICS_ID}', {
-            'anonymize_ip': true,
-            'store_gac': false,
-            'cookie_expires': 13 * 30 * 24 * 60 * 60
-        }); &lt;
-        !--BEGIN google_analytics_code_bis-- &gt;
-        gtag('config', '{G_ANALYTICS_ID_BIS}', {
-            'anonymize_ip': true,
-            'store_gac': false,
-            'cookie_expires': 13 * 30 * 24 * 60 * 60
-        }); &lt;
-        !--END google_analytics_code_bis-- &gt;
-
-    &lt;/script&gt;
-    &lt;!-- END google_analytics_code --&gt;
-
-
+	&lt;!-- BEGIN google_analytics_code --&gt;
+	&lt;script async src="https://www.googletagmanager.com/gtag/js?id={G_ANALYTICS_ID}"&gt;&lt;/script&gt;
+	&lt;script&gt;
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', '{G_ANALYTICS_ID}', {'anonymize_ip': true, 'store_gac': false, 'cookie_expires': 13 * 30 * 24 * 60 * 60});
+		&lt;!-- BEGIN google_analytics_code_bis --&gt;
+		gtag('config', '{G_ANALYTICS_ID_BIS}', {'anonymize_ip': true, 'store_gac': false, 'cookie_expires': 13 * 30 * 24 * 60 * 60});
+		&lt;!-- END google_analytics_code_bis --&gt;
+	&lt;/script&gt;
+	&lt;!-- END google_analytics_code --&gt;
 &lt;/head&gt;
 
 &lt;body id="phpbb"&gt;
