@@ -413,13 +413,13 @@
     &lt;form action="{S_LOGIN_ACTION}" method="post" name="form_login"&gt;
         &lt;div class="user_login_form center"&gt;
             &lt;!-- Nom utilisateur --&gt;
-            &lt;label&gt;{L_USERNAME} : &lt;input class="post" type="text" size="10" name="username" /&gt;&lt;/label&gt;&nbsp;
+            &lt;label&gt;{L_USERNAME} : &lt;input class="post" type="text" size="10" name="username" /&gt;&lt;/label&gt; &amp;nbsp;
 
             &lt;!-- Mot de passe --&gt;
-            &lt;label&gt;{L_PASSWORD} : &lt;input class="post" type="password" size="10" name="password" /&gt;&lt;/label&gt;&nbsp;
+            &lt;label&gt;{L_PASSWORD} : &lt;input class="post" type="password" size="10" name="password" /&gt;&lt;/label&gt; &amp;nbsp;
 
             &lt;!-- Check : connexion automatique --&gt;
-            &lt;label&gt;{L_AUTO_LOGIN} : &lt;input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} /&gt;&lt;/label&gt;&nbsp;
+            &lt;label&gt;{L_AUTO_LOGIN} : &lt;input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} /&gt;&lt;/label&gt; &amp;nbsp;
 
             &lt;!-- Bouton connexion --&gt;
             {S_HIDDEN_FIELDS}&lt;input class="mainoption button1" type="submit" name="login" value="{L_LOGIN}" /&gt;
@@ -735,10 +735,10 @@ document.getElementById('24hconnected').innerHTML = document.getElementById('24h
 &lt;div class="links_bar"&gt;
     &lt;span&gt;
         &lt;!-- Sujets actifs du jour --&gt;
-        &lt;a href="{U_TODAY_ACTIVE}"&gt;{L_TODAY_ACTIVE}&lt;/a&gt;&nbsp;&bull;&nbsp;
+        &lt;a href="{U_TODAY_ACTIVE}"&gt;{L_TODAY_ACTIVE}&lt;/a&gt; &amp;nbsp; &bull; &amp;nbsp;
 
         &lt;!-- Top 20 des posteurs du jour --&gt;
-        &lt;a href="{U_TODAY_POSTERS}"&gt;{L_TODAY_POSTERS}&lt;/a&gt;&nbsp;&bull;&nbsp;
+        &lt;a href="{U_TODAY_POSTERS}"&gt;{L_TODAY_POSTERS}&lt;/a&gt; &amp;nbsp; &bull; &amp;nbsp;
 
         &lt;!-- Top 20 des posteurs du forum --&gt;
         &lt;a href="{U_OVERALL_POSTERS}"&gt;{L_OVERALL_POSTERS}&lt;/a&gt;
@@ -875,7 +875,7 @@ document.getElementById('24hconnected').innerHTML = document.getElementById('24h
     &lt;form action="{S_JUMPBOX_ACTION}" method="get" name="jumpbox" onsubmit="if(document.jumpbox.f.value == -1){return false;}"&gt;
         &lt;fieldset class="vf_jumpbox"&gt;
             &lt;label&gt;{L_JUMP_TO}:&lt;/label&gt;&lt;br /&gt;
-            {S_JUMPBOX_SELECT}&nbsp;
+            {S_JUMPBOX_SELECT} &amp;nbsp;
             &lt;input class="button2" type="submit" value="{L_GO}" /&gt;
         &lt;/fieldset&gt;
     &lt;/form&gt;
@@ -970,7 +970,7 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
         &lt;/span&gt;
 
         &lt;span class="topic-author"&gt;
-            {topics_list_box.row.L_BY}&nbsp;
+            {topics_list_box.row.L_BY} &amp;nbsp;
             &lt;!-- Indication "par" --&gt;
             {topics_list_box.row.TOPIC_AUTHOR}
             &lt;!-- Auteur --&gt;
@@ -1000,10 +1000,10 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
     &lt;!-- Dernier message --&gt;
     &lt;div class="topicslist-lastpost"&gt;
         &lt;!-- Date du dernier message --&gt;
-        {topics_list_box.row.LAST_POST_TIME}&nbsp;
+        {topics_list_box.row.LAST_POST_TIME} &amp;nbsp;
         &lt;br /&gt;
         &lt;!-- Auteur du dernier message --&gt;
-        {topics_list_box.row.LAST_POST_AUTHOR} &nbsp;
+        {topics_list_box.row.LAST_POST_AUTHOR} &amp;nbsp;
         &lt;!-- Image-lien pour aller au dernier message --&gt;
         {topics_list_box.row.LAST_POST_IMG}
     &lt;/div&gt;
@@ -1122,14 +1122,17 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
 &lt;/div&gt;
 
 &lt;!-----------------------------------------------&gt;
-&lt;!-- RBARRE DE GESTION --------------&gt;
+&lt;!-- BARRE DE GESTION --------------&gt;
 
 &lt;div class="links_bar"&gt;
     &lt;span&gt;
         &lt;!-- Boutons : nouveau --&gt;
         &lt;!-- BEGIN switch_user_authpost --&gt;
-        &lt;a class="buttons" href="{U_POST_NEW_TOPIC}" rel="nofollow"&gt;&lt;img src="{POST_IMG}" class="{POST_IMG_CLASS}" alt="{L_POST_NEW_TOPIC}" /&gt;&lt;/a&gt;&nbsp;&nbsp;&nbsp;
+        &lt;a class="buttons" href="{U_POST_NEW_TOPIC}" rel="nofollow"&gt;&lt;img src="{POST_IMG}" class="{POST_IMG_CLASS}" alt="{L_POST_NEW_TOPIC}" /&gt;&lt;/a&gt;
         &lt;!-- END switch_user_authpost --&gt;
+
+&lt;!-- Espace --&gt;
+&amp;nbsp; &amp;nbsp;
 
         &lt;!-- Bouton : répondre --&gt;
         &lt;!-- BEGIN switch_user_authreply --&gt;
@@ -1262,12 +1265,12 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
 
             &lt;!-- Lien de contact --&gt;
             &lt;div class="profil_contact"&gt;
-                {postrow.displayed.PROFILE_IMG}&nbsp;&lt;!-- Profil --&gt;
-                {postrow.displayed.PM_IMG}&nbsp;&lt;!-- MP --&gt;
-                {postrow.displayed.EMAIL_IMG}&nbsp;&lt;!--Email --&gt;
+                {postrow.displayed.PROFILE_IMG} &amp;nbsp; &lt;!-- Profil --&gt;
+                {postrow.displayed.PM_IMG} &amp;nbsp; &lt;!-- MP --&gt;
+                {postrow.displayed.EMAIL_IMG} &amp;nbsp; &lt;!--Email --&gt;
                 &lt;!-- Autre contact--&gt;
                 &lt;!-- BEGIN contact_field --&gt;
-                {postrow.displayed.contact_field.CONTENT}&nbsp;
+                {postrow.displayed.contact_field.CONTENT}
                 &lt;!-- END contact_field --&gt;
             &lt;/div&gt;
 
