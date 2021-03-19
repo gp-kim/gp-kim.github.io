@@ -547,7 +547,7 @@ document.getElementById('24hconnected').innerHTML = document.getElementById('24h
       &lt;div class="h3"&gt;&lt;a href="{S_JOIN_CHAT}" target="ChatBox"&gt;{CHATBOX_NAME}&lt;/a&gt;&lt;/div&gt;
   
       &lt;!-- Nombre et liste des connectés sur la CB --&gt;
-      {TOTAL_CHATTERS_ONLINE}&nbsp;:&nbsp;{CHATTERS_LIST}&lt;br /&gt;
+      {TOTAL_CHATTERS_ONLINE}&amp;nbsp;:&amp;nbsp;{CHATTERS_LIST}&lt;br /&gt;
   
       &lt;!-- BEGIN switch_chatbox_popup --&gt;
       &lt;!-- Lien pour rejoindre la CB --&gt;
@@ -581,13 +581,13 @@ document.getElementById('24hconnected').innerHTML = document.getElementById('24h
     &lt;form action="{S_LOGIN_ACTION}" method="post" name="form_login"&gt;
         &lt;div class="user_login_form center"&gt;
             &lt;!-- Nom utilisateur --&gt;
-            &lt;label&gt;{L_USERNAME} : &lt;input class="post" type="text" size="10" name="username" /&gt;&lt;/label&gt;&nbsp;
+            &lt;label&gt;{L_USERNAME} : &lt;input class="post" type="text" size="10" name="username" /&gt;&lt;/label&gt;&amp;nbsp;
 
             &lt;!-- Mot de passe --&gt;
-            &lt;label&gt;{L_PASSWORD} : &lt;input class="post" type="password" size="10" name="password" /&gt;&lt;/label&gt;&nbsp;
+            &lt;label&gt;{L_PASSWORD} : &lt;input class="post" type="password" size="10" name="password" /&gt;&lt;/label&gt;&amp;nbsp;
 
             &lt;!-- Check : connexion automatique --&gt;
-            &lt;label&gt;{L_AUTO_LOGIN} : &lt;input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} /&gt;&lt;/label&gt;&nbsp;
+            &lt;label&gt;{L_AUTO_LOGIN} : &lt;input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} /&gt;&lt;/label&gt;&amp;nbsp;
 
             &lt;!-- Bouton connexion --&gt;
             {S_HIDDEN_FIELDS}&lt;input class="mainoption button1" type="submit" name="login" value="{L_LOGIN}" /&gt;
@@ -619,10 +619,10 @@ document.getElementById('24hconnected').innerHTML = document.getElementById('24h
     &lt;span&gt;
         &lt;!-- BEGIN switch_user_logged_in --&gt;
         &lt;!-- Messages depuis la dernière visite --&gt;
-        &lt;a id="lastvisit_posts" href="{U_SEARCH_NEW}"&gt;{L_SEARCH_NEW}&lt;/a&gt;&nbsp;&bull;&nbsp;
+        &lt;a id="lastvisit_posts" href="{U_SEARCH_NEW}"&gt;{L_SEARCH_NEW}&lt;/a&gt;&amp;nbsp;&bull;&amp;nbsp;
 
         &lt;!-- Voir ses messages --&gt;
-        &lt;a href="{U_SEARCH_SELF}"&gt;{L_SEARCH_SELF}&lt;/a&gt;&nbsp;&bull;&nbsp;
+        &lt;a href="{U_SEARCH_SELF}"&gt;{L_SEARCH_SELF}&lt;/a&gt;&amp;nbsp;&bull;&amp;nbsp;
         &lt;!-- END switch_user_logged_in --&gt;
 
         &lt;!-- Messages sans réponses --&gt;
@@ -1313,7 +1313,7 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
         &lt;!-- END switch_user_logged_in --&gt;
 
         &lt;!-- Lien "sujets surveillés" --&gt;
-        &nbsp;&lt;a class="specials_links" href="{U_WATCHSEARCH_JS_PLUS_MENU}"&gt;Sujets surveillés&lt;/a&gt;
+        &amp;nbsp;&lt;a class="specials_links" href="{U_WATCHSEARCH_JS_PLUS_MENU}"&gt;Sujets surveillés&lt;/a&gt;
     &lt;/span&gt;
 
     &lt;!-- Pagination --&gt;
@@ -1366,7 +1366,7 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
     &lt;span&gt;
         &lt;!-- Bouton : nouveau --&gt;
         &lt;!-- BEGIN switch_user_authpost --&gt;
-        &lt;a class="buttons" href="{U_POST_NEW_TOPIC}" rel="nofollow"&gt;&lt;img src="{POST_IMG}" class="{POST_IMG_CLASS}" alt="{L_POST_NEW_TOPIC}" /&gt;&lt;/a&gt;&nbsp;&nbsp;&nbsp;
+        &lt;a class="buttons" href="{U_POST_NEW_TOPIC}" rel="nofollow"&gt;&lt;img src="{POST_IMG}" class="{POST_IMG_CLASS}" alt="{L_POST_NEW_TOPIC}" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;
         &lt;!-- END switch_user_authpost --&gt;
 
         &lt;!-- Bouton : répondre --&gt;
@@ -1389,8 +1389,8 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
 
 &lt;form action="{S_JUMPBOX_ACTION}" method="get" onsubmit="if(document.jumpbox.f.value == -1){return false;}"&gt;
     &lt;fieldset class="jumpbox"&gt;
-        &lt;label&gt;{L_JUMP_TO}:&nbsp;&lt;/label&gt;
-        {S_JUMPBOX_SELECT}&nbsp;
+        &lt;label&gt;{L_JUMP_TO}:&amp;nbsp;&lt;/label&gt;
+        {S_JUMPBOX_SELECT}&amp;nbsp;
         &lt;input class="button2" type="submit" value="{L_GO}" /&gt;
     &lt;/fieldset&gt;
 &lt;/form&gt;
@@ -1401,13 +1401,13 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
 
 &lt;!-- BEGIN viewtopic_bottom --&gt;
 &lt;form method="get" action="{S_FORM_MOD_ACTION}"&gt;
-    &lt;fieldset class="quickmod"&gt;
+    &lt;fieldset class="quickmod clear"&gt;
         &lt;input type="hidden" name="t" value="{TOPIC_ID}" /&gt;
 
         &lt;!-- &lt;input type="hidden" name="sid" value="{S_SID}" /&gt; --&gt;
         &lt;input type="hidden" name="{SECURE_ID_NAME}" value="{SECURE_ID_VALUE}" /&gt;
-        &lt;label&gt;{L_MOD_TOOLS}:&nbsp;&lt;/label&gt;
-        {S_SELECT_MOD}&nbsp;
+        &lt;label&gt;{L_MOD_TOOLS}:&amp;nbsp;&lt;/label&gt;
+        {S_SELECT_MOD}&amp;nbsp;
         &lt;input class="button2" type="submit" value="{L_GO}" /&gt;
     &lt;/fieldset&gt;
   &lt;br/&gt;&lt;br/&gt;
@@ -1523,7 +1523,7 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
             &lt;input type="submit" name="submit" value="{L_SUBMIT_VOTE}" class="button1" /&gt;
 
             &lt;!-- Voir les résultats --&gt;
-            &nbsp;&nbsp;&lt;a href="{U_VIEW_RESULTS}"&gt;{L_VIEW_RESULTS}&lt;/a&gt;
+            &amp;nbsp;&amp;nbsp;&lt;a href="{U_VIEW_RESULTS}"&gt;{L_VIEW_RESULTS}&lt;/a&gt;
 
             &lt;br /&gt;
             &lt;!-- Sondage terminé --&gt;
@@ -1572,11 +1572,11 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
                     &lt;!-- Images de barre de progression --&gt;
                     &lt;img src="{VOTE_LCAP_IMG}" height="12" alt="" /&gt;
                     &lt;img src="{poll_option.POLL_OPTION_IMG}" width="{poll_option.POLL_OPTION_IMG_WIDTH}" height="12" alt="{poll_option.POLL_OPTION_PERCENT}" /&gt;
-                    &lt;img src="{VOTE_RCAP_IMG}" height="12" alt="" /&gt;&nbsp;
+                    &lt;img src="{VOTE_RCAP_IMG}" height="12" alt="" /&gt;&amp;nbsp;
 
                    
                     &lt;!-- Compte des votes d'une option --&gt;
-                    &lt;strong&gt;{poll_option.POLL_OPTION_RESULT}&lt;/strong&gt;&nbsp;
+                    &lt;strong&gt;{poll_option.POLL_OPTION_RESULT}&lt;/strong&gt;&amp;nbsp;
                     &lt;!-- Total en pourcentage --&gt;
                     ({poll_option.POLL_OPTION_PERCENT})
 
@@ -1593,7 +1593,7 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
             {L_VOTE_EXPIRE}&lt;br /&gt;
 
             &lt;!-- Résultat total des votes --&gt;
-            {L_TOTAL_VOTES} : &lt;strong&gt;{TOTAL_VOTES}&lt;/strong&gt;&nbsp;
+            {L_TOTAL_VOTES} : &lt;strong&gt;{TOTAL_VOTES}&lt;/strong&gt;&amp;nbsp;
 
             &lt;!-- Annuler vote --&gt;
             &lt;!-- BEGIN cancel_vote --&gt;
@@ -1700,8 +1700,8 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
                         &lt;!-- BEGIN switch_username --&gt;
                         &lt;input class="inputbox" style="width:15%;margin:1px 0" type="text" name="username[]" value="{switch_privmsg.switch_username.USERNAME}" /&gt;&lt;br /&gt;
                         &lt;!-- END switch_username --&gt;
-                        &lt;input class="inputbox" style="width:15%;margin:1px 0" type="text" id="username" name="username[]" value="{USERNAME}" tabindex="1" /&gt;&nbsp;
-                        &lt;img id="add_username" src="{ADD_USERNAME_IMG}" class="selectHover" style="vertical-align:middle" alt="" /&gt;&nbsp;
+                        &lt;input class="inputbox" style="width:15%;margin:1px 0" type="text" id="username" name="username[]" value="{USERNAME}" tabindex="1" /&gt;&amp;nbsp;
+                        &lt;img id="add_username" src="{ADD_USERNAME_IMG}" class="selectHover" style="vertical-align:middle" alt="" /&gt;&amp;nbsp;
                         &lt;input class="button2" type="button" id="find_user" value="{L_FIND_USERNAME}" /&gt;
                     &lt;/dd&gt;
                 &lt;/dl&gt;
@@ -1720,7 +1720,7 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
                     &lt;dd&gt;
                         &lt;!-- BEGIN row --&gt;
                         &lt;!-- BEGIN cell --&gt;
-                        &lt;label&gt;&lt;input type="radio" name="post_icon" value="{switch_icon_checkbox.row.cell.ICON_ID}" {switch_icon_checkbox.row.cell.ICON_CHECKED} id="post_icon_{switch_icon_checkbox.row.cell.ICON_ID}" /&gt;&nbsp;&lt;span onclick="document.forms['post'].post_icon_{switch_icon_checkbox.row.cell.ICON_ID}.checked=true"&gt;{switch_icon_checkbox.row.cell.ICON_IMG}&lt;/span&gt;&lt;/label&gt; &nbsp;
+                        &lt;label&gt;&lt;input type="radio" name="post_icon" value="{switch_icon_checkbox.row.cell.ICON_ID}" {switch_icon_checkbox.row.cell.ICON_CHECKED} id="post_icon_{switch_icon_checkbox.row.cell.ICON_ID}" /&gt;&amp;nbsp;&lt;span onclick="document.forms['post'].post_icon_{switch_icon_checkbox.row.cell.ICON_ID}.checked=true"&gt;{switch_icon_checkbox.row.cell.ICON_IMG}&lt;/span&gt;&lt;/label&gt; &amp;nbsp;
                         &lt;!-- END cell --&gt;
                         &lt;!-- END row --&gt;
                     &lt;/dd&gt;
@@ -1802,17 +1802,17 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
                 {S_HIDDEN_FORM_FIELDS}
                 &lt;input type="hidden" name="lt" value="{LAST_TOPIC_ID}" /&gt;
                 &lt;!-- BEGIN switch_preview --&gt;
-                &lt;input class="button2" type="submit" name="preview" value="{L_PREVIEW}" tabindex="5" /&gt;&nbsp;
+                &lt;input class="button2" type="submit" name="preview" value="{L_PREVIEW}" tabindex="5" /&gt;&amp;nbsp;
                 &lt;!-- END switch_preview --&gt;
                 &lt;!-- BEGIN switch_draft --&gt;
-                &nbsp;&lt;input class="button2" type="submit" name="draft" value="{L_DRAFT}" tabindex="7" accesskey="d" /&gt;&nbsp;
+                &amp;nbsp;&lt;input class="button2" type="submit" name="draft" value="{L_DRAFT}" tabindex="7" accesskey="d" /&gt;&amp;nbsp;
                 &lt;!-- END switch_draft --&gt;
                 &lt;!-- BEGIN switch_publish --&gt;
-                &nbsp;&lt;input class="button2" type="submit" name="publish" value="{L_PUBLISH}" tabindex="8" accesskey="p" /&gt;&nbsp;
+                &amp;nbsp;&lt;input class="button2" type="submit" name="publish" value="{L_PUBLISH}" tabindex="8" accesskey="p" /&gt;&amp;nbsp;
                 &lt;!-- END switch_publish --&gt;
-                &nbsp;&lt;input class="button1" type="submit" name="post" value="{L_SUBMIT}" tabindex="6" accesskey="s" /&gt;
+                &amp;nbsp;&lt;input class="button1" type="submit" name="post" value="{L_SUBMIT}" tabindex="6" accesskey="s" /&gt;
                 &lt;!-- BEGIN switch_signature --&gt;
-                &nbsp;&lt;input type="hidden" name="submit" value="{L_SUBMIT}" /&gt;
+                &amp;nbsp;&lt;input type="hidden" name="submit" value="{L_SUBMIT}" /&gt;
                 &lt;!-- END switch_signature --&gt;
             &lt;/fieldset&gt;
         &lt;/div&gt;
@@ -1834,7 +1834,7 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
 
                 var new_tr = document.createElement('tr');
                 new_tr.appendChild(document.createElement('td'));
-                new_tr.firstChild.innerHTML = '{ROLL_DICE_TITLE_LOW} #' + (dice_number + 1) + ' :&nbsp;&lt;select name="post_dice_' + dice_number + '" id="post_dice_' + dice_number + '" value="' + dice + '"&gt;' + content + '&lt;/select&gt;&nbsp;&lt;label for="nb_rolls"&gt;{switch_roll_dice.L_DICE_ROLLS} : &lt;/label&gt;&lt;input type="text" size="2" maxlength="3" name="nb_rolls_' + dice_number + '" id="nb_rolls" value="' + number + '" /&gt;&nbsp;&lt;span id="dice_to_del"&gt;&lt;a href="javascript:add_dice(' + (dice_number + 1) + ',\'\',1)"&gt;&lt;img src="{PATH_IMG_FA}tabs_more.gif" alt="plus" /&gt;&lt;/a&gt;&lt;/span&gt;';
+                new_tr.firstChild.innerHTML = '{ROLL_DICE_TITLE_LOW} #' + (dice_number + 1) + ' :&amp;nbsp;&lt;select name="post_dice_' + dice_number + '" id="post_dice_' + dice_number + '" value="' + dice + '"&gt;' + content + '&lt;/select&gt;&amp;nbsp;&lt;label for="nb_rolls"&gt;{switch_roll_dice.L_DICE_ROLLS} : &lt;/label&gt;&lt;input type="text" size="2" maxlength="3" name="nb_rolls_' + dice_number + '" id="nb_rolls" value="' + number + '" /&gt;&amp;nbsp;&lt;span id="dice_to_del"&gt;&lt;a href="javascript:add_dice(' + (dice_number + 1) + ',\'\',1)"&gt;&lt;img src="{PATH_IMG_FA}tabs_more.gif" alt="plus" /&gt;&lt;/a&gt;&lt;/span&gt;';
                 document.getElementById('list_dice').lastChild.appendChild(new_tr);
 
                 var select_dice = document.getElementById('post_dice_' + dice_number);
@@ -1850,15 +1850,15 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
         &lt;table style="width:100%" id="list_dice"&gt;
             &lt;tr&gt;
                 &lt;td&gt;
-                    {ROLL_DICE_TITLE_LOW} #1 :&nbsp;
+                    {ROLL_DICE_TITLE_LOW} #1 :&amp;nbsp;
                     &lt;select name="post_dice_0" id="post_dice"&gt;
                         &lt;option value=""&gt;-&lt;/option&gt;
                         &lt;!-- BEGIN row_replace --&gt;
                         &lt;option value="{switch_roll_dice.row_replace.DICE_ID}" {switch_roll_dice.row_replace.DICE_SELECTED}&gt;{switch_roll_dice.row_replace.DICE_NAME}&lt;/option&gt;
                         &lt;!-- END row_replace --&gt;
                     &lt;/select&gt;
-                    &nbsp;&lt;label for="nb_rolls"&gt;{switch_roll_dice.L_DICE_ROLLS} : &lt;/label&gt;&lt;input type="text" size="2" maxlength="3" name="nb_rolls_0" id="nb_rolls" value="{switch_roll_dice.S_DICE_ROLLS_VALUE}" /&gt;
-                    &nbsp;&lt;span id="dice_to_del"&gt;&lt;a href="javascript:add_dice(1,'',1)"&gt;&lt;img src="{PATH_IMG_FA}tabs_more.gif" alt="plus" /&gt;&lt;/a&gt;&lt;/span&gt;
+                    &amp;nbsp;&lt;label for="nb_rolls"&gt;{switch_roll_dice.L_DICE_ROLLS} : &lt;/label&gt;&lt;input type="text" size="2" maxlength="3" name="nb_rolls_0" id="nb_rolls" value="{switch_roll_dice.S_DICE_ROLLS_VALUE}" /&gt;
+                    &amp;nbsp;&lt;span id="dice_to_del"&gt;&lt;a href="javascript:add_dice(1,'',1)"&gt;&lt;img src="{PATH_IMG_FA}tabs_more.gif" alt="plus" /&gt;&lt;/a&gt;&lt;/span&gt;
                 &lt;/td&gt;
             &lt;/tr&gt;
         &lt;/table&gt;
@@ -1880,7 +1880,7 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
                 &lt;dd&gt;
                     &lt;!-- BEGIN row --&gt;
                     &lt;!-- BEGIN cell --&gt;
-                    &lt;label&gt;&lt;input type="radio" name="post_icon" value="{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_ID}" id="post_icon_{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_ID}" {switch_topic_modif.switch_icon_checkbox.row.cell.ICON_CHECKED} /&gt;&nbsp;&lt;span onclick="document.forms['post'].post_icon_{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_ID}.checked=true"&gt;{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_IMG}&lt;/span&gt;&lt;/label&gt;
+                    &lt;label&gt;&lt;input type="radio" name="post_icon" value="{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_ID}" id="post_icon_{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_ID}" {switch_topic_modif.switch_icon_checkbox.row.cell.ICON_CHECKED} /&gt;&amp;nbsp;&lt;span onclick="document.forms['post'].post_icon_{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_ID}.checked=true"&gt;{switch_topic_modif.switch_icon_checkbox.row.cell.ICON_IMG}&lt;/span&gt;&lt;/label&gt;
                     &lt;!-- END cell --&gt;
                     &lt;!-- END row --&gt;
                 &lt;/dd&gt;
@@ -1891,7 +1891,7 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
                 &lt;dd&gt;
                     &lt;input type="text" class="inputbox medium" name="modif_topic_title" id="modif_topic_title" value="{MODIF_TOPIC_TITLE}" maxlength="{TOPIC_DESCRIPTION_MAXLENGTH}" onkeypress="if (event.keyCode==13){return false}" /&gt;
                     &lt;!-- BEGIN switch_topic_button --&gt;
-                    &nbsp;&lt;input type="button" class="button2" value="{L_SOLVED_WITHOUT_BRAKETS}" onclick="set_solved(this.form.elements['modif_topic_title'],'{L_SOLVED}')" style="display:none" id="button_solved" /&gt;
+                    &amp;nbsp;&lt;input type="button" class="button2" value="{L_SOLVED_WITHOUT_BRAKETS}" onclick="set_solved(this.form.elements['modif_topic_title'],'{L_SOLVED}')" style="display:none" id="button_solved" /&gt;
                     &lt;script type="text/javascript"&gt;
                         //&lt;![CDATA[
                         document.getElementById('button_solved').style.display = 'inline';
@@ -1906,27 +1906,27 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
         &lt;!-- END switch_topic_modif --&gt;
         &lt;fieldset class="fields1"&gt;
             &lt;!-- BEGIN switch_html_checkbox --&gt;
-            &lt;label&gt;&lt;input type="checkbox" name="disable_html" {S_HTML_CHECKED} /&gt;&nbsp;{L_DISABLE_HTML}&lt;/label&gt;&lt;br /&gt;
+            &lt;label&gt;&lt;input type="checkbox" name="disable_html" {S_HTML_CHECKED} /&gt;&amp;nbsp;{L_DISABLE_HTML}&lt;/label&gt;&lt;br /&gt;
             &lt;!-- END switch_html_checkbox --&gt;
 
             &lt;!-- BEGIN switch_bbcode_checkbox --&gt;
-            &lt;label&gt;&lt;input type="checkbox" name="disable_bbcode" {S_BBCODE_CHECKED} /&gt;&nbsp;{L_DISABLE_BBCODE}&lt;/label&gt;&lt;br /&gt;
+            &lt;label&gt;&lt;input type="checkbox" name="disable_bbcode" {S_BBCODE_CHECKED} /&gt;&amp;nbsp;{L_DISABLE_BBCODE}&lt;/label&gt;&lt;br /&gt;
             &lt;!-- END switch_bbcode_checkbox --&gt;
 
             &lt;!-- BEGIN switch_smilies_checkbox --&gt;
-            &lt;label&gt;&lt;input type="checkbox" name="disable_smilies" {S_SMILIES_CHECKED} /&gt;&nbsp;{L_DISABLE_SMILIES}&lt;/label&gt;&lt;br /&gt;
+            &lt;label&gt;&lt;input type="checkbox" name="disable_smilies" {S_SMILIES_CHECKED} /&gt;&amp;nbsp;{L_DISABLE_SMILIES}&lt;/label&gt;&lt;br /&gt;
             &lt;!-- END switch_smilies_checkbox --&gt;
 
             &lt;!-- BEGIN switch_signature_checkbox --&gt;
-            &lt;label&gt;&lt;input type="checkbox" name="attach_sig" {S_SIGNATURE_CHECKED} /&gt;&nbsp;{L_ATTACH_SIGNATURE}&lt;/label&gt;&lt;br /&gt;
+            &lt;label&gt;&lt;input type="checkbox" name="attach_sig" {S_SIGNATURE_CHECKED} /&gt;&amp;nbsp;{L_ATTACH_SIGNATURE}&lt;/label&gt;&lt;br /&gt;
             &lt;!-- END switch_signature_checkbox --&gt;
 
             &lt;!-- BEGIN switch_notify_checkbox --&gt;
-            &lt;label&gt;&lt;input type="checkbox" name="notify" {S_NOTIFY_CHECKED} /&gt;&nbsp;{L_NOTIFY_ON_REPLY}&lt;/label&gt;&lt;br /&gt;
+            &lt;label&gt;&lt;input type="checkbox" name="notify" {S_NOTIFY_CHECKED} /&gt;&amp;nbsp;{L_NOTIFY_ON_REPLY}&lt;/label&gt;&lt;br /&gt;
             &lt;!-- END switch_notify_checkbox --&gt;
 
             &lt;!-- BEGIN switch_delete_checkbox --&gt;
-            &lt;label&gt;&lt;input type="checkbox" name="delete" /&gt;&nbsp;{L_DELETE_POST}&lt;/label&gt;&lt;br /&gt;
+            &lt;label&gt;&lt;input type="checkbox" name="delete" /&gt;&amp;nbsp;{L_DELETE_POST}&lt;/label&gt;&lt;br /&gt;
             &lt;!-- END switch_delete_checkbox --&gt;
 
             &lt;!-- BEGIN switch_type_toggle --&gt;
@@ -1948,7 +1948,7 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
 
 &lt;!-- BEGIN switch_jumpbox --&gt;
 &lt;form action="{S_JUMPBOX_ACTION}" method="get" name="jumpbox" onsubmit="if(document.jumpbox.f.value == -1){return false}"&gt;
-    &lt;p class="right"&gt;{L_JUMP_TO}:&nbsp;{S_JUMPBOX_SELECT}&nbsp;&lt;input class="button2" type="submit" value="{L_GO}" /&gt;&lt;/p&gt;
+    &lt;p class="right"&gt;{L_JUMP_TO}:&amp;nbsp;{S_JUMPBOX_SELECT}&amp;nbsp;&lt;input class="button2" type="submit" value="{L_GO}" /&gt;&lt;/p&gt;
 &lt;/form&gt;
 &lt;!-- END switch_jumpbox --&gt;
 
@@ -2129,8 +2129,8 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
 
         &lt;!-- Montrer tous les messsages --&gt;
         &lt;span class="right"&gt;
-            {L_DISPLAY_MESSAGES}:&nbsp;
-            &lt;select name="msgdays"&gt;{S_SELECT_MSG_DAYS}&lt;/select&gt;&nbsp;
+            {L_DISPLAY_MESSAGES}:&amp;nbsp;
+            &lt;select name="msgdays"&gt;{S_SELECT_MSG_DAYS}&lt;/select&gt;&amp;nbsp;
             &lt;input class="button2" type="submit" name="submit_msgdays" value="{L_GO}" /&gt;
         &lt;/span&gt;
 
@@ -2180,16 +2180,16 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
     &lt;div&gt;
         {S_HIDDEN_FIELDS}
         &lt;!-- BEGIN switch_save --&gt;
-        &lt;input class="button1" type="submit" name="save" value="{L_SAVE_MARKED}" /&gt;&nbsp;&nbsp;
+        &lt;input class="button1" type="submit" name="save" value="{L_SAVE_MARKED}" /&gt;&amp;nbsp;&amp;nbsp;
         &lt;!-- END switch_save --&gt;
         &lt;!-- BEGIN switch_move_profile --&gt;
-        &lt;input class="button1" type="submit" name="moveprofile" value="{L_MOVE_PROFILE_MARKED}" /&gt;&nbsp;&nbsp;
+        &lt;input class="button1" type="submit" name="moveprofile" value="{L_MOVE_PROFILE_MARKED}" /&gt;&amp;nbsp;&amp;nbsp;
         &lt;!-- END switch_move_profile --&gt;
         &lt;!-- BEGIN switch_mark_as_read --&gt;
-        &lt;input class="button2" type="submit" name="mark_as_read" value="{switch_mark_as_read.L_MARK_AS_READ}" /&gt;&nbsp;&nbsp;
-        &lt;input class="button2" type="submit" name="mark_as_unread" value="{switch_mark_as_read.L_MARK_AS_UNREAD}" /&gt;&nbsp;&nbsp;
+        &lt;input class="button2" type="submit" name="mark_as_read" value="{switch_mark_as_read.L_MARK_AS_READ}" /&gt;&amp;nbsp;&amp;nbsp;
+        &lt;input class="button2" type="submit" name="mark_as_unread" value="{switch_mark_as_read.L_MARK_AS_UNREAD}" /&gt;&amp;nbsp;&amp;nbsp;
         &lt;!-- END switch_mark_as_read --&gt;
-        &lt;input class="button2" type="submit" name="delete" value="{L_DELETE_MARKED}" /&gt;&nbsp;&nbsp;
+        &lt;input class="button2" type="submit" name="delete" value="{L_DELETE_MARKED}" /&gt;&amp;nbsp;&amp;nbsp;
         &lt;input class="button2" type="submit" name="deleteall" value="{L_DELETE_ALL}" /&gt;
     &lt;/div&gt;
 
@@ -2313,12 +2313,12 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
 
             &lt;!-- Bouton "sauvegarder le message" --&gt;
             &lt;!-- BEGIN switch_save --&gt;
-            &lt;input class="button2" type="submit" name="save" value="{L_SAVE_MSG}" /&gt;&nbsp;&nbsp;
+            &lt;input class="button2" type="submit" name="save" value="{L_SAVE_MSG}" /&gt;&amp;nbsp;&amp;nbsp;
             &lt;!-- END switch_save --&gt;
 
             &lt;!-- --&gt;
             &lt;!-- BEGIN switch_move_profile --&gt;
-            &lt;input class="button2" type="submit" name="moveprofile" value="{L_MOVE_PROFILE}" /&gt;&nbsp;&nbsp;
+            &lt;input class="button2" type="submit" name="moveprofile" value="{L_MOVE_PROFILE}" /&gt;&amp;nbsp;&amp;nbsp;
             &lt;!-- END switch_move_profile --&gt;
 
             &lt;!-- Bouton "supprimer le message" --&gt;
@@ -2381,9 +2381,9 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
 &lt;div class="links_bar"&gt;
     &lt;form action="{S_MODE_ACTION}" method="get"&gt;
         &lt;span&gt;
-            {L_USER_SELECT}&nbsp;&lt;input type="text" class="inputbox tiny" name="username" maxlength="25" size="20" value="{L_USER_SELECT_VALUE}" /&gt;&nbsp;&nbsp;&nbsp;&nbsp;
-            {L_SELECT_SORT_METHOD}&nbsp;{S_MODE_SELECT}&nbsp;&nbsp;&nbsp;&nbsp;
-            {L_ORDER}&nbsp;{S_ORDER_SELECT}&nbsp;&nbsp;&nbsp;&nbsp;
+            {L_USER_SELECT}&amp;nbsp;&lt;input type="text" class="inputbox tiny" name="username" maxlength="25" size="20" value="{L_USER_SELECT_VALUE}" /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+            {L_SELECT_SORT_METHOD}&amp;nbsp;{S_MODE_SELECT}&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+            {L_ORDER}&amp;nbsp;{S_ORDER_SELECT}&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
             {S_HIDDEN_SID}
             &lt;input class="button2" type="submit" name="submit" value="{L_SUBMIT}" /&gt;
         &lt;/span&gt;
@@ -2435,7 +2435,7 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
 
                 &lt;!-- Lien de contact --&gt;
                 &lt;div class="userlist_contact right"&gt;
-                    {memberrow.PM_IMG}&nbsp;
+                    {memberrow.PM_IMG}&amp;nbsp;
                     {memberrow.WWW_IMG}
                 &lt;/div&gt;
             &lt;/div&gt;
@@ -2726,7 +2726,7 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
             &lt;!-- Icon sujet récent --&gt;
             {topics_blog_box.row.NEWEST_POST_IMG}
             &lt;!-- Icon "vous avez posté dans ce sujet" --&gt;
-            {topics_blog_box.row.PARTICIPATE_POST_IMG}&nbsp;
+            {topics_blog_box.row.PARTICIPATE_POST_IMG}&amp;nbsp;
             {topics_blog_box.row.TOPIC_TYPE}
 
            &lt;!-- Titre du blog --&gt;
@@ -2867,7 +2867,7 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
     &lt;span&gt;
         &lt;!-- Boutons : nouveau --&gt;
         &lt;!-- BEGIN switch_user_authpost --&gt;
-        &lt;a class="buttons" href="{U_POST_NEW_TOPIC}" rel="nofollow"&gt;&lt;img src="{POST_IMG}" class="{POST_IMG_CLASS}" alt="{L_POST_NEW_TOPIC}" /&gt;&lt;/a&gt;&nbsp;&nbsp;&nbsp;
+        &lt;a class="buttons" href="{U_POST_NEW_TOPIC}" rel="nofollow"&gt;&lt;img src="{POST_IMG}" class="{POST_IMG_CLASS}" alt="{L_POST_NEW_TOPIC}" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;
         &lt;!-- END switch_user_authpost --&gt;
 
         &lt;!-- Bouton : répondre --&gt;
@@ -2908,7 +2908,7 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
 
             &lt;!-- Auteur du blog --&gt;
             &lt;span class="blog_author"&gt;
-                {L_TOPIC_BY}&nbsp;{postrow.displayed.POSTER_NAME}
+                {L_TOPIC_BY}&amp;nbsp;{postrow.displayed.POSTER_NAME}
             &lt;/span&gt;
 
             &lt;!-- Bouton d'édition de message --&gt;
@@ -2980,7 +2980,7 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
                 &lt;/div&gt;
 
                 &lt;!-- Lien du commentaire --&gt;
-                &lt;a href="{comment.displayed.POST_URL}" name="{comment.displayed.U_POST_ID}"&gt;Réponse de&lt;/a&gt;&nbsp;
+                &lt;a href="{comment.displayed.POST_URL}" name="{comment.displayed.U_POST_ID}"&gt;Réponse de&lt;/a&gt;&amp;nbsp;
                 &lt;!-- Auteur du commentaire --&gt;
                 {comment.displayed.POSTER_NAME}
                 &lt;!-- En ligne --&gt;
@@ -3041,7 +3041,7 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
         &lt;!-- END switch_user_logged_in --&gt;
 
         &lt;!-- Sujets surveillés --&gt;
-        &nbsp;&lt;a class="specials_links" href="{U_WATCHSEARCH_JS_PLUS_MENU}"&gt;Sujets surveillés&lt;/a&gt;
+        &amp;nbsp;&lt;a class="specials_links" href="{U_WATCHSEARCH_JS_PLUS_MENU}"&gt;Sujets surveillés&lt;/a&gt;
     &lt;/span&gt;
 
 
@@ -3070,7 +3070,7 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
     &lt;span&gt;
         &lt;!-- Boutons : nouveau --&gt;
         &lt;!-- BEGIN switch_user_authpost --&gt;
-        &lt;a class="buttons" href="{U_POST_NEW_TOPIC}" rel="nofollow"&gt;&lt;img src="{POST_IMG}" class="{POST_IMG_CLASS}" alt="{L_POST_NEW_TOPIC}" /&gt;&lt;/a&gt;&nbsp;&nbsp;&nbsp;
+        &lt;a class="buttons" href="{U_POST_NEW_TOPIC}" rel="nofollow"&gt;&lt;img src="{POST_IMG}" class="{POST_IMG_CLASS}" alt="{L_POST_NEW_TOPIC}" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;
         &lt;!-- END switch_user_authpost --&gt;
 
         &lt;!-- Bouton : répondre --&gt;
@@ -3092,8 +3092,8 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
 
 &lt;form action="{S_JUMPBOX_ACTION}" method="get" onsubmit="if(document.jumpbox.f.value == -1){return false;}"&gt;
     &lt;fieldset class="jumpbox"&gt;
-        &lt;label&gt;{L_JUMP_TO}:&nbsp;&lt;/label&gt;
-        {S_JUMPBOX_SELECT}&nbsp;
+        &lt;label&gt;{L_JUMP_TO}:&amp;nbsp;&lt;/label&gt;
+        {S_JUMPBOX_SELECT}&amp;nbsp;
         &lt;input class="button2" type="submit" value="{L_GO}" /&gt;
     &lt;/fieldset&gt;
 &lt;/form&gt;
@@ -3109,8 +3109,8 @@ document.getElementById('moderation_forum_tools').innerHTML = document.getElemen
 
         &lt;!-- &lt;input type="hidden" name="sid" value="{S_SID}" /&gt; --&gt;
         &lt;input type="hidden" name="{SECURE_ID_NAME}" value="{SECURE_ID_VALUE}" /&gt;
-        &lt;label&gt;{L_MOD_TOOLS}:&nbsp;&lt;/label&gt;
-        {S_SELECT_MOD}&nbsp;
+        &lt;label&gt;{L_MOD_TOOLS}:&amp;nbsp;&lt;/label&gt;
+        {S_SELECT_MOD}&amp;nbsp;
         &lt;input class="button2" type="submit" value="{L_GO}" /&gt;
     &lt;/fieldset&gt;
     &lt;br /&gt;&lt;br /&gt;
