@@ -437,6 +437,13 @@ span.specials_links {
     
 }
 
+/* On retire les liens spéciaux vide (pour les invités) */
+a.specials_links:empty,
+.specials_links a:empty,
+span.specials_links:empty {
+  display: none
+}
+
 /* Image/avatar réduit */
 .mini_img img {
     width: 40px;
@@ -510,6 +517,12 @@ span.specials_links {
 form#quick_reply {
     width: 705px;
 }
+
+/* Retire le cadre de la réponse rapide pour les invités */
+#quickreply_content:empty {
+    display: none;
+}
+
 
 /* Editeur de texte */
 .sceditor-container {}
@@ -2423,6 +2436,13 @@ span.specials_links {
     align-items: center;
 }
 
+/* On retire les liens spéciaux vide (pour les invités) */
+a.specials_links:empty,
+.specials_links a:empty,
+span.specials_links:empty {
+  display: none
+}
+
 /* Image/avatar réduit */
 .mini_img img {
     width: 40px;
@@ -2496,6 +2516,12 @@ span.specials_links {
 form#quick_reply {
     width: 705px;
 }
+
+/* Retire le cadre de la réponse rapide pour les invités */
+#quickreply_content:empty {
+    display: none;
+}
+
 
 /* Editeur de texte */
 .sceditor-container {}
