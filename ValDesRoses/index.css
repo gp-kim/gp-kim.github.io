@@ -1,0 +1,304 @@
+:where(:not(iframe, canvas, img, svg, video, a):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+:root {
+    --neutral: #FFFDFD;
+    --light-clr: #FFECEC;
+    --accent-clr: #753075;
+    --dark-clr: #563C56;
+    --title-clr: #D982B9;
+    
+    --base-font: 'Open Sans', sans-serif;
+    --title-font: 'Playfair Display', serif;
+    
+    --gap: 30px;
+}
+
+html {
+    font-size: 100%;
+    font-family:sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--neutral);
+    font-size: 1.2rem;
+    color: var(--dark-clr);
+    font-family: var(--base-font);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-clr);
+    border-bottom: 2px solid transparent
+}
+
+a:is(.more a) {
+    font-weight: 600
+}
+
+a:is(nav a:hover) {
+    border-bottom-color:var(--accent-clr)
+}
+
+strong {
+    font-weight: 700
+}
+
+.small {
+    font-size: 1rem;
+}
+
+h1, h2, h3 { 
+    font-family: var(--title-font);
+    color: var(--accent-clr);
+}
+
+h1 {
+    text-transform: uppercase;
+    color: var(--title-clr);
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 600
+}
+
+h3 {
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.6rem;
+    color: var(--accent-clr);
+    font-weight: 600
+}
+
+main {
+    max-width: 82.5rem;
+    margin: 100px auto 50px;
+    padding: 0 var(--gap)
+}
+
+
+
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    right: 0;
+    background-color: var(--light-clr);
+    padding: .4em 1.5em;
+    z-index: 999;
+    text-align: right;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px
+}
+
+.phone-number {
+    border-radius: 10px;
+    background-color: var(--neutral);
+    padding: .05em .6em .03em;
+    font-size: 1rem;
+}
+
+.topbar img {
+    height: 18px;
+}
+
+section {
+    width: 100%
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: var(--gap) auto;
+    flex-wrap: wrap;
+    
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 80px;
+    margin-left: calc(-80px - var(--gap))
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--gap);
+    font-weight: 600;
+}
+
+
+
+.home {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+
+.home--img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-height: 26em;
+    min-height: 26em;
+    object-fit: cover;
+    object-position: center;
+}
+
+.home--hours {
+    position: absolute;
+    z-index: 2;
+    left: var(--gap);
+    bottom: -50px;
+    
+}
+
+h3.hours {
+    color: var(--neutral);
+    text-shadow: 0 0 5px var(--dark-clr);
+    margin: 15px var(--gap);
+}
+
+.home--hours-infos {
+    background-color: var(--light-clr);
+    border-radius: 25px;
+    padding: 15px var(--gap);
+}
+
+.home--hours-infos p {
+    margin: 10px 0
+}
+
+
+.subtitle {
+    text-align: center;
+    position: relative;
+    margin: 8em auto;
+    max-width: 42rem;
+}
+
+.subtitle h2 {
+    position: relative;
+    z-index: 2
+}
+
+.subtitle img {
+    width: 30%
+}
+
+
+
+.ideas--flower {
+    position: absolute;
+    bottom: -60px;
+    right: -30px;
+    z-index: 1
+}
+
+.ideas--grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    grid-gap: var(--gap);
+    text-align: center;   
+}
+
+.idea img:not(.more img) {
+    object-fit: cover;
+    object-position: center;
+    height: 215px;
+    width: 100%;
+}
+
+.idea.more {
+    background-color: var(--light-clr);
+    border-radius: 25px;
+    padding: var(--gap);
+    height: 160px;
+    display: grid;
+    align-items: center;
+}
+
+
+
+
+
+.delivery--flower {
+    position: absolute;
+    top: -35px;
+    left: -90px;
+    z-index: 1
+}
+
+.delivery--flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.delivery--place {
+    width: 420px;
+    text-align: center;
+}
+
+.delivery--place h3 {
+    margin-bottom: .4em;
+}
+
+.delivery--place.france img {
+    margin-top: 10px;
+}
+
+
+
+
+.contact--bloc {
+    background-color: var(--light-clr);
+    padding: var(--gap);
+    border-radius: 25px;
+    text-align: center;
+    max-width: 30rem;
+    margin: var(--gap) auto;
+}
+
+
+.contact--content {
+    width: 60%;
+    margin: var(--gap) auto 0;
+    line-height: 40px;
+}
+
+.contact--content a {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 40px auto;
+    align-items: center;
+}
+
+.contact--content img {
+    height: 16px
+}
+
+
+#contact, #delivery, #insta {
+    scroll-margin-top: 5rem;
+}
